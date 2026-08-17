@@ -1,0 +1,644 @@
+{
+  "_meta": {
+    "file": "12-SEED-DATA.json",
+    "purpose": "Starter records for the wildtours-plugin importer (ContentSeeder + SCF field keys). Meta keys map 1:1 to SCF field 'name' values in wildtours-plugin/app/SCF/Groups/.",
+    "notes": [
+      "pwt_resort amenities uses exact checkbox choice values: pool, wifi, parking, restaurant, pickup.",
+      "pwt_package days_itinerary is an array of {title, description, photo}; expand to ACF repeater rows (days_itinerary_count + days_itinerary_0_title etc.) at import time.",
+      "All prices are indicative, subject to forest fee revisions and seasonal stay rates.",
+      "Sample content only for launch — verify each property and rate before production."
+    ]
+  },
+  "site": {
+    "brand_name": "Panna Wild Tour",
+    "domain": "pannawildtour.com",
+    "locale": "en_IN",
+    "contact_phone": "+91 9921841234",
+    "contact_email": "support@pannawildtour.com",
+    "address": "Madla Gate, Madla, Panna, Madhya Pradesh, India"
+  },
+  "taxonomies": {
+    "pwt_safari_zone": ["Madla Gate Core Zone", "Hinauta Gate Core Zone", "Akola Buffer Zone"],
+    "pwt_vehicle_type": ["Open Gypsy (6 Seater)", "Canter (20 Seater)", "SUV Transfer"],
+    "pwt_season": ["Peak (Nov-Feb)", "Shoulder (Mar-Jun)", "Monsoon (Jul-Oct)"],
+    "pwt_package_category": ["Family Safari Packages", "Couple Getaway Packages", "Weekend Tours"],
+    "pwt_activity": ["Tiger Safari", "Bird Watching", "Ken River Boating", "Waterfall Trail", "Village Experience", "Heritage Excursion"],
+    "pwt_destination_category": ["Wildlife", "Adventure", "Cultural", "Nature Retreat"]
+  },
+  "pwt_destination": [
+    {
+      "title": "Madla Gate — Panna Core Zone",
+      "excerpt": "Primary core-zone gate with the most safari routes and the thickest lodge belt nearby.",
+      "content": "Panna's main entry to the core zone, ideal for first-time visitors and most itineraries. Routes run through teak and dry deciduous forest, rocky ridges and Ken river gorges. Highest demand — book 30-60 days ahead.",
+      "status": "publish",
+      "meta": {
+        "destination_code": "PWT-MADLA",
+        "state": "Madhya Pradesh",
+        "country": "India",
+        "latitude": "24.7205",
+        "longitude": "80.1903",
+        "google_map": "https://maps.app.goo.gl/madla-gate",
+        "best_time": "Oct-Jun"
+      },
+      "terms": {
+        "pwt_destination_category": ["Wildlife"],
+        "pwt_activity": ["Tiger Safari", "Bird Watching"]
+      }
+    },
+    {
+      "title": "Hinouta Gate — Panna Core Zone",
+      "excerpt": "Core-zone gate on the Panna-Khajuraho road, ideal for travellers arriving from Khajuraho.",
+      "content": "Core entry from the Khajuraho highway (~35 km from the temples). Less saturated than Madla on many days and a natural fit for a Panna + Khajuraho loop.",
+      "status": "publish",
+      "meta": {
+        "destination_code": "PWT-HINOUTA",
+        "state": "Madhya Pradesh",
+        "country": "India",
+        "latitude": "24.7020",
+        "longitude": "80.0880",
+        "google_map": "https://maps.app.goo.gl/hinouta-gate",
+        "best_time": "Oct-Jun"
+      },
+      "terms": {
+        "pwt_destination_category": ["Wildlife"],
+        "pwt_activity": ["Tiger Safari"]
+      }
+    },
+    {
+      "title": "Akola Gate — Panna Buffer Zone",
+      "excerpt": "Buffer-side eco-tourism gate with seasonal, permit-based availability.",
+      "content": "Used for eco-tourism and some community routes. Quieter and often more affordable when open. Availability is seasonal — we confirm current status before quoting.",
+      "status": "publish",
+      "meta": {
+        "destination_code": "PWT-AKOLA",
+        "state": "Madhya Pradesh",
+        "country": "India",
+        "latitude": "24.6510",
+        "longitude": "80.0210",
+        "google_map": "https://maps.app.goo.gl/akola-gate",
+        "best_time": "Oct-Jun"
+      },
+      "terms": {
+        "pwt_destination_category": ["Wildlife", "Adventure"],
+        "pwt_activity": ["Tiger Safari"]
+      }
+    },
+    {
+      "title": "Pandav Caves & Falls",
+      "excerpt": "Fascinating caves and waterfall surrounded by natural scenery and local legends.",
+      "content": "Explore the Pandav Caves and Waterfall, where a 30-metre cascade falls into a famously heart-shaped pool. A short, rewarding trail leads through rock and woodland to the caves and waterfall — one of the most photogenic spots in the Panna region. Best after light monsoon rain; suitable for families.",
+      "status": "publish",
+      "meta": {
+        "destination_code": "PWT-EXP-PANDAV",
+        "state": "Madhya Pradesh",
+        "country": "India",
+        "best_time": "Aug-Feb"
+      },
+      "terms": {
+        "pwt_destination_category": ["Nature Retreat", "Adventure"],
+        "pwt_activity": ["Waterfall Trail"]
+      }
+    },
+    {
+      "title": "Raneh Waterfall",
+      "excerpt": "Dramatic natural beauty where the Ken River flows through a spectacular rocky canyon.",
+      "content": "The Ken drops through layered volcanic rock — granite, sandstone and crimson rhyolite — creating a narrow gorge with several waterfalls, especially after monsoon. Half-day trip from Panna town; ideal for photographers. Best August to February for full flow.",
+      "status": "publish",
+      "meta": {
+        "destination_code": "PWT-EXP-RANEH",
+        "state": "Madhya Pradesh",
+        "country": "India",
+        "best_time": "Aug-Feb"
+      },
+      "terms": {
+        "pwt_destination_category": ["Adventure", "Nature Retreat"],
+        "pwt_activity": ["Waterfall Trail"]
+      }
+    },
+    {
+      "title": "Khajuraho Western Temples",
+      "excerpt": "Magnificent Western Group of Temples renowned for remarkable architecture and intricate stone carvings.",
+      "content": "A UNESCO World Heritage site, Khajuraho's Western Group preserves Chandela-era temples famous for their shikhara towers and dense, expressive stone carving. About 35 km from Panna. Morning or evening light transforms the sandstone into gold.",
+      "status": "publish",
+      "meta": {
+        "destination_code": "PWT-EXP-KHAJURAHO",
+        "state": "Madhya Pradesh",
+        "country": "India",
+        "best_time": "Oct-Mar"
+      },
+      "terms": {
+        "pwt_destination_category": ["Cultural"],
+        "pwt_activity": ["Heritage Excursion"]
+      }
+    },
+    {
+      "title": "Ken Gharial Sanctuary",
+      "excerpt": "River sanctuary where ancient gharials bask — a rare wildlife spectacle on the Ken.",
+      "content": "On the banks of the Ken, a stretch of river protects one of India's ancient crocodilians — the gharial. See them basking on sandbars, and hear the story of their return from the brink. Mugger crocodiles share the same sandbars. Best November to March, morning or late afternoon.",
+      "status": "publish",
+      "meta": {
+        "destination_code": "PWT-EXP-GHARIAL",
+        "state": "Madhya Pradesh",
+        "country": "India",
+        "best_time": "Nov-Mar"
+      },
+      "terms": {
+        "pwt_destination_category": ["Wildlife", "Nature Retreat"],
+        "pwt_activity": ["Ken River Boating", "Bird Watching"]
+      }
+    },
+    {
+      "title": "Panna Temples",
+      "excerpt": "Discover the spiritual side of Panna through its historic and culturally significant temples.",
+      "content": "From the streets of Panna town to nearby villages, the district is dotted with living temples that anchor local festivals, folk song and traditional music. Baldau Mandir and Jugalkishor Mandir are the best-known landmarks — quiet, atmospheric and easy to visit between safaris.",
+      "status": "publish",
+      "meta": {
+        "destination_code": "PWT-EXP-TEMPLES",
+        "state": "Madhya Pradesh",
+        "country": "India",
+        "best_time": "Oct-Mar"
+      },
+      "terms": {
+        "pwt_destination_category": ["Cultural"],
+        "pwt_activity": ["Heritage Excursion"]
+      }
+    },
+    {
+      "title": "Kutni Dam",
+      "excerpt": "A peaceful escape surrounded by water and natural landscapes — perfect for relaxing and enjoying the scenery.",
+      "content": "Kutni Dam is a calm reservoir on the edge of the district — a half-day escape for slow travellers who want sky, water and stillness. Great for a relaxed picnic, quiet birding and sunset photography.",
+      "status": "publish",
+      "meta": {
+        "destination_code": "PWT-EXP-KUTNI",
+        "state": "Madhya Pradesh",
+        "country": "India",
+        "best_time": "Nov-Mar"
+      },
+      "terms": {
+        "pwt_destination_category": ["Nature Retreat"],
+        "pwt_activity": ["Ken River Boating"]
+      }
+    },
+    {
+      "title": "Walk with Pardhi",
+      "excerpt": "Experience nature on foot and learn more about the local environment and traditional knowledge.",
+      "content": "The Pardhi community has read this landscape for generations. On a guided walk you will see the forest through their eyes — tracking signs, edible and medicinal plants, and the rhythms of village life around Panna. Gentle walk, local guides, early morning or late afternoon departures.",
+      "status": "publish",
+      "meta": {
+        "destination_code": "PWT-EXP-PARDHI",
+        "state": "Madhya Pradesh",
+        "country": "India",
+        "best_time": "Oct-Mar"
+      },
+      "terms": {
+        "pwt_destination_category": ["Cultural", "Adventure"],
+        "pwt_activity": ["Village Experience"]
+      }
+    },
+    {
+      "title": "Ken Riverside Scenes",
+      "excerpt": "Peaceful riverside locations, breathtaking views and memorable sunsets along the Ken River.",
+      "content": "The Ken cuts a calm, dramatic line through the reserve. Selected riverside points offer the best of it — basking gharials, cliff-nesting vultures, kingfishers over still water and sunsets that turn the sandstone gold. Winter is a birding hotspot for photographers.",
+      "status": "publish",
+      "meta": {
+        "destination_code": "PWT-EXP-KEN",
+        "state": "Madhya Pradesh",
+        "country": "India",
+        "best_time": "Nov-Mar"
+      },
+      "terms": {
+        "pwt_destination_category": ["Nature Retreat", "Adventure"],
+        "pwt_activity": ["Ken River Boating", "Bird Watching"]
+      }
+    },
+    {
+      "title": "Bird Watching",
+      "excerpt": "Panna is a birder's haven — over 200 species across teak forest, grassland and the Ken river.",
+      "content": "From red-headed vultures on the Ken cliffs to crested serpent eagles over the plateau, pied kingfishers and lapwings on the river — our guides know the calls, roosts and seasonal migrants. Best November to March. Binoculars and field guide provided on guided trips.",
+      "status": "publish",
+      "meta": {
+        "destination_code": "PWT-EXP-BIRD",
+        "state": "Madhya Pradesh",
+        "country": "India",
+        "best_time": "Nov-Mar"
+      },
+      "terms": {
+        "pwt_destination_category": ["Nature Retreat"],
+        "pwt_activity": ["Bird Watching"]
+      }
+    }
+  ],
+  "pwt_safari": [
+    {
+      "title": "Morning Jeep Safari — Madla Gate",
+      "excerpt": "Morning core-zone safari with naturalist support and priority wildlife routes.",
+      "content": "Enter via Madla Gate at the first light of the day. Fresh tracks, active movement and cooler air. Reporting is 30-45 minutes before gate opening (summer 05:30 / winter 06:30).",
+      "status": "publish",
+      "meta": {
+        "duration": "4 to 5 hours",
+        "shift": "morning",
+        "meeting_point": "Madla Gate Reporting Point",
+        "regular_price": "4500",
+        "offer_price": "3999"
+      },
+      "terms": {
+        "pwt_safari_zone": ["Madla Gate Core Zone"],
+        "pwt_vehicle_type": ["Open Gypsy (6 Seater)"],
+        "pwt_season": ["Peak (Nov-Feb)", "Shoulder (Mar-Jun)"]
+      }
+    },
+    {
+      "title": "Evening Jeep Safari — Madla Gate",
+      "excerpt": "Evening slot with golden light and leisurely pace.",
+      "content": "Afternoon core-zone drive (summer 15:30 / winter 14:30). Warm light, relaxed pace, great for families and photographers.",
+      "status": "publish",
+      "meta": {
+        "duration": "4 to 5 hours",
+        "shift": "evening",
+        "meeting_point": "Madla Gate Reporting Point",
+        "regular_price": "4500",
+        "offer_price": "3999"
+      },
+      "terms": {
+        "pwt_safari_zone": ["Madla Gate Core Zone"],
+        "pwt_vehicle_type": ["Open Gypsy (6 Seater)"],
+        "pwt_season": ["Peak (Nov-Feb)", "Shoulder (Mar-Jun)"]
+      }
+    },
+    {
+      "title": "Hinouta Gate Safari — Khajuraho Route",
+      "excerpt": "Core-zone safari entered from the Panna-Khajuraho highway.",
+      "content": "Ideal when combining Panna with Khajuraho (~35 km). Less saturated on many days with its own route variety.",
+      "status": "publish",
+      "meta": {
+        "duration": "4 to 5 hours",
+        "shift": "morning",
+        "meeting_point": "Hinouta Gate Reporting Point",
+        "regular_price": "4500",
+        "offer_price": "3999"
+      },
+      "terms": {
+        "pwt_safari_zone": ["Hinauta Gate Core Zone"],
+        "pwt_vehicle_type": ["Open Gypsy (6 Seater)"],
+        "pwt_season": ["Peak (Nov-Feb)", "Shoulder (Mar-Jun)"]
+      }
+    },
+    {
+      "title": "Ken River Boat Safari (Seasonal)",
+      "excerpt": "Guide-led boat ride past gharials, gorges and nesting vulture cliffs.",
+      "content": "Seasonal, water-level dependent. We confirm current forest-department permission and availability before booking.",
+      "status": "publish",
+      "meta": {
+        "duration": "2 hours",
+        "shift": "evening",
+        "meeting_point": "Ken River Launch Point (seasonal)",
+        "regular_price": "1500",
+        "offer_price": "1200"
+      },
+      "terms": {
+        "pwt_activity": ["Bird Watching"]
+      }
+    },
+    {
+      "title": "Jungle Safari (Buffer) — Akola",
+      "excerpt": "Quieter buffer-zone safari with leopard, deer and rare bird sightings.",
+      "content": "Buffer-zone routes around Akola blend riverine habitat and open scrub — strong for leopards, sambar, chital and a long list of birds. Evening and seasonal night drives available where the forest department permits.",
+      "status": "publish",
+      "meta": {
+        "duration": "4 to 5 hours",
+        "shift": "evening",
+        "meeting_point": "Akola Gate Reporting Point",
+        "regular_price": "4000",
+        "offer_price": "3500"
+      },
+      "terms": {
+        "pwt_safari_zone": ["Akola Buffer Zone"],
+        "pwt_vehicle_type": ["Open Gypsy (6 Seater)"],
+        "pwt_season": ["Peak (Nov-Feb)", "Shoulder (Mar-Jun)"]
+      }
+    }
+  ],
+  "pwt_package": [
+    {
+      "title": "Panna Express — 2D/1N",
+      "subtitle": "Weekend tiger trail",
+      "package_code": "PWT-EXPRESS-2D1N",
+      "excerpt": "All-inclusive weekend break: two safaris, one night in a gate-side lodge, transfers and coordination.",
+      "content": "Day 1 arrival + evening safari; Day 2 morning safari + checkout. One quote covering permits, gypsy, guide, stay (AP) and lodge-gate transfers.",
+      "status": "publish",
+      "meta": {
+        "duration": "2 Days 1 Night",
+        "days": "2",
+        "nights": "1",
+        "regular_price": "12500",
+        "offer_price": "9500",
+        "child_price": "6500",
+        "peak_multiplier": "1.2",
+        "shoulder_multiplier": "1",
+        "monsoon_multiplier": "0.85",
+        "minimum_person": "2",
+        "maximum_person": "6",
+        "booking_enabled": "1",
+        "inclusions": "2 jeep safaris (forest e-permit + guide), 1 night premium lodge AP, lodge-gate transfers, safari coordination",
+        "exclusions": "Rail/air tickets, highway transfers, camera fees, tips & personal expenses",
+        "days_itinerary": [
+          {
+            "title": "Day 1 — Arrival & evening safari",
+            "description": "Check-in near Madla gate. Evening core-zone jeep safari (summer 15:30 / winter 14:30 slot). Dinner at lodge.",
+            "photo": ""
+          },
+          {
+            "title": "Day 2 — Morning safari & departure",
+            "description": "Morning jeep safari (summer 05:30 / winter 06:30). Breakfast, check-out, onward transfer.",
+            "photo": ""
+          }
+        ]
+      },
+      "terms": {
+        "pwt_package_category": ["Family Safari Packages", "Weekend Tours"],
+        "pwt_activity": ["Tiger Safari"],
+        "pwt_season": ["Peak (Nov-Feb)", "Shoulder (Mar-Jun)"]
+      }
+    },
+    {
+      "title": "Panna Deep Dive — 3D/2N",
+      "subtitle": "Photographer's Panna",
+      "package_code": "PWT-DEEP-3D2N",
+      "excerpt": "Three safaris plus a seasonal Ken River boat ride, two nights and full coordination.",
+      "content": "Day 1 arrival + evening safari; Day 2 morning safari + optional boat + optional buffer night drive (permit-permitting); Day 3 morning safari + checkout.",
+      "status": "publish",
+      "meta": {
+        "duration": "3 Days 2 Nights",
+        "days": "3",
+        "nights": "2",
+        "regular_price": "19500",
+        "offer_price": "14500",
+        "child_price": "9800",
+        "peak_multiplier": "1.2",
+        "shoulder_multiplier": "1",
+        "monsoon_multiplier": "0.85",
+        "minimum_person": "2",
+        "maximum_person": "6",
+        "booking_enabled": "1",
+        "inclusions": "3 jeep safaris + 1 seasonal Ken River boat safari (permits + guide), 2 nights premium lodge AP, lodge-gate transfers, safari coordination",
+        "exclusions": "Rail/air tickets, highway transfers, camera fees, buffer night-drive (where available), tips & personal expenses",
+        "days_itinerary": [
+          {
+            "title": "Day 1 — Arrival & evening safari",
+            "description": "Check-in near Madla gate. Evening core-zone jeep safari. Dinner at lodge.",
+            "photo": ""
+          },
+          {
+            "title": "Day 2 — River & jungle day",
+            "description": "Morning jeep safari, optional Ken boat safari (seasonal). Evening free, or buffer night drive if the forest department permits.",
+            "photo": ""
+          },
+          {
+            "title": "Day 3 — Final morning safari",
+            "description": "Morning jeep safari. Breakfast, check-out, onward transfer.",
+            "photo": ""
+          }
+        ]
+      },
+      "terms": {
+        "pwt_package_category": ["Couple Getaway Packages", "Weekend Tours"],
+        "pwt_activity": ["Tiger Safari", "Bird Watching"],
+        "pwt_season": ["Peak (Nov-Feb)", "Shoulder (Mar-Jun)"]
+      }
+    }
+  ],
+  "pwt_resort": [
+    {
+      "title": "Ken Vihar Jungle Lodge",
+      "excerpt": "Premium gate-side lodge with full restaurant and pickup support.",
+      "content": "Spacious cottages and tented suites, lawns, full restaurant, hot water round the clock. 3 km from Madla gate with pickup/drop.",
+      "status": "publish",
+      "meta": {
+        "resort_type": "premium",
+        "price_per_night": "5500",
+        "distance_from_gate": "3",
+        "amenities": ["wifi", "parking", "restaurant", "pickup"],
+        "contact_phone": "+91 9921841234",
+        "contact_email": "support@pannawildtour.com"
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Panna Gate View Cottages",
+      "excerpt": "Clean budget cottages 2 km from Madla gate with basic meals.",
+      "content": "Simple rooms, attached bath, in-house basic meals. 2 km from Madla gate; early-morning departure handled. Best for budget travellers.",
+      "status": "publish",
+      "meta": {
+        "resort_type": "budget",
+        "price_per_night": "2200",
+        "distance_from_gate": "2",
+        "amenities": ["parking", "restaurant"],
+        "contact_phone": "+91 9921841234",
+        "contact_email": "support@pannawildtour.com"
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Tiger Den Luxury Resort",
+      "excerpt": "Luxury resort with pool, spa-style service and curated dining.",
+      "content": "Pool, premium rooms, curated dining and guided stays. 9 km from Madla gate with private transfers. Best for honeymoons and premium wildlife weeks.",
+      "status": "publish",
+      "meta": {
+        "resort_type": "luxury",
+        "price_per_night": "12000",
+        "distance_from_gate": "9",
+        "amenities": ["pool", "wifi", "parking", "restaurant", "pickup"],
+        "contact_phone": "+91 9921841234",
+        "contact_email": "support@pannawildtour.com"
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Hinouta Riverside Stay",
+      "excerpt": "Premium stay on the Khajuraho road, 1 km from Hinouta gate.",
+      "content": "Ideal for the last night of a Panna + Khajuraho loop. Riverside setting, full meals, pickup/drop.",
+      "status": "publish",
+      "meta": {
+        "resort_type": "premium",
+        "price_per_night": "6500",
+        "distance_from_gate": "1",
+        "amenities": ["wifi", "parking", "restaurant", "pickup"],
+        "contact_phone": "+91 9921841234",
+        "contact_email": "support@pannawildtour.com"
+      },
+      "terms": {},
+      "profiles": ["full"]
+    }
+  ],
+  "pwt_vehicle": [
+    {
+      "title": "Open Gypsy 6-Seater — Safari Fleet",
+      "excerpt": "Official safari-compatible open vehicle with trained driver support.",
+      "content": "Primary vehicle for core and buffer wildlife drives. Best for small groups and photographers requiring open-angle visibility.",
+      "status": "publish",
+      "meta": {},
+      "terms": {
+        "pwt_vehicle_type": ["Open Gypsy (6 Seater)"]
+      },
+      "profiles": ["full"]
+    },
+    {
+      "title": "Canter 20-Seater — Group Safari",
+      "excerpt": "Zone-approved canter for larger groups on limited routes.",
+      "content": "For big groups and budget travellers. Route availability is zone-approved and limited — confirm at booking.",
+      "status": "publish",
+      "meta": {},
+      "terms": {
+        "pwt_vehicle_type": ["Canter (20 Seater)"]
+      },
+      "profiles": ["full"]
+    }
+  ],
+  "pwt_faq": [
+    {
+      "title": "What is the best time to visit Panna Tiger Reserve?",
+      "content": "The best period for wildlife sightings is October to June, with the finest combination of weather and activity from February to April. The reserve closes for the core monsoon season each year.",
+      "status": "publish",
+      "meta": {}
+    },
+    {
+      "title": "How many people can sit in a Panna safari gypsy?",
+      "content": "The open 4x4 gypsy seats up to 6 people including driver and guide. We recommend 4-5 guests for comfortable photography positions.",
+      "status": "publish",
+      "meta": {}
+    },
+    {
+      "title": "Which ID do I need for the safari permit?",
+      "content": "One valid government photo ID per visitor (Aadhaar, PAN, Passport or Voter ID). Names must match the ID exactly.",
+      "status": "publish",
+      "meta": {}
+    },
+    {
+      "title": "Do I need to book Panna safari in advance?",
+      "content": "Yes, strongly. Core-zone permits for Madla and Hinouta open online about 60 days ahead and peak-season weekend slots sell out fast. 30-60 days' lead time is ideal.",
+      "status": "publish",
+      "meta": {}
+    },
+    {
+      "title": "Are entry fees included in the safari price?",
+      "content": "Official forest charges are billed at the actual rate on your permit. Our quotes itemise them separately so you always see what you are paying for.",
+      "status": "publish",
+      "meta": {}
+    },
+    {
+      "title": "Is a tiger sighting guaranteed?",
+      "content": "No. Sightings are natural events. Good slot and zone planning improves your chances — we plan routes with that in mind.",
+      "status": "publish",
+      "meta": {}
+    },
+    {
+      "title": "Is the Ken River boat safari available all year?",
+      "content": "No. It runs seasonally when the forest department permits boating and water levels allow, typically winter through early summer. We confirm current status before booking.",
+      "status": "publish",
+      "meta": {}
+    },
+    {
+      "title": "Is there a night safari inside Panna core zone?",
+      "content": "Night drives are not part of regular core-zone permits. Where the forest department permits buffer-zone drives we arrange them; otherwise we are transparent about it.",
+      "status": "publish",
+      "meta": {}
+    },
+    {
+      "title": "Which gate should I choose for my first Panna safari?",
+      "content": "Madla. It is the primary core-zone gate with the most routes and the thickest lodge belt nearby.",
+      "status": "publish",
+      "meta": {}
+    },
+    {
+      "title": "Which is the best area to stay for Panna safari?",
+      "content": "The Madla gate belt (2-10 km). It is the primary core-zone gate, so you avoid long pre-safari drives.",
+      "status": "publish",
+      "meta": {}
+    },
+    {
+      "title": "Do package prices change?",
+      "content": "Prices are indicative. Forest fees and seasonal stay rates can move; we reconfirm the exact figure before you pay.",
+      "status": "publish",
+      "meta": {}
+    },
+    {
+      "title": "Can I customise a package?",
+      "content": "Yes, most travellers do — swap lodges, add Khajuraho, add a boat ride. We rebuild the quote line-by-line.",
+      "status": "publish",
+      "meta": {}
+    }
+  ],
+  "pwt_testimonial": [
+    {
+      "title": "Smooth Family Safari Planning",
+      "excerpt": "",
+      "content": "Our 3-day family tour was coordinated perfectly. Safari timing, stay, and transfers were all smooth and professional.",
+      "status": "publish",
+      "meta": {},
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Permits handled end to end",
+      "excerpt": "",
+      "content": "The e-permit process felt invisible — they handled IDs, quotas and gate reporting. We just showed up and enjoyed the drives.",
+      "status": "publish",
+      "meta": {},
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Honest about sightings",
+      "excerpt": "",
+      "content": "They never promised a tiger, and we still saw two. Clear quotes, no hidden charges. Exactly the transparency you want.",
+      "status": "publish",
+      "meta": {},
+      "terms": {},
+      "profiles": ["full"]
+    }
+  ],
+  "pwt_review": [
+    {
+      "title": "Memorable Tiger Sighting Experience",
+      "excerpt": "Well-coordinated safari and friendly support team throughout the trip.",
+      "content": "From pickup to safari execution, everything was on time. We were briefed clearly and had a memorable tiger sighting in the core zone.",
+      "status": "publish",
+      "meta": {
+        "rating": "5",
+        "guest_city": "Bhopal",
+        "verified": "1"
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Great boat + jeep combo",
+      "excerpt": "The river ride was the highlight of our second day.",
+      "content": "Boat safari was well organised, gharials and kingfishers everywhere. Combined easily with our morning jeep drive.",
+      "status": "publish",
+      "meta": {
+        "rating": "5",
+        "guest_city": "New Delhi",
+        "verified": "1"
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Gate-side stay recommendation was perfect",
+      "excerpt": "They matched the lodge to our budget without pushing extras.",
+      "content": "No hard-selling, honest comparison between properties, and a resort that was exactly as described.",
+      "status": "publish",
+      "meta": {
+        "rating": "4",
+        "guest_city": "Pune",
+        "verified": "1"
+      },
+      "terms": {},
+      "profiles": ["full"]
+    }
+  ]
+}
