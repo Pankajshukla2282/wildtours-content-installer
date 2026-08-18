@@ -13,9 +13,6 @@
 | `00-IMPORT-MASTER.md` | This index + import runbook |
 | `01-URL-MATRIX-NAVIGATION.md` | Content architecture, URL redirection matrix, header/footer navigation tree, zero-404 plan |
 | `02-HOMEPAGE.md` | Full homepage rewrite (Gutenberg block HTML + copy + media map) |
-| `03-SERVICES-JEEP-SAFARI.md` | Jeep Safari Booking Assistance page |
-| `04-SERVICES-BOAT-NIGHT-SAFARI.md` | Ken River Boat Safari & Night Drive page |
-| `05-ACCOMMODATIONS.md` | Accommodations / Resort Assistance page |
 | `06-TOUR-PACKAGES.md` | Customized Tour Packages + 2 full day-by-day itineraries |
 | `07-ZONES.md` | Safari Zone hub + Madla / Hinouta / Akola sub-pages |
 | `08-BLOG-POSTS.md` | 4 production SEO blog posts (long-form) |
@@ -28,6 +25,12 @@
 | `14-SAFARIS.md` | **Safaris hub + Jungle Safari (Core/Buffer) + Boating** — supersedes `03`/`04` |
 | `15-STAYS.md` | **Stays hub + Home Stay / Hotel / Resort** — supersedes `05` |
 | `16-NAV-SUPPORT-PAGES.md` | **Guides hub, Dining, Travel Guide, FAQ, Privacy, Thank You** sample pages |
+| `HOMEPAGE-GUTENBERG-CONTENT.html` | Deployed homepage as Gutenberg block markup (core blocks + plugin shortcodes) |
+| `BLOG-CALENDAR-30-DAYS.md` | SEO blog calendar: 16 planned post titles + publishing rhythm |
+| `BLOG-DRAFTS-16.md` | 16 publish-ready blog drafts (SEO long-form, CTA-included) |
+| `CONTENT-PRODUCTION-KIT.md` / `-hi_IN.md` | Brand voice, page copy, FAQ bank, microcopy, publishing priority (EN + Hindi) |
+
+> Superseded source files `03-SERVICES-JEEP-SAFARI.md`, `04-SERVICES-BOAT-NIGHT-SAFARI.md`, `05-ACCOMMODATIONS.md` and the `From_child_theme/` / `From_plugin/` archive folders (older `CONTENT-SEED-DATA.json`, `content-seed-data.json`, `GUTENBERG-PAGE-BLUEPRINTS.md`, `ARCHITECTURE.md`) were consolidated into this folder and removed. All importable content lives here.
 
 ---
 
@@ -87,10 +90,8 @@
 | User requirement | File |
 |---|---|
 | Content architecture + XML utilization | `01-URL-MATRIX-NAVIGATION.md` |
-| Homepage (hero, why-us, experiences, zones, testimonials, FAQ) | `02-HOMEPAGE.md` |
-| Jeep Safari booking page → **Safaris (14)** | `03-SERVICES-JEEP-SAFARI.md` (superseded reference) |
-| Boat safari & night drive → **Safaris (14)** | `04-SERVICES-BOAT-NIGHT-SAFARI.md` (superseded reference) |
-| Accommodation assistance → **Stays (15)** | `05-ACCOMMODATIONS.md` (superseded reference) |
+| Homepage (hero, why-us, experiences, zones, testimonials, FAQ) | `02-HOMEPAGE.md` (markup: `HOMEPAGE-GUTENBERG-CONTENT.html`) |
+| Jeep Safari / Boat safari / Accommodation pages | consolidated into **Safaris (14)** and **Stays (15)** |
 | Tour packages + itineraries | `06-TOUR-PACKAGES.md` |
 | Zones overview (Madla/Hinouta/Akola) | `07-ZONES.md` |
 | Guides hub + Dining + Travel Guide + FAQ + Privacy + Thank You | `16-NAV-SUPPORT-PAGES.md` |

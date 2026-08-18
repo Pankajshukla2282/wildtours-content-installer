@@ -20,12 +20,18 @@ final class SeedImporter
     private const SUPPORTED_TYPES = [
         'pwt_destination',
         'pwt_safari',
+        'pwt_vehicle',
+        'pwt_resort',
+        'pwt_room_type',
+        'pwt_room_unit',
+        'pwt_safari_schedule',
+        'pwt_restaurant',
+        'pwt_local_trip',
+        'pwt_gallery',
         'pwt_package',
         'pwt_faq',
         'pwt_testimonial',
         'pwt_review',
-        'pwt_resort',
-        'pwt_vehicle',
     ];
 
     /**
@@ -197,12 +203,49 @@ final class SeedImporter
             }
 
             if (is_array($value)) {
+                if ($this->isReference($value)) {
+                    $refId = $this->resolveReferenceId($value);
+                    if ($refId > 0) {
+                        update_post_meta($postId, $key, (string) $refId);
+                    }
+                    continue;
+                }
+
                 update_post_meta($postId, $key, $value);
                 continue;
             }
 
             update_post_meta($postId, $key, (string) $value);
         }
+    }
+
+    /**
+     * Detect a post-object reference value: { "pwt_resort": "Ken Vihar Jungle Lodge" }.
+     *
+     * @param array<string, mixed> $value
+     */
+    private function isReference(array $value): bool
+    {
+        if (count($value) !== 1) {
+            return false;
+        }
+
+        $postType = (string) array_key_first($value);
+
+        return $postType !== '' && post_type_exists($postType) && is_string(reset($value));
+    }
+
+    /**
+     * Resolve a post-object reference to its post ID (0 when the title is unknown).
+     *
+     * @param array<string, mixed> $value
+     */
+    private function resolveReferenceId(array $value): int
+    {
+        $postType = (string) array_key_first($value);
+        $title = trim((string) reset($value));
+
+        return $title === '' ? 0 : $this->findByTitle($postType, $title);
     }
 
     /**

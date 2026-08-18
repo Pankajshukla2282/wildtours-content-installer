@@ -3,8 +3,15 @@
     "file": "12-SEED-DATA.json",
     "purpose": "Starter records for the wildtours-plugin importer (ContentSeeder + SCF field keys). Meta keys map 1:1 to SCF field 'name' values in wildtours-plugin/app/SCF/Groups/.",
     "notes": [
+      "Covers every content post type the wildtours-plugin registers (2.5.0): destination, safari, vehicle, resort, room_type, room_unit, safari_schedule, restaurant, local_trip, gallery, package, faq, testimonial, review.",
       "pwt_resort amenities uses exact checkbox choice values: pool, wifi, parking, restaurant, pickup.",
+      "pwt_room_type amenities uses exact checkbox values: ac, wifi, tv, hot_water, balcony, parking; meal_plans: room_only, breakfast, half_board, full_board.",
+      "pwt_restaurant meal_types: breakfast, lunch, dinner, snacks; price_range: budget, mid, premium.",
+      "pwt_local_trip difficulty: easy, moderate, hard.",
+      "Post-object fields (pwt_room_type.resort_id, pwt_room_unit.room_type_id, pwt_safari_schedule.safari_id/vehicle_id) use { \"<post_type>\": \"Title\" } and are resolved to post IDs at import time — import order follows dependencies (resort before room_type before room_unit; safari/vehicle before safari_schedule).",
+      "Safari schedule service_dates are sample launch dates; replace with real operating dates (or let the booking-calendar sync / manual provisioning build them).",
       "pwt_package days_itinerary is an array of {title, description, photo}; expand to ACF repeater rows (days_itinerary_count + days_itinerary_0_title etc.) at import time.",
+      "Gallery records are placeholders — attach images via the media library after import.",
       "All prices are indicative, subject to forest fee revisions and seasonal stay rates.",
       "Sample content only for launch — verify each property and rate before production."
     ]
@@ -23,7 +30,10 @@
     "pwt_season": ["Peak (Nov-Feb)", "Shoulder (Mar-Jun)", "Monsoon (Jul-Oct)"],
     "pwt_package_category": ["Family Safari Packages", "Couple Getaway Packages", "Weekend Tours"],
     "pwt_activity": ["Tiger Safari", "Bird Watching", "Ken River Boating", "Waterfall Trail", "Village Experience", "Heritage Excursion"],
-    "pwt_destination_category": ["Wildlife", "Adventure", "Cultural", "Nature Retreat"]
+    "pwt_destination_category": ["Wildlife", "Adventure", "Cultural", "Nature Retreat"],
+    "pwt_resort_category": ["Premium", "Budget", "Luxury"],
+    "pwt_trip_type": ["Half Day", "Full Day", "Sunset Experience", "Village Immersion"],
+    "pwt_cuisine": ["North Indian", "Bundelkhandi Local", "Continental", "Multi-cuisine"]
   },
   "pwt_destination": [
     {
@@ -235,6 +245,8 @@
       "content": "Enter via Madla Gate at the first light of the day. Fresh tracks, active movement and cooler air. Reporting is 30-45 minutes before gate opening (summer 05:30 / winter 06:30).",
       "status": "publish",
       "meta": {
+        "safari_code": "PWT-SAF-MADLA-M",
+        "safari_type": "jeep",
         "duration": "4 to 5 hours",
         "shift": "morning",
         "meeting_point": "Madla Gate Reporting Point",
@@ -253,6 +265,8 @@
       "content": "Afternoon core-zone drive (summer 15:30 / winter 14:30). Warm light, relaxed pace, great for families and photographers.",
       "status": "publish",
       "meta": {
+        "safari_code": "PWT-SAF-MADLA-E",
+        "safari_type": "jeep",
         "duration": "4 to 5 hours",
         "shift": "evening",
         "meeting_point": "Madla Gate Reporting Point",
@@ -271,6 +285,8 @@
       "content": "Ideal when combining Panna with Khajuraho (~35 km). Less saturated on many days with its own route variety.",
       "status": "publish",
       "meta": {
+        "safari_code": "PWT-SAF-HINAUTA",
+        "safari_type": "jeep",
         "duration": "4 to 5 hours",
         "shift": "morning",
         "meeting_point": "Hinouta Gate Reporting Point",
@@ -289,6 +305,8 @@
       "content": "Seasonal, water-level dependent. We confirm current forest-department permission and availability before booking.",
       "status": "publish",
       "meta": {
+        "safari_code": "PWT-SAF-BOAT",
+        "safari_type": "private",
         "duration": "2 hours",
         "shift": "evening",
         "meeting_point": "Ken River Launch Point (seasonal)",
@@ -305,6 +323,8 @@
       "content": "Buffer-zone routes around Akola blend riverine habitat and open scrub — strong for leopards, sambar, chital and a long list of birds. Evening and seasonal night drives available where the forest department permits.",
       "status": "publish",
       "meta": {
+        "safari_code": "PWT-SAF-AKOLA",
+        "safari_type": "jeep",
         "duration": "4 to 5 hours",
         "shift": "evening",
         "meeting_point": "Akola Gate Reporting Point",
@@ -421,7 +441,9 @@
         "contact_phone": "+91 9921841234",
         "contact_email": "support@pannawildtour.com"
       },
-      "terms": {},
+      "terms": {
+        "pwt_resort_category": ["Premium"]
+      },
       "profiles": ["full"]
     },
     {
@@ -437,7 +459,9 @@
         "contact_phone": "+91 9921841234",
         "contact_email": "support@pannawildtour.com"
       },
-      "terms": {},
+      "terms": {
+        "pwt_resort_category": ["Budget"]
+      },
       "profiles": ["full"]
     },
     {
@@ -453,7 +477,9 @@
         "contact_phone": "+91 9921841234",
         "contact_email": "support@pannawildtour.com"
       },
-      "terms": {},
+      "terms": {
+        "pwt_resort_category": ["Luxury"]
+      },
       "profiles": ["full"]
     },
     {
@@ -469,7 +495,9 @@
         "contact_phone": "+91 9921841234",
         "contact_email": "support@pannawildtour.com"
       },
-      "terms": {},
+      "terms": {
+        "pwt_resort_category": ["Premium"]
+      },
       "profiles": ["full"]
     }
   ],
@@ -479,7 +507,12 @@
       "excerpt": "Official safari-compatible open vehicle with trained driver support.",
       "content": "Primary vehicle for core and buffer wildlife drives. Best for small groups and photographers requiring open-angle visibility.",
       "status": "publish",
-      "meta": {},
+      "meta": {
+        "vehicle_type": "jeep",
+        "capacity": "6",
+        "is_ac": "0",
+        "notes": "Official safari-compatible open vehicle for core and buffer drives."
+      },
       "terms": {
         "pwt_vehicle_type": ["Open Gypsy (6 Seater)"]
       },
@@ -490,7 +523,12 @@
       "excerpt": "Zone-approved canter for larger groups on limited routes.",
       "content": "For big groups and budget travellers. Route availability is zone-approved and limited — confirm at booking.",
       "status": "publish",
-      "meta": {},
+      "meta": {
+        "vehicle_type": "canter",
+        "capacity": "20",
+        "is_ac": "0",
+        "notes": "Zone-approved canter for larger groups on limited routes."
+      },
       "terms": {
         "pwt_vehicle_type": ["Canter (20 Seater)"]
       },
@@ -639,6 +677,544 @@
       },
       "terms": {},
       "profiles": ["full"]
+    }
+  ],
+  "pwt_room_type": [
+    {
+      "title": "Ken Vihar Deluxe Cottage",
+      "excerpt": "Spacious premium cottage with AC and a private balcony.",
+      "content": "Cottage with attached bath, private balcony and full-board dining at the lodge restaurant. Walkable to the lawns and pickup point.",
+      "status": "publish",
+      "meta": {
+        "resort_id": { "pwt_resort": "Ken Vihar Jungle Lodge" },
+        "max_occupancy": "3",
+        "max_adults": "2",
+        "max_children": "1",
+        "base_rate": "5500",
+        "meal_plans": ["full_board", "breakfast"],
+        "amenities": ["ac", "wifi", "tv", "hot_water", "balcony", "parking"]
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Ken Vihar Premium Tent",
+      "excerpt": "Glamping-style tented suite on the lodge lawns.",
+      "content": "Tented suite with attached bath, deck seating and shared dining. A comfortable compromise between camping and hotel comfort.",
+      "status": "publish",
+      "meta": {
+        "resort_id": { "pwt_resort": "Ken Vihar Jungle Lodge" },
+        "max_occupancy": "3",
+        "max_adults": "2",
+        "max_children": "1",
+        "base_rate": "4500",
+        "meal_plans": ["half_board", "breakfast"],
+        "amenities": ["wifi", "hot_water", "balcony"]
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Panna Gate View Standard Cottage",
+      "excerpt": "Clean budget cottage with attached bath and basic meals.",
+      "content": "Simple, well-kept cottage two km from Madla gate. Early-morning safari departures handled with packed breakfast.",
+      "status": "publish",
+      "meta": {
+        "resort_id": { "pwt_resort": "Panna Gate View Cottages" },
+        "max_occupancy": "3",
+        "max_adults": "2",
+        "max_children": "1",
+        "base_rate": "2200",
+        "meal_plans": ["breakfast"],
+        "amenities": ["ac", "hot_water", "parking"]
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Panna Gate View Budget Room",
+      "excerpt": "No-frills room for travellers who want the lowest gate-side cost.",
+      "content": "Compact room with attached bath and shared verandah. Meals available at the in-house kitchen on request.",
+      "status": "publish",
+      "meta": {
+        "resort_id": { "pwt_resort": "Panna Gate View Cottages" },
+        "max_occupancy": "2",
+        "max_adults": "2",
+        "max_children": "0",
+        "base_rate": "1800",
+        "meal_plans": ["room_only"],
+        "amenities": ["hot_water"]
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Tiger Den Luxury Suite",
+      "excerpt": "Premium suite with curated dining and private transfers.",
+      "content": "Spacious suite, pool access, curated dining and concierge-style service. Nine km from Madla gate with private transfers included.",
+      "status": "publish",
+      "meta": {
+        "resort_id": { "pwt_resort": "Tiger Den Luxury Resort" },
+        "max_occupancy": "3",
+        "max_adults": "2",
+        "max_children": "1",
+        "base_rate": "12000",
+        "meal_plans": ["full_board", "breakfast"],
+        "amenities": ["ac", "wifi", "tv", "hot_water", "balcony", "parking"]
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Tiger Den Pool View Villa",
+      "excerpt": "Largest villa with direct poolside views and extra space.",
+      "content": "Villa with pool-facing deck, sleeping up to four. Best for honeymoons and premium wildlife weeks.",
+      "status": "publish",
+      "meta": {
+        "resort_id": { "pwt_resort": "Tiger Den Luxury Resort" },
+        "max_occupancy": "4",
+        "max_adults": "3",
+        "max_children": "1",
+        "base_rate": "15000",
+        "meal_plans": ["full_board", "half_board"],
+        "amenities": ["ac", "wifi", "tv", "hot_water", "balcony", "parking"]
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Hinouta River View Room",
+      "excerpt": "Riverside room one km from Hinouta gate on the Khajuraho road.",
+      "content": "Calm riverside setting, full meals and pickup/drop. Ideal for the last night of a Panna + Khajuraho loop.",
+      "status": "publish",
+      "meta": {
+        "resort_id": { "pwt_resort": "Hinouta Riverside Stay" },
+        "max_occupancy": "3",
+        "max_adults": "2",
+        "max_children": "1",
+        "base_rate": "6500",
+        "meal_plans": ["half_board", "breakfast"],
+        "amenities": ["ac", "wifi", "tv", "hot_water", "balcony"]
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Hinouta Family Room",
+      "excerpt": "Two-room family unit near the river.",
+      "content": "Two interconnected rooms sleeping four, with river-facing verandah and full-board option.",
+      "status": "publish",
+      "meta": {
+        "resort_id": { "pwt_resort": "Hinouta Riverside Stay" },
+        "max_occupancy": "4",
+        "max_adults": "3",
+        "max_children": "1",
+        "base_rate": "7500",
+        "meal_plans": ["full_board", "breakfast"],
+        "amenities": ["ac", "wifi", "tv", "hot_water", "balcony", "parking"]
+      },
+      "terms": {},
+      "profiles": ["full"]
+    }
+  ],
+  "pwt_room_unit": [
+    {
+      "title": "Ken Vihar Deluxe Cottage 101",
+      "content": "",
+      "status": "publish",
+      "meta": {
+        "room_type_id": { "pwt_room_type": "Ken Vihar Deluxe Cottage" },
+        "room_number": "101",
+        "floor": "1",
+        "operational_status": "active"
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Ken Vihar Deluxe Cottage 102",
+      "content": "",
+      "status": "publish",
+      "meta": {
+        "room_type_id": { "pwt_room_type": "Ken Vihar Deluxe Cottage" },
+        "room_number": "102",
+        "floor": "1",
+        "operational_status": "active"
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Ken Vihar Premium Tent T1",
+      "content": "",
+      "status": "publish",
+      "meta": {
+        "room_type_id": { "pwt_room_type": "Ken Vihar Premium Tent" },
+        "room_number": "T1",
+        "floor": "0",
+        "operational_status": "active"
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Panna Gate View Standard Cottage 1",
+      "content": "",
+      "status": "publish",
+      "meta": {
+        "room_type_id": { "pwt_room_type": "Panna Gate View Standard Cottage" },
+        "room_number": "1",
+        "floor": "0",
+        "operational_status": "active"
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Panna Gate View Budget Room 2",
+      "content": "",
+      "status": "publish",
+      "meta": {
+        "room_type_id": { "pwt_room_type": "Panna Gate View Budget Room" },
+        "room_number": "2",
+        "floor": "0",
+        "operational_status": "active"
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Tiger Den Luxury Suite 201",
+      "content": "",
+      "status": "publish",
+      "meta": {
+        "room_type_id": { "pwt_room_type": "Tiger Den Luxury Suite" },
+        "room_number": "201",
+        "floor": "2",
+        "operational_status": "active"
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Tiger Den Pool View Villa 202",
+      "content": "",
+      "status": "publish",
+      "meta": {
+        "room_type_id": { "pwt_room_type": "Tiger Den Pool View Villa" },
+        "room_number": "202",
+        "floor": "2",
+        "operational_status": "active"
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Hinouta River View Room 1",
+      "content": "",
+      "status": "publish",
+      "meta": {
+        "room_type_id": { "pwt_room_type": "Hinouta River View Room" },
+        "room_number": "1",
+        "floor": "0",
+        "operational_status": "active"
+      },
+      "terms": {},
+      "profiles": ["full"]
+    },
+    {
+      "title": "Hinouta Family Room 2",
+      "content": "",
+      "status": "publish",
+      "meta": {
+        "room_type_id": { "pwt_room_type": "Hinouta Family Room" },
+        "room_number": "2",
+        "floor": "0",
+        "operational_status": "active"
+      },
+      "terms": {},
+      "profiles": ["full"]
+    }
+  ],
+  "pwt_safari_schedule": [
+    {
+      "title": "Morning Safari — Madla Gate — 12 Sep 2026",
+      "excerpt": "Morning core-zone slot from Madla Gate.",
+      "content": "",
+      "status": "publish",
+      "meta": {
+        "safari_id": { "pwt_safari": "Morning Jeep Safari — Madla Gate" },
+        "service_date": "2026-09-12",
+        "shift": "morning",
+        "vehicle_id": { "pwt_vehicle": "Open Gypsy 6-Seater — Safari Fleet" },
+        "capacity": "6",
+        "entry_gate": "Madla Gate",
+        "schedule_status": "open"
+      },
+      "terms": { "pwt_safari_zone": ["Madla Gate Core Zone"] }
+    },
+    {
+      "title": "Evening Safari — Madla Gate — 12 Sep 2026",
+      "excerpt": "Evening core-zone slot from Madla Gate.",
+      "content": "",
+      "status": "publish",
+      "meta": {
+        "safari_id": { "pwt_safari": "Evening Jeep Safari — Madla Gate" },
+        "service_date": "2026-09-12",
+        "shift": "evening",
+        "vehicle_id": { "pwt_vehicle": "Open Gypsy 6-Seater — Safari Fleet" },
+        "capacity": "6",
+        "entry_gate": "Madla Gate",
+        "schedule_status": "open"
+      },
+      "terms": { "pwt_safari_zone": ["Madla Gate Core Zone"] }
+    },
+    {
+      "title": "Hinouta Gate Safari — 12 Sep 2026",
+      "excerpt": "Core-zone slot entered from the Khajuraho highway.",
+      "content": "",
+      "status": "publish",
+      "meta": {
+        "safari_id": { "pwt_safari": "Hinouta Gate Safari — Khajuraho Route" },
+        "service_date": "2026-09-12",
+        "shift": "morning",
+        "vehicle_id": { "pwt_vehicle": "Open Gypsy 6-Seater — Safari Fleet" },
+        "capacity": "6",
+        "entry_gate": "Hinouta Gate",
+        "schedule_status": "open"
+      },
+      "terms": { "pwt_safari_zone": ["Hinauta Gate Core Zone"] }
+    },
+    {
+      "title": "Morning Safari — Madla Gate — 13 Sep 2026",
+      "excerpt": "Morning core-zone slot from Madla Gate.",
+      "content": "",
+      "status": "publish",
+      "meta": {
+        "safari_id": { "pwt_safari": "Morning Jeep Safari — Madla Gate" },
+        "service_date": "2026-09-13",
+        "shift": "morning",
+        "vehicle_id": { "pwt_vehicle": "Open Gypsy 6-Seater — Safari Fleet" },
+        "capacity": "6",
+        "entry_gate": "Madla Gate",
+        "schedule_status": "open"
+      },
+      "terms": { "pwt_safari_zone": ["Madla Gate Core Zone"] }
+    },
+    {
+      "title": "Evening Safari — Madla Gate — 13 Sep 2026",
+      "excerpt": "Evening core-zone slot from Madla Gate.",
+      "content": "",
+      "status": "publish",
+      "meta": {
+        "safari_id": { "pwt_safari": "Evening Jeep Safari — Madla Gate" },
+        "service_date": "2026-09-13",
+        "shift": "evening",
+        "vehicle_id": { "pwt_vehicle": "Open Gypsy 6-Seater — Safari Fleet" },
+        "capacity": "6",
+        "entry_gate": "Madla Gate",
+        "schedule_status": "open"
+      },
+      "terms": { "pwt_safari_zone": ["Madla Gate Core Zone"] }
+    },
+    {
+      "title": "Jungle Safari (Buffer) — Akola — 13 Sep 2026",
+      "excerpt": "Quieter buffer-zone slot around Akola.",
+      "content": "",
+      "status": "publish",
+      "meta": {
+        "safari_id": { "pwt_safari": "Jungle Safari (Buffer) — Akola" },
+        "service_date": "2026-09-13",
+        "shift": "evening",
+        "vehicle_id": { "pwt_vehicle": "Open Gypsy 6-Seater — Safari Fleet" },
+        "capacity": "6",
+        "entry_gate": "Akola Gate",
+        "schedule_status": "open"
+      },
+      "terms": { "pwt_safari_zone": ["Akola Buffer Zone"] }
+    },
+    {
+      "title": "Ken River Boat Safari — 13 Sep 2026",
+      "excerpt": "Seasonal guided boat ride on the Ken.",
+      "content": "",
+      "status": "publish",
+      "meta": {
+        "safari_id": { "pwt_safari": "Ken River Boat Safari (Seasonal)" },
+        "service_date": "2026-09-13",
+        "shift": "evening",
+        "capacity": "10",
+        "entry_gate": "Ken River Launch Point (seasonal)",
+        "schedule_status": "open"
+      },
+      "terms": { "pwt_activity": ["Bird Watching"] }
+    }
+  ],
+  "pwt_restaurant": [
+    {
+      "title": "Ken Vihar Jungle Lodge Restaurant",
+      "excerpt": "Full multi-cuisine restaurant with curated safari spreads.",
+      "content": "Buffet breakfast before the morning drive, packed safari lunch and set dinner menus. North Indian, continental and regional options.",
+      "status": "publish",
+      "meta": {
+        "price_range": "mid",
+        "meal_types": ["breakfast", "lunch", "dinner"],
+        "seating_capacity": "60",
+        "phone": "+91 9921841234",
+        "address": "3 km from Madla Gate, Panna, Madhya Pradesh",
+        "opening_time": "06:00",
+        "closing_time": "22:00"
+      },
+      "terms": { "pwt_cuisine": ["North Indian", "Continental", "Multi-cuisine"] }
+    },
+    {
+      "title": "Tiger Den Courtyard Dining",
+      "excerpt": "Premium poolside dining with curated regional and continental menus.",
+      "content": "Poolside courtyard restaurant with à-la-carte and set menus, plus high-tea and evening snacks for in-house guests.",
+      "status": "publish",
+      "meta": {
+        "price_range": "premium",
+        "meal_types": ["breakfast", "lunch", "dinner", "snacks"],
+        "seating_capacity": "80",
+        "phone": "+91 9921841234",
+        "address": "9 km from Madla Gate, Panna, Madhya Pradesh",
+        "opening_time": "06:30",
+        "closing_time": "23:00"
+      },
+      "terms": { "pwt_cuisine": ["North Indian", "Continental"] }
+    },
+    {
+      "title": "Panna Gate View Dhaba",
+      "excerpt": "Casual Bundelkhandi home-style meals near the Madla gate approach.",
+      "content": "Authentic local thalis, parathas and chai in a no-frills setting. A favourite quick stop before the morning drive.",
+      "status": "publish",
+      "meta": {
+        "price_range": "budget",
+        "meal_types": ["breakfast", "lunch", "dinner", "snacks"],
+        "seating_capacity": "40",
+        "phone": "+91 9921841234",
+        "address": "2 km from Madla Gate, Panna, Madhya Pradesh",
+        "opening_time": "06:00",
+        "closing_time": "22:30"
+      },
+      "terms": { "pwt_cuisine": ["Bundelkhandi Local", "North Indian"] }
+    }
+  ],
+  "pwt_local_trip": [
+    {
+      "title": "Khajuraho Heritage Excursion",
+      "excerpt": "Full-day guided tour of the UNESCO Khajuraho Western Temples.",
+      "content": "Private guided loop from Panna to the Western Group of Temples (~35 km). Includes the temple circuit, photography stops and optional sound-and-light show.",
+      "status": "publish",
+      "meta": {
+        "trip_code": "PWT-TRIP-KHAJ",
+        "duration": "8 hours",
+        "base_price": "7500",
+        "offer_price": "6500",
+        "max_group_size": "6",
+        "difficulty": "easy",
+        "pickup_point": "Lodge / Panna town",
+        "inclusions": "Private SUV, guide, temple entry tickets, bottled water",
+        "exclusions": "Meals, camera fee at temples"
+      },
+      "terms": { "pwt_trip_type": ["Full Day"], "pwt_activity": ["Heritage Excursion"] }
+    },
+    {
+      "title": "Pandav Caves & Waterfall Trail",
+      "excerpt": "Half-day trail to the caves and the heart-shaped waterfall pool.",
+      "content": "Guided walk through rock and woodland to the Pandav Caves and a 30-metre waterfall with its famous heart-shaped pool. Best after light monsoon rain.",
+      "status": "publish",
+      "meta": {
+        "trip_code": "PWT-TRIP-PANDAV",
+        "duration": "4 hours",
+        "base_price": "3500",
+        "offer_price": "3000",
+        "max_group_size": "8",
+        "difficulty": "moderate",
+        "pickup_point": "Panna town / lodge",
+        "inclusions": "Guide, trail entry, transfers",
+        "exclusions": "Meals"
+      },
+      "terms": { "pwt_trip_type": ["Half Day"], "pwt_activity": ["Waterfall Trail"] }
+    },
+    {
+      "title": "Ken River Sunset Boat & Gharial Watch",
+      "excerpt": "Evening boat ride past gharials, gorges and nesting vulture cliffs.",
+      "content": "Guided sunset ride on the Ken — basking gharials, cliff-nesting vultures and sandstone gorges turning gold. Seasonal, water-level dependent.",
+      "status": "publish",
+      "meta": {
+        "trip_code": "PWT-TRIP-KENBOAT",
+        "duration": "2.5 hours",
+        "base_price": "1500",
+        "offer_price": "1200",
+        "max_group_size": "10",
+        "difficulty": "easy",
+        "pickup_point": "Ken River Launch Point (seasonal)",
+        "inclusions": "Boat, guide, life jackets",
+        "exclusions": "Forest permit if charged separately"
+      },
+      "terms": { "pwt_trip_type": ["Sunset Experience"], "pwt_activity": ["Ken River Boating", "Bird Watching"] }
+    },
+    {
+      "title": "Village Walk with Pardhi Community",
+      "excerpt": "Gentle guided walk through the landscape with local Pardhi guides.",
+      "content": "See the forest through the eyes of the Pardhi community — tracking signs, edible and medicinal plants, and the rhythms of village life around Panna.",
+      "status": "publish",
+      "meta": {
+        "trip_code": "PWT-TRIP-PARDHI",
+        "duration": "3 hours",
+        "base_price": "1800",
+        "offer_price": "1500",
+        "max_group_size": "8",
+        "difficulty": "moderate",
+        "pickup_point": "Panna town / lodge",
+        "inclusions": "Local Pardhi guide, field snacks",
+        "exclusions": "Meals"
+      },
+      "terms": { "pwt_trip_type": ["Village Immersion"], "pwt_activity": ["Village Experience"] }
+    },
+    {
+      "title": "Raneh Falls & Diamond Mines Drive",
+      "excerpt": "Scenic drive to Raneh's layered rock canyon and historic diamond pits.",
+      "content": "The Ken drops through layered volcanic rock — granite, sandstone and crimson rhyolite — with several waterfalls after the monsoon. Includes the diamond mine story of Panna.",
+      "status": "publish",
+      "meta": {
+        "trip_code": "PWT-TRIP-RANEH",
+        "duration": "5 hours",
+        "base_price": "4500",
+        "offer_price": "3800",
+        "max_group_size": "6",
+        "difficulty": "moderate",
+        "pickup_point": "Lodge / Panna town",
+        "inclusions": "Private SUV, guide, sightseeing stops",
+        "exclusions": "Meals"
+      },
+      "terms": { "pwt_trip_type": ["Full Day"], "pwt_activity": ["Waterfall Trail"] }
+    }
+  ],
+  "pwt_gallery": [
+    {
+      "title": "Tiger Sightings — Core Zone",
+      "excerpt": "Our favourite tiger frames from the Madla and Hinouta routes.",
+      "content": "A curated gallery of core-zone tiger sightings. Add photographs via the media library after import.",
+      "status": "publish",
+      "meta": {},
+      "terms": {}
+    },
+    {
+      "title": "Ken River & Gharial Gallery",
+      "excerpt": "Boating, gharials and river sunsets on the Ken.",
+      "content": "Basking gharials, nesting vultures and sandstone gorges. Add photographs via the media library after import.",
+      "status": "publish",
+      "meta": {},
+      "terms": {}
+    },
+    {
+      "title": "Lodges & Stays",
+      "excerpt": "Rooms, pools and dining at our partner properties.",
+      "content": "Room types, pool villas and dining spaces across our partner stays. Add photographs via the media library after import.",
+      "status": "publish",
+      "meta": {},
+      "terms": {}
     }
   ]
 }
