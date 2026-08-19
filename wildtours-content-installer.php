@@ -16,7 +16,7 @@
 
 defined('ABSPATH') || exit;
 
-define('PWTCI_VERSION', '1.0.0');
+define('PWTCI_VERSION', '1.0.1');
 define('PWTCI_PLUGIN_FILE', __FILE__);
 define('PWTCI_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('PWTCI_CONTENT_DIR', PWTCI_PLUGIN_DIR . 'resources/content/');
