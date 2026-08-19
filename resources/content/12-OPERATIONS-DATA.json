@@ -1,0 +1,475 @@
+{
+  "_meta": {
+    "notes": [
+      "Sample operational data for the wildtours-plugin custom tables: customers, vendors, vendor_rates, rates (sell), availability, bookings (+ items, travelers, payments) and settlements.",
+      "CPT references ({ \"pwt_safari_schedule\": \"Title\" }, { \"pwt_room_unit\": \"Title\" }, etc.) are resolved to post IDs at import time — run AFTER 12-SEED-DATA.json so the referenced records exist.",
+      "vendor_rates.resource_id = 0 means a generic net rate across all resources of that type (matches the plugin admin convention).",
+      "Bookings are contextual demos: totals/items/costs are internally consistent, but treat all numbers as illustrative — verify net rates with suppliers before production.",
+      "Settlement + items.cost numbers are tuned so the Vendors admin page shows a meaningful 'Outstanding' per vendor (e.g. Ken Vihar ~6,800, Himgiri ~14,600, Panna Gate View settled to zero).",
+      "Re-runs are safe: every table row is deduped by its natural key (email, name, booking_number, resource+date, rate key, reference)."
+    ]
+  },
+  "customers": [
+    {
+      "email": "rohit.malhotra@example.com",
+      "phone": "+91 98290 11223",
+      "first_name": "Rohit",
+      "last_name": "Malhotra",
+      "country": "India",
+      "city": "Jaipur",
+      "notes": "Family of 3; booked Panna Express. Prefers early morning safaris."
+    },
+    {
+      "email": "ananya.iyer@example.com",
+      "phone": "+91 98450 44556",
+      "first_name": "Ananya",
+      "last_name": "Iyer",
+      "country": "India",
+      "city": "Bengaluru",
+      "notes": "Photographer; keen on the Ken boat safari and buffer zone."
+    },
+    {
+      "email": "james.carter@example.com",
+      "phone": "+44 7700 900123",
+      "first_name": "James",
+      "last_name": "Carter",
+      "country": "United Kingdom",
+      "city": "London",
+      "notes": "UK traveller; enquired via web form. Waiting for permit confirmation."
+    },
+    {
+      "email": "priya.sharma@example.com",
+      "phone": "+91 99270 55678",
+      "first_name": "Priya",
+      "last_name": "Sharma",
+      "country": "India",
+      "city": "Indore",
+      "notes": "Group canter booking for a family weekend trip."
+    },
+    {
+      "email": "arjun.mehta@example.com",
+      "phone": "+91 98110 88990",
+      "first_name": "Arjun",
+      "last_name": "Mehta",
+      "country": "India",
+      "city": "Ahmedabad",
+      "notes": "Repeat enquiry — Khajuraho + Panna heritage combo."
+    }
+  ],
+  "vendors": [
+    {
+      "name": "Ken Vihar Jungle Lodge",
+      "vendor_type": "hotel",
+      "contact_person": "Sanjay Tiwari",
+      "email": "ops@kenvihar.in",
+      "phone": "+91 99887 76655",
+      "pan": "AAKCT1234K",
+      "gstin": "23AAKCT1234K1Z5",
+      "bank_details": "HDFC Bank, Panna — A/C 50100123456789, IFSC HDFC0001234",
+      "notes": "Primary gate-side partner at Madla. Net rates on AP basis, high season.",
+      "status": "active"
+    },
+    {
+      "name": "Hinouta Riverside Stay",
+      "vendor_type": "hotel",
+      "contact_person": "Meena Patel",
+      "email": "stay@hinoutariverside.in",
+      "phone": "+91 99445 67788",
+      "pan": "AALPM4567P",
+      "gstin": "23AALPM4567P1Z9",
+      "bank_details": "SBI, Hinouta — A/C 35123456789, IFSC SBIN0001234",
+      "notes": "Riverside rooms near Hinouta gate on the Panna–Khajuraho road.",
+      "status": "active"
+    },
+    {
+      "name": "Tiger Den Luxury Resort",
+      "vendor_type": "hotel",
+      "contact_person": "Rohan Shukla",
+      "email": "bookings@tigerdenresort.in",
+      "phone": "+91 98877 88990",
+      "pan": "AABCS7890S",
+      "gstin": "23AABCS7890S1Z1",
+      "bank_details": "Axis Bank, Panna — A/C 910012345678, IFSC UTIB0001234",
+      "notes": "Premium 9 km from Madla gate; pool villas and curated dining.",
+      "status": "active"
+    },
+    {
+      "name": "Panna Gate View Cottages",
+      "vendor_type": "hotel",
+      "contact_person": "Dinesh Yadav",
+      "email": "pannagateview@gmail.com",
+      "phone": "+91 99001 22334",
+      "pan": "AADPY5566Y",
+      "gstin": "23AADPY5566Y1Z3",
+      "bank_details": "PNB, Madla — A/C 778899001122, IFSC PUNB0123400",
+      "notes": "Budget cottages 2 km from Madla gate. Packed breakfast on request.",
+      "status": "active"
+    },
+    {
+      "name": "Himgiri Gypsy Safari Fleet",
+      "vendor_type": "vehicle",
+      "contact_person": "Vikram Singh",
+      "email": "himgirisafari@gmail.com",
+      "phone": "+91 98277 66554",
+      "pan": "AAKHS2233H",
+      "gstin": "23AAKHS2233H1Z7",
+      "bank_details": "Bank of Baroda, Panna — A/C 440055661122, IFSC BARB0PANNXX",
+      "notes": "Gypsy fleet + canter operator for core and buffer zones. Net per safari.",
+      "status": "active"
+    },
+    {
+      "name": "Sanctuary Naturalist Guide Co-op",
+      "vendor_type": "guide",
+      "contact_person": "Arjun Rathore",
+      "email": "guides@safarinaturalists.in",
+      "phone": "+91 97654 33221",
+      "pan": "AAPSR8899R",
+      "gstin": "23AAPSR8899R1Z4",
+      "bank_details": "Canara Bank, Panna — A/C 661122334455, IFSC CNRB0011223",
+      "notes": "Trained naturalists for core-zone jeep and boat safaris.",
+      "status": "active"
+    },
+    {
+      "name": "Safari Point Restaurant Madla",
+      "vendor_type": "restaurant",
+      "contact_person": "Kamla Bai",
+      "email": "safaripoint.madla@gmail.com",
+      "phone": "+91 96333 22445",
+      "pan": "AALSP1122P",
+      "gstin": "23AALSP1122P1Z6",
+      "bank_details": "SBI, Madla — A/C 112233445566, IFSC SBIN0009988",
+      "notes": "Local thali and breakfast point near the gate; meal cost per pax.",
+      "status": "active"
+    },
+    {
+      "name": "Ken River Housekeeping Services",
+      "vendor_type": "housekeeping",
+      "contact_person": "Sunil Kumar",
+      "email": "kenhousekeeping@gmail.com",
+      "phone": "+91 94000 11223",
+      "pan": "AAHKS4455K",
+      "gstin": "23AAHKS4455K1Z8",
+      "bank_details": "SBI, Panna — A/C 990011223344, IFSC SBIN0005544",
+      "notes": "Daily room servicing for partner properties.",
+      "status": "active"
+    },
+    {
+      "name": "Panna Valley Laundry Services",
+      "vendor_type": "laundry",
+      "contact_person": "Suresh Rawat",
+      "email": "pannavalleylaundry@gmail.com",
+      "phone": "+91 93000 88990",
+      "pan": "AAGPR7788R",
+      "gstin": "23AAGPR7788R1Z2",
+      "bank_details": "Axis Bank, Panna — A/C 778899003344, IFSC UTIB0009988",
+      "notes": "Hotel laundry collection + delivery, billed per kg.",
+      "status": "active"
+    },
+    {
+      "name": "Satna–Khajuraho Cab Transfers",
+      "vendor_type": "other",
+      "contact_person": "Manoj Gupta",
+      "email": "satnakhajuratransfers@gmail.com",
+      "phone": "+91 99220 99887",
+      "pan": "AAKMG3344G",
+      "gstin": "23AAKMG3344G1Z0",
+      "bank_details": "HDFC Bank, Satna — A/C 556677889900, IFSC HDFC0006677",
+      "notes": "Door-to-door transfers Satna railhead / Khajuraho airport to Madla.",
+      "status": "active"
+    }
+  ],
+  "vendor_rates": [
+    { "vendor": "Ken Vihar Jungle Lodge", "resource_type": "room_unit", "resource": { "pwt_room_unit": "Ken Vihar Deluxe Cottage 101" }, "rate_name": "Net double, AP", "unit_price": "4800", "currency": "INR", "start_date": "2026-09-01", "end_date": "2026-11-30", "priority": 10, "notes": "Peak-season net", "status": "active" },
+    { "vendor": "Ken Vihar Jungle Lodge", "resource_type": "room_unit", "resource": { "pwt_room_unit": "Ken Vihar Deluxe Cottage 102" }, "rate_name": "Net double, AP", "unit_price": "4800", "currency": "INR", "start_date": "2026-09-01", "end_date": "2026-11-30", "priority": 10, "notes": "Peak-season net", "status": "active" },
+    { "vendor": "Ken Vihar Jungle Lodge", "resource_type": "room_unit", "resource": { "pwt_room_unit": "Ken Vihar Premium Tent T1" }, "rate_name": "Net tent, CP", "unit_price": "3500", "currency": "INR", "start_date": "2026-09-01", "end_date": "2026-11-30", "priority": 10, "notes": "Glamping tent net", "status": "active" },
+    { "vendor": "Ken Vihar Jungle Lodge", "resource_type": "room_unit", "resource_id": 0, "rate_name": "Generic net stay", "unit_price": "4200", "currency": "INR", "priority": 20, "notes": "Fallback card", "status": "active" },
+    { "vendor": "Hinouta Riverside Stay", "resource_type": "room_unit", "resource": { "pwt_room_unit": "Hinouta River View Room 1" }, "rate_name": "Net riverside double", "unit_price": "2800", "currency": "INR", "priority": 10, "status": "active" },
+    { "vendor": "Hinouta Riverside Stay", "resource_type": "room_unit", "resource": { "pwt_room_unit": "Hinouta Family Room 2" }, "rate_name": "Net family unit", "unit_price": "4200", "currency": "INR", "priority": 10, "status": "active" },
+    { "vendor": "Tiger Den Luxury Resort", "resource_type": "room_unit", "resource": { "pwt_room_unit": "Tiger Den Luxury Suite 201" }, "rate_name": "Net suite", "unit_price": "6500", "currency": "INR", "priority": 10, "status": "active" },
+    { "vendor": "Tiger Den Luxury Resort", "resource_type": "room_unit", "resource": { "pwt_room_unit": "Tiger Den Pool View Villa 202" }, "rate_name": "Net villa", "unit_price": "7800", "currency": "INR", "priority": 10, "status": "active" },
+    { "vendor": "Panna Gate View Cottages", "resource_type": "room_unit", "resource": { "pwt_room_unit": "Panna Gate View Standard Cottage 1" }, "rate_name": "Net cottage", "unit_price": "1500", "currency": "INR", "priority": 10, "status": "active" },
+    { "vendor": "Panna Gate View Cottages", "resource_type": "room_unit", "resource": { "pwt_room_unit": "Panna Gate View Budget Room 2" }, "rate_name": "Net budget room", "unit_price": "1100", "currency": "INR", "priority": 10, "status": "active" },
+    { "vendor": "Himgiri Gypsy Safari Fleet", "resource_type": "vehicle", "resource": { "pwt_vehicle": "Open Gypsy 6-Seater — Safari Fleet" }, "rate_name": "Net gypsy per safari", "unit_price": "5200", "currency": "INR", "priority": 10, "status": "active" },
+    { "vendor": "Himgiri Gypsy Safari Fleet", "resource_type": "service", "resource_id": 0, "rate_name": "Driver charges", "unit_price": "500", "currency": "INR", "priority": 20, "notes": "Per safari", "status": "active" },
+    { "vendor": "Sanctuary Naturalist Guide Co-op", "resource_type": "service", "resource_id": 0, "rate_name": "Guide fee per safari", "unit_price": "1200", "currency": "INR", "priority": 10, "status": "active" },
+    { "vendor": "Safari Point Restaurant Madla", "resource_type": "restaurant", "resource_id": 0, "rate_name": "Meal cost per pax", "unit_price": "750", "currency": "INR", "priority": 10, "status": "active" },
+    { "vendor": "Ken River Housekeeping Services", "resource_type": "service", "resource_id": 0, "rate_name": "Room servicing per day", "unit_price": "350", "currency": "INR", "priority": 10, "status": "active" },
+    { "vendor": "Panna Valley Laundry Services", "resource_type": "service", "resource_id": 0, "rate_name": "Laundry per kg", "unit_price": "200", "currency": "INR", "priority": 10, "status": "active" },
+    { "vendor": "Satna–Khajuraho Cab Transfers", "resource_type": "service", "resource_id": 0, "rate_name": "Round-trip transfer", "unit_price": "4500", "currency": "INR", "priority": 10, "status": "active" }
+  ],
+  "rates": [
+    { "resource_type": "safari_schedule", "resource_id": 0, "rate_type": "peak", "amount": "8500", "currency": "INR", "start_date": "2026-09-01", "end_date": "2026-11-30", "min_quantity": 1, "max_quantity": 6, "priority": 10, "status": "active" },
+    { "resource_type": "safari_schedule", "resource_id": 0, "rate_type": "shoulder", "amount": "7500", "currency": "INR", "start_date": "2026-03-01", "end_date": "2026-06-30", "min_quantity": 1, "max_quantity": 6, "priority": 10, "status": "active" },
+    { "resource_type": "room_unit", "resource": { "pwt_room_unit": "Ken Vihar Deluxe Cottage 101" }, "rate_type": "peak", "amount": "7200", "currency": "INR", "start_date": "2026-09-01", "end_date": "2026-11-30", "min_quantity": 1, "max_quantity": 2, "priority": 10, "status": "active" },
+    { "resource_type": "vehicle", "resource_id": 0, "rate_type": "base", "amount": "9000", "currency": "INR", "min_quantity": 1, "max_quantity": 6, "priority": 10, "status": "active" },
+    { "resource_type": "restaurant", "resource_id": 0, "rate_type": "base", "amount": "950", "currency": "INR", "min_quantity": 1, "max_quantity": 20, "priority": 10, "status": "active" }
+  ],
+  "availability": [
+    { "resource_type": "safari_schedule", "resource": { "pwt_safari_schedule": "Morning Safari — Madla Gate — 12 Sep 2026" }, "service_date": "2026-09-12", "capacity": 6, "reserved": 2, "blocked": 0, "status": "open", "notes": "Two seats held by PWT-20260912-001" },
+    { "resource_type": "safari_schedule", "resource": { "pwt_safari_schedule": "Evening Safari — Madla Gate — 12 Sep 2026" }, "service_date": "2026-09-12", "capacity": 6, "reserved": 4, "blocked": 0, "status": "open", "notes": "Four seats held" },
+    { "resource_type": "safari_schedule", "resource": { "pwt_safari_schedule": "Hinouta Gate Safari — 12 Sep 2026" }, "service_date": "2026-09-12", "capacity": 6, "reserved": 2, "blocked": 0, "status": "open", "notes": "" },
+    { "resource_type": "safari_schedule", "resource": { "pwt_safari_schedule": "Morning Safari — Madla Gate — 13 Sep 2026" }, "service_date": "2026-09-13", "capacity": 6, "reserved": 1, "blocked": 0, "status": "open", "notes": "" },
+    { "resource_type": "safari_schedule", "resource": { "pwt_safari_schedule": "Evening Safari — Madla Gate — 13 Sep 2026" }, "service_date": "2026-09-13", "capacity": 6, "reserved": 0, "blocked": 0, "status": "open", "notes": "" },
+    { "resource_type": "safari_schedule", "resource": { "pwt_safari_schedule": "Jungle Safari (Buffer) — Akola — 13 Sep 2026" }, "service_date": "2026-09-13", "capacity": 6, "reserved": 0, "blocked": 0, "status": "open", "notes": "" },
+    { "resource_type": "safari_schedule", "resource": { "pwt_safari_schedule": "Ken River Boat Safari — 13 Sep 2026" }, "service_date": "2026-09-13", "capacity": 8, "reserved": 3, "blocked": 0, "status": "open", "notes": "" },
+    { "resource_type": "safari_schedule", "resource": { "pwt_safari_schedule": "Group Canter Safari — 12 Sep 2026" }, "service_date": "2026-09-12", "capacity": 20, "reserved": 6, "blocked": 0, "status": "open", "notes": "Family group + public seats" },
+    { "resource_type": "room_unit", "resource": { "pwt_room_unit": "Ken Vihar Deluxe Cottage 101" }, "service_date": "2026-09-12", "capacity": 2, "reserved": 2, "blocked": 0, "status": "open", "notes": "Occupied by PWT-20260912-001" },
+    { "resource_type": "room_unit", "resource": { "pwt_room_unit": "Ken Vihar Deluxe Cottage 102" }, "service_date": "2026-09-12", "capacity": 2, "reserved": 1, "blocked": 0, "status": "open", "notes": "" }
+  ],
+  "bookings": [
+    {
+      "booking_number": "PWT-20260912-001",
+      "customer": "rohit.malhotra@example.com",
+      "status": "confirmed",
+      "travel_start": "2026-09-12",
+      "travel_end": "2026-09-13",
+      "adults": 2,
+      "children": 1,
+      "currency": "INR",
+      "subtotal": "16500",
+      "discount": "0",
+      "tax": "0",
+      "total": "16500",
+      "deposit_due": "6500",
+      "notes": "Panna Express 2D/1N. E-permit names as per Aadhaar.",
+      "source": "web",
+      "items": [
+        {
+          "item_type": "safari_schedule",
+          "resource": { "pwt_safari_schedule": "Morning Safari — Madla Gate — 12 Sep 2026" },
+          "name": "Morning Safari — Madla Gate (2 guests)",
+          "quantity": 2,
+          "start_date": "2026-09-12",
+          "unit_price": "4500",
+          "total": "9000",
+          "cost": "8000",
+          "vendor": "Himgiri Gypsy Safari Fleet",
+          "meta": { "gypsy": "MP20P-8844", "guide": "Arjun Rathore", "slot": "morning" }
+        },
+        {
+          "item_type": "room_unit",
+          "resource": { "pwt_room_unit": "Ken Vihar Deluxe Cottage 101" },
+          "name": "Ken Vihar Deluxe Cottage 101 — 1 night",
+          "quantity": 1,
+          "start_date": "2026-09-12",
+          "end_date": "2026-09-13",
+          "unit_price": "6500",
+          "total": "6500",
+          "cost": "4800",
+          "vendor": "Ken Vihar Jungle Lodge",
+          "meta": { "meal_plan": "AP", "guests": 3 }
+        }
+      ],
+      "travelers": [
+        { "first_name": "Rohit", "last_name": "Malhotra", "date_of_birth": "1988-03-14", "nationality": "Indian", "email": "rohit.malhotra@example.com", "phone": "+91 98290 11223" },
+        { "first_name": "Neha", "last_name": "Malhotra", "date_of_birth": "1990-07-22", "nationality": "Indian" },
+        { "first_name": "Arnav", "last_name": "Malhotra", "date_of_birth": "2016-04-12", "nationality": "Indian" }
+      ],
+      "payments": [
+        { "gateway": "razorpay", "transaction_type": "payment", "transaction_id": "pay_RZP_20260912_0001", "status": "completed", "amount": "10000", "currency": "INR", "reference": "DEP-001", "paid_at": "2026-08-20 10:30:00", "meta": { "method": "upi" } }
+      ]
+    },
+    {
+      "booking_number": "PWT-20260913-002",
+      "customer": "ananya.iyer@example.com",
+      "status": "paid",
+      "travel_start": "2026-09-12",
+      "travel_end": "2026-09-14",
+      "adults": 1,
+      "children": 0,
+      "currency": "INR",
+      "subtotal": "26500",
+      "discount": "0",
+      "tax": "0",
+      "total": "26500",
+      "deposit_due": "0",
+      "notes": "Panna Deep Dive 3D/2N — photographer. Boat ride water-level dependent.",
+      "source": "whatsapp",
+      "items": [
+        {
+          "item_type": "safari_schedule",
+          "resource": { "pwt_safari_schedule": "Evening Safari — Madla Gate — 12 Sep 2026" },
+          "name": "Evening Safari — Madla Gate (1 guest)",
+          "quantity": 1,
+          "start_date": "2026-09-12",
+          "unit_price": "5500",
+          "total": "5500",
+          "cost": "5200",
+          "vendor": "Himgiri Gypsy Safari Fleet",
+          "meta": { "slot": "evening" }
+        },
+        {
+          "item_type": "safari_schedule",
+          "resource": { "pwt_safari_schedule": "Morning Safari — Madla Gate — 13 Sep 2026" },
+          "name": "Morning Safari — Madla Gate (1 guest)",
+          "quantity": 1,
+          "start_date": "2026-09-13",
+          "unit_price": "5500",
+          "total": "5500",
+          "cost": "5200",
+          "vendor": "Himgiri Gypsy Safari Fleet",
+          "meta": { "slot": "morning" }
+        },
+        {
+          "item_type": "safari_schedule",
+          "resource": { "pwt_safari_schedule": "Ken River Boat Safari — 13 Sep 2026" },
+          "name": "Ken River Boat Safari (1 guest)",
+          "quantity": 1,
+          "start_date": "2026-09-13",
+          "unit_price": "4500",
+          "total": "4500",
+          "cost": "4200",
+          "vendor": "Himgiri Gypsy Safari Fleet",
+          "meta": { "permission": "forest-department pending" }
+        },
+        {
+          "item_type": "room_unit",
+          "resource": { "pwt_room_unit": "Ken Vihar Premium Tent T1" },
+          "name": "Ken Vihar Premium Tent T1 — 2 nights",
+          "quantity": 2,
+          "start_date": "2026-09-12",
+          "end_date": "2026-09-14",
+          "unit_price": "5500",
+          "total": "11000",
+          "cost": "7000",
+          "vendor": "Ken Vihar Jungle Lodge",
+          "meta": { "meal_plan": "CP" }
+        }
+      ],
+      "travelers": [
+        { "first_name": "Ananya", "last_name": "Iyer", "date_of_birth": "1991-11-05", "nationality": "Indian", "email": "ananya.iyer@example.com", "phone": "+91 98450 44556" }
+      ],
+      "payments": [
+        { "gateway": "razorpay", "transaction_type": "payment", "transaction_id": "pay_RZP_20260913_0002", "status": "completed", "amount": "26500", "currency": "INR", "reference": "DEP-002", "paid_at": "2026-08-22 18:45:00", "meta": { "method": "upi" } }
+      ]
+    },
+    {
+      "booking_number": "PWT-20260914-003",
+      "customer": "james.carter@example.com",
+      "status": "pending",
+      "travel_start": "2026-09-13",
+      "travel_end": "2026-09-14",
+      "adults": 2,
+      "children": 0,
+      "currency": "INR",
+      "subtotal": "9500",
+      "discount": "0",
+      "tax": "0",
+      "total": "9500",
+      "deposit_due": "5000",
+      "notes": "Evening safari + Hinouta riverside stay. Awaiting e-permit confirmation.",
+      "source": "web",
+      "items": [
+        {
+          "item_type": "safari_schedule",
+          "resource": { "pwt_safari_schedule": "Evening Safari — Madla Gate — 13 Sep 2026" },
+          "name": "Evening Safari — Madla Gate (2 guests)",
+          "quantity": 2,
+          "start_date": "2026-09-13",
+          "unit_price": "5500",
+          "total": "5500",
+          "cost": "5200",
+          "vendor": "Himgiri Gypsy Safari Fleet",
+          "meta": { "slot": "evening" }
+        },
+        {
+          "item_type": "room_unit",
+          "resource": { "pwt_room_unit": "Hinouta River View Room 1" },
+          "name": "Hinouta River View Room 1 — 1 night",
+          "quantity": 1,
+          "start_date": "2026-09-13",
+          "end_date": "2026-09-14",
+          "unit_price": "4000",
+          "total": "4000",
+          "cost": "2800",
+          "vendor": "Hinouta Riverside Stay",
+          "meta": { "meal_plan": "HB" }
+        }
+      ],
+      "travelers": [
+        { "first_name": "James", "last_name": "Carter", "date_of_birth": "1982-05-30", "nationality": "British", "email": "james.carter@example.com", "phone": "+44 7700 900123" }
+      ],
+      "payments": []
+    },
+    {
+      "booking_number": "PWT-20260914-004",
+      "customer": "priya.sharma@example.com",
+      "status": "confirmed",
+      "travel_start": "2026-09-12",
+      "travel_end": "2026-09-13",
+      "adults": 2,
+      "children": 0,
+      "currency": "INR",
+      "subtotal": "8500",
+      "discount": "0",
+      "tax": "0",
+      "total": "8500",
+      "deposit_due": "3000",
+      "notes": "Group canter morning slot + budget cottage.",
+      "source": "referral",
+      "items": [
+        {
+          "item_type": "safari_schedule",
+          "resource": { "pwt_safari_schedule": "Group Canter Safari — 12 Sep 2026" },
+          "name": "Group Canter Safari — Madla Gate (2 seats)",
+          "quantity": 2,
+          "start_date": "2026-09-12",
+          "unit_price": "3000",
+          "total": "6000",
+          "cost": "4000",
+          "vendor": "Himgiri Gypsy Safari Fleet",
+          "meta": { "vehicle": "Canter 20-Seater — Group Safari" }
+        },
+        {
+          "item_type": "room_unit",
+          "resource": { "pwt_room_unit": "Panna Gate View Standard Cottage 1" },
+          "name": "Panna Gate View Standard Cottage 1 — 1 night",
+          "quantity": 1,
+          "start_date": "2026-09-12",
+          "end_date": "2026-09-13",
+          "unit_price": "2500",
+          "total": "2500",
+          "cost": "1500",
+          "vendor": "Panna Gate View Cottages",
+          "meta": { "meal_plan": "BB" }
+        }
+      ],
+      "travelers": [
+        { "first_name": "Priya", "last_name": "Sharma", "date_of_birth": "1993-02-18", "nationality": "Indian", "email": "priya.sharma@example.com", "phone": "+91 99270 55678" },
+        { "first_name": "Amit", "last_name": "Sharma", "date_of_birth": "1991-09-09", "nationality": "Indian" }
+      ],
+      "payments": [
+        { "gateway": "razorpay", "transaction_type": "payment", "transaction_id": "pay_RZP_20260914_0004", "status": "completed", "amount": "3000", "currency": "INR", "reference": "DEP-004", "paid_at": "2026-08-25 09:15:00", "meta": { "method": "upi" } }
+      ]
+    }
+  ],
+  "settlements": [
+    {
+      "vendor": "Ken Vihar Jungle Lodge",
+      "booking": "PWT-20260912-001",
+      "amount": "5000",
+      "currency": "INR",
+      "reference": "UTR-9001122334",
+      "settled_at": "2026-08-28 11:00:00",
+      "notes": "Partial net payment — balance on final invoice after stay."
+    },
+    {
+      "vendor": "Himgiri Gypsy Safari Fleet",
+      "booking": "PWT-20260912-001",
+      "amount": "12000",
+      "currency": "INR",
+      "reference": "NEFT-5566778899",
+      "settled_at": "2026-09-05 14:20:00",
+      "notes": "Gypsy + driver fees, September week 1."
+    },
+    {
+      "vendor": "Panna Gate View Cottages",
+      "booking": "PWT-20260914-004",
+      "amount": "1500",
+      "currency": "INR",
+      "reference": "UTR-6677889900",
+      "settled_at": "2026-09-10 10:00:00",
+      "notes": "Standard cottage net, settled in full."
+    }
+  ]
+}

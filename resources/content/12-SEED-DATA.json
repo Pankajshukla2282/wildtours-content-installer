@@ -8,7 +8,7 @@
       "pwt_room_type amenities uses exact checkbox values: ac, wifi, tv, hot_water, balcony, parking; meal_plans: room_only, breakfast, half_board, full_board.",
       "pwt_restaurant meal_types: breakfast, lunch, dinner, snacks; price_range: budget, mid, premium.",
       "pwt_local_trip difficulty: easy, moderate, hard.",
-      "Post-object fields (pwt_room_type.resort_id, pwt_room_unit.room_type_id, pwt_safari_schedule.safari_id/vehicle_id) use { \"<post_type>\": \"Title\" } and are resolved to post IDs at import time — import order follows dependencies (resort before room_type before room_unit; safari/vehicle before safari_schedule).",
+      "Post-object fields (pwt_room_type.resort_id, pwt_room_unit.room_type_id, pwt_safari_schedule.safari_id\/vehicle_id, pwt_package.resorts) use { \"<post_type>\": \"Title\" } (single value) or [ { \"<post_type>\": \"Title\" }, ... ] (relationship list) and are resolved to post IDs at import time — import order follows dependencies (resort before room_type before room_unit; safari\/vehicle before safari_schedule).",
       "Safari schedule service_dates are sample launch dates; replace with real operating dates (or let the booking-calendar sync / manual provisioning build them).",
       "pwt_package days_itinerary is an array of {title, description, photo}; expand to ACF repeater rows (days_itinerary_count + days_itinerary_0_title etc.) at import time.",
       "Gallery records are placeholders — attach images via the media library after import.",
@@ -247,6 +247,7 @@
       "meta": {
         "safari_code": "PWT-SAF-MADLA-M",
         "safari_type": "jeep",
+        "inclusions": "Naturalist-guided jeep, forest e-permit assistance, gate coordination, bottled water",
         "duration": "4 to 5 hours",
         "shift": "morning",
         "meeting_point": "Madla Gate Reporting Point",
@@ -267,6 +268,7 @@
       "meta": {
         "safari_code": "PWT-SAF-MADLA-E",
         "safari_type": "jeep",
+        "inclusions": "Naturalist-guided jeep, forest e-permit assistance, gate coordination, bottled water",
         "duration": "4 to 5 hours",
         "shift": "evening",
         "meeting_point": "Madla Gate Reporting Point",
@@ -287,6 +289,7 @@
       "meta": {
         "safari_code": "PWT-SAF-HINAUTA",
         "safari_type": "jeep",
+        "inclusions": "Naturalist-guided jeep, forest e-permit assistance, gate coordination, bottled water",
         "duration": "4 to 5 hours",
         "shift": "morning",
         "meeting_point": "Hinouta Gate Reporting Point",
@@ -307,6 +310,7 @@
       "meta": {
         "safari_code": "PWT-SAF-BOAT",
         "safari_type": "private",
+        "inclusions": "Guide, life jackets, forest-department permission coordination",
         "duration": "2 hours",
         "shift": "evening",
         "meeting_point": "Ken River Launch Point (seasonal)",
@@ -325,6 +329,7 @@
       "meta": {
         "safari_code": "PWT-SAF-AKOLA",
         "safari_type": "jeep",
+        "inclusions": "Naturalist-guided jeep, forest e-permit assistance (buffer), gate coordination",
         "duration": "4 to 5 hours",
         "shift": "evening",
         "meeting_point": "Akola Gate Reporting Point",
@@ -334,6 +339,27 @@
       "terms": {
         "pwt_safari_zone": ["Akola Buffer Zone"],
         "pwt_vehicle_type": ["Open Gypsy (6 Seater)"],
+        "pwt_season": ["Peak (Nov-Feb)", "Shoulder (Mar-Jun)"]
+      }
+    },
+    {
+      "title": "Group Canter Safari — Madla Gate",
+      "excerpt": "Zone-approved 20-seater canter for larger groups and budget travellers.",
+      "content": "Shared canter ride for bigger groups on zone-approved routes. Route availability is limited — we confirm the current zone approval before quoting.",
+      "status": "publish",
+      "meta": {
+        "safari_code": "PWT-SAF-CANTER",
+        "safari_type": "canter",
+        "inclusions": "Zone-approved canter ride, forest e-permit assistance, gate coordination",
+        "duration": "4 to 5 hours",
+        "shift": "morning",
+        "meeting_point": "Madla Gate Reporting Point",
+        "regular_price": "6000",
+        "offer_price": "5500"
+      },
+      "terms": {
+        "pwt_safari_zone": ["Madla Gate Core Zone"],
+        "pwt_vehicle_type": ["Canter (20 Seater)"],
         "pwt_season": ["Peak (Nov-Feb)", "Shoulder (Mar-Jun)"]
       }
     }
@@ -359,6 +385,7 @@
         "minimum_person": "2",
         "maximum_person": "6",
         "booking_enabled": "1",
+        "resorts": [ { "pwt_resort": "Ken Vihar Jungle Lodge" } ],
         "inclusions": "2 jeep safaris (forest e-permit + guide), 1 night premium lodge AP, lodge-gate transfers, safari coordination",
         "exclusions": "Rail/air tickets, highway transfers, camera fees, tips & personal expenses",
         "days_itinerary": [
@@ -400,6 +427,7 @@
         "minimum_person": "2",
         "maximum_person": "6",
         "booking_enabled": "1",
+        "resorts": [ { "pwt_resort": "Ken Vihar Jungle Lodge" }, { "pwt_resort": "Hinouta Riverside Stay" } ],
         "inclusions": "3 jeep safaris + 1 seasonal Ken River boat safari (permits + guide), 2 nights premium lodge AP, lodge-gate transfers, safari coordination",
         "exclusions": "Rail/air tickets, highway transfers, camera fees, buffer night-drive (where available), tips & personal expenses",
         "days_itinerary": [
@@ -423,6 +451,58 @@
       "terms": {
         "pwt_package_category": ["Couple Getaway Packages", "Weekend Tours"],
         "pwt_activity": ["Tiger Safari", "Bird Watching"],
+        "pwt_season": ["Peak (Nov-Feb)", "Shoulder (Mar-Jun)"]
+      }
+    },
+    {
+      "title": "Panna + Khajuraho Heritage Combo — 4D/3N",
+      "subtitle": "Safari + UNESCO heritage loop",
+      "package_code": "PWT-HERITAGE-4D3N",
+      "excerpt": "Three safaris, the Khajuraho Western Temples, three nights and full coordination across both gates.",
+      "content": "Day 1 arrival + evening safari; Day 2 morning safari + guided Khajuraho afternoon (~35 km); Day 3 Hinouta morning safari + Raneh Falls stop; Day 4 departure. One quote covering permits, gypsy, guide, stay (AP) and transfers.",
+      "status": "publish",
+      "meta": {
+        "duration": "4 Days 3 Nights",
+        "days": "4",
+        "nights": "3",
+        "regular_price": "26000",
+        "offer_price": "19500",
+        "child_price": "12000",
+        "peak_multiplier": "1.2",
+        "shoulder_multiplier": "1",
+        "monsoon_multiplier": "0.85",
+        "minimum_person": "2",
+        "maximum_person": "6",
+        "booking_enabled": "1",
+        "resorts": [ { "pwt_resort": "Ken Vihar Jungle Lodge" }, { "pwt_resort": "Hinouta Riverside Stay" } ],
+        "inclusions": "3 jeep safaris (forest e-permit + guide), 1 guided Khajuraho heritage tour (entry tickets + guide), 3 nights stay AP, lodge-gate transfers, Raneh Falls stop, safari coordination",
+        "exclusions": "Rail/air tickets, highway transfers, camera fees, tips & personal expenses",
+        "days_itinerary": [
+          {
+            "title": "Day 1 — Arrival & evening safari",
+            "description": "Check-in near Madla gate. Evening core-zone jeep safari (summer 15:30 / winter 14:30 slot). Dinner at lodge.",
+            "photo": ""
+          },
+          {
+            "title": "Day 2 — Heritage & jungle day",
+            "description": "Morning jeep safari. Afternoon drive to Khajuraho for the guided Western Temples tour (entry tickets included).",
+            "photo": ""
+          },
+          {
+            "title": "Day 3 — Hinouta & Raneh loop",
+            "description": "Morning safari via Hinouta Gate. Return leg stops at Raneh Falls for the Ken gorge viewpoints.",
+            "photo": ""
+          },
+          {
+            "title": "Day 4 — Departure",
+            "description": "Breakfast, check-out, onward transfer to Panna town, Satna or Khajuraho.",
+            "photo": ""
+          }
+        ]
+      },
+      "terms": {
+        "pwt_package_category": ["Weekend Tours"],
+        "pwt_activity": ["Tiger Safari", "Heritage Excursion", "Bird Watching"],
         "pwt_season": ["Peak (Nov-Feb)", "Shoulder (Mar-Jun)"]
       }
     }
@@ -533,6 +613,23 @@
         "pwt_vehicle_type": ["Canter (20 Seater)"]
       },
       "profiles": ["full"]
+    },
+    {
+      "title": "SUV Transfer — Khajuraho / Airport",
+      "excerpt": "AC SUV for lodge, railway and Khajuraho airport transfers.",
+      "content": "Comfortable AC SUV for transfers between Madla gate lodges, Panna town, Satna railhead and Khajuraho airport. Drives 1.5–3 hours depending on route.",
+      "status": "publish",
+      "meta": {
+        "vehicle_type": "car",
+        "capacity": "4",
+        "price_per_day": "5500",
+        "is_ac": "1",
+        "notes": "Door-to-door transfers; driver stays with the vehicle."
+      },
+      "terms": {
+        "pwt_vehicle_type": ["SUV Transfer"]
+      },
+      "profiles": ["full"]
     }
   ],
   "pwt_faq": [
@@ -615,7 +712,13 @@
       "excerpt": "",
       "content": "Our 3-day family tour was coordinated perfectly. Safari timing, stay, and transfers were all smooth and professional.",
       "status": "publish",
-      "meta": {},
+      "meta": {
+        "guest_name": "Rohit Malhotra",
+        "guest_city": "Jaipur",
+        "rating": "5",
+        "travel_month": "February",
+        "featured": "1"
+      },
       "terms": {},
       "profiles": ["full"]
     },
@@ -624,7 +727,13 @@
       "excerpt": "",
       "content": "The e-permit process felt invisible — they handled IDs, quotas and gate reporting. We just showed up and enjoyed the drives.",
       "status": "publish",
-      "meta": {},
+      "meta": {
+        "guest_name": "Ananya Iyer",
+        "guest_city": "Bengaluru",
+        "rating": "5",
+        "travel_month": "March",
+        "featured": "1"
+      },
       "terms": {},
       "profiles": ["full"]
     },
@@ -633,7 +742,13 @@
       "excerpt": "",
       "content": "They never promised a tiger, and we still saw two. Clear quotes, no hidden charges. Exactly the transparency you want.",
       "status": "publish",
-      "meta": {},
+      "meta": {
+        "guest_name": "James Carter",
+        "guest_city": "New Delhi",
+        "rating": "5",
+        "travel_month": "January",
+        "featured": "0"
+      },
       "terms": {},
       "profiles": ["full"]
     }
@@ -820,7 +935,8 @@
   "pwt_room_unit": [
     {
       "title": "Ken Vihar Deluxe Cottage 101",
-      "content": "",
+      "excerpt": "AC deluxe cottage on the lodge grounds.",
+      "content": "Deluxe cottage with attached bath, AC, private balcony and full-board dining at the lodge restaurant. Garden access, walkable to the lawns and pickup point.",
       "status": "publish",
       "meta": {
         "room_type_id": { "pwt_room_type": "Ken Vihar Deluxe Cottage" },
@@ -833,7 +949,8 @@
     },
     {
       "title": "Ken Vihar Deluxe Cottage 102",
-      "content": "",
+      "excerpt": "AC deluxe cottage with garden access.",
+      "content": "Twin of cottage 101 — AC, private balcony, attached bath and full-board dining. Quiet garden-facing position near the lawns.",
       "status": "publish",
       "meta": {
         "room_type_id": { "pwt_room_type": "Ken Vihar Deluxe Cottage" },
@@ -846,7 +963,8 @@
     },
     {
       "title": "Ken Vihar Premium Tent T1",
-      "content": "",
+      "excerpt": "Tented suite on the lodge lawns with attached bath.",
+      "content": "Glamping-style tented suite with deck seating, attached bath and shared dining — a comfortable middle ground between camping and hotel comfort.",
       "status": "publish",
       "meta": {
         "room_type_id": { "pwt_room_type": "Ken Vihar Premium Tent" },
@@ -859,7 +977,8 @@
     },
     {
       "title": "Panna Gate View Standard Cottage 1",
-      "content": "",
+      "excerpt": "Budget cottage with attached bath and basic meals.",
+      "content": "Clean, well-kept cottage two km from Madla gate with early-morning safari departures and packed breakfast on request.",
       "status": "publish",
       "meta": {
         "room_type_id": { "pwt_room_type": "Panna Gate View Standard Cottage" },
@@ -872,7 +991,8 @@
     },
     {
       "title": "Panna Gate View Budget Room 2",
-      "content": "",
+      "excerpt": "No-frills room with shared verandah.",
+      "content": "Compact room with attached bath and shared verandah. Meals available at the in-house kitchen on request.",
       "status": "publish",
       "meta": {
         "room_type_id": { "pwt_room_type": "Panna Gate View Budget Room" },
@@ -885,7 +1005,8 @@
     },
     {
       "title": "Tiger Den Luxury Suite 201",
-      "content": "",
+      "excerpt": "Premium suite with pool access and curated dining.",
+      "content": "Spacious suite with pool access, curated dining and concierge-style service. Nine km from Madla gate with private transfers included.",
       "status": "publish",
       "meta": {
         "room_type_id": { "pwt_room_type": "Tiger Den Luxury Suite" },
@@ -898,7 +1019,8 @@
     },
     {
       "title": "Tiger Den Pool View Villa 202",
-      "content": "",
+      "excerpt": "Largest villa with poolside deck.",
+      "content": "Villa with pool-facing deck, sleeping up to four — best for honeymoons and premium wildlife weeks.",
       "status": "publish",
       "meta": {
         "room_type_id": { "pwt_room_type": "Tiger Den Pool View Villa" },
@@ -911,7 +1033,8 @@
     },
     {
       "title": "Hinouta River View Room 1",
-      "content": "",
+      "excerpt": "Riverside room one km from Hinouta gate.",
+      "content": "Calm riverside room with balcony, full meals and pickup/drop on the Panna–Khajuraho road.",
       "status": "publish",
       "meta": {
         "room_type_id": { "pwt_room_type": "Hinouta River View Room" },
@@ -924,7 +1047,8 @@
     },
     {
       "title": "Hinouta Family Room 2",
-      "content": "",
+      "excerpt": "Two-room family unit near the river.",
+      "content": "Two interconnected rooms sleeping four, with a river-facing verandah and full-board option.",
       "status": "publish",
       "meta": {
         "room_type_id": { "pwt_room_type": "Hinouta Family Room" },
@@ -940,7 +1064,7 @@
     {
       "title": "Morning Safari — Madla Gate — 12 Sep 2026",
       "excerpt": "Morning core-zone slot from Madla Gate.",
-      "content": "",
+      "content": "Reporting 45 minutes before gate opening (summer 05:30 / winter 06:30) at the Madla Gate reporting point. Open gypsy, six guests.",
       "status": "publish",
       "meta": {
         "safari_id": { "pwt_safari": "Morning Jeep Safari — Madla Gate" },
@@ -956,7 +1080,7 @@
     {
       "title": "Evening Safari — Madla Gate — 12 Sep 2026",
       "excerpt": "Evening core-zone slot from Madla Gate.",
-      "content": "",
+      "content": "Reporting 45 minutes before gate opening (summer 15:30 / winter 14:30) at the Madla Gate reporting point. Warm light, relaxed pace.",
       "status": "publish",
       "meta": {
         "safari_id": { "pwt_safari": "Evening Jeep Safari — Madla Gate" },
@@ -972,7 +1096,7 @@
     {
       "title": "Hinouta Gate Safari — 12 Sep 2026",
       "excerpt": "Core-zone slot entered from the Khajuraho highway.",
-      "content": "",
+      "content": "Core-zone slot entered from the Panna–Khajuraho highway (~35 km from Khajuraho). Less saturated on many days.",
       "status": "publish",
       "meta": {
         "safari_id": { "pwt_safari": "Hinouta Gate Safari — Khajuraho Route" },
@@ -988,7 +1112,7 @@
     {
       "title": "Morning Safari — Madla Gate — 13 Sep 2026",
       "excerpt": "Morning core-zone slot from Madla Gate.",
-      "content": "",
+      "content": "Reporting 45 minutes before gate opening (summer 05:30 / winter 06:30) at the Madla Gate reporting point. Open gypsy, six guests.",
       "status": "publish",
       "meta": {
         "safari_id": { "pwt_safari": "Morning Jeep Safari — Madla Gate" },
@@ -1004,7 +1128,7 @@
     {
       "title": "Evening Safari — Madla Gate — 13 Sep 2026",
       "excerpt": "Evening core-zone slot from Madla Gate.",
-      "content": "",
+      "content": "Reporting 45 minutes before gate opening (summer 15:30 / winter 14:30) at the Madla Gate reporting point. Warm light, relaxed pace.",
       "status": "publish",
       "meta": {
         "safari_id": { "pwt_safari": "Evening Jeep Safari — Madla Gate" },
@@ -1020,7 +1144,7 @@
     {
       "title": "Jungle Safari (Buffer) — Akola — 13 Sep 2026",
       "excerpt": "Quieter buffer-zone slot around Akola.",
-      "content": "",
+      "content": "Quieter buffer-zone slot around Akola — strong for leopards, sambar, chital and a long list of birds. Evening drive.",
       "status": "publish",
       "meta": {
         "safari_id": { "pwt_safari": "Jungle Safari (Buffer) — Akola" },
@@ -1036,7 +1160,7 @@
     {
       "title": "Ken River Boat Safari — 13 Sep 2026",
       "excerpt": "Seasonal guided boat ride on the Ken.",
-      "content": "",
+      "content": "Seasonal guided boat ride past gharials, gorges and nesting vulture cliffs. Water-level dependent; we confirm forest-department permission before booking.",
       "status": "publish",
       "meta": {
         "safari_id": { "pwt_safari": "Ken River Boat Safari (Seasonal)" },
@@ -1047,6 +1171,22 @@
         "schedule_status": "open"
       },
       "terms": { "pwt_activity": ["Bird Watching"] }
+    },
+    {
+      "title": "Group Canter Safari — 12 Sep 2026",
+      "excerpt": "Zone-approved 20-seater canter slot from Madla Gate.",
+      "content": "Group canter slot from Madla Gate. Reporting 45 minutes before gate opening; shared 20-seater on zone-approved routes.",
+      "status": "publish",
+      "meta": {
+        "safari_id": { "pwt_safari": "Group Canter Safari — Madla Gate" },
+        "service_date": "2026-09-12",
+        "shift": "morning",
+        "vehicle_id": { "pwt_vehicle": "Canter 20-Seater — Group Safari" },
+        "capacity": "20",
+        "entry_gate": "Madla Gate",
+        "schedule_status": "open"
+      },
+      "terms": { "pwt_safari_zone": ["Madla Gate Core Zone"] }
     }
   ],
   "pwt_restaurant": [
@@ -1195,7 +1335,7 @@
     {
       "title": "Tiger Sightings — Core Zone",
       "excerpt": "Our favourite tiger frames from the Madla and Hinouta routes.",
-      "content": "A curated gallery of core-zone tiger sightings. Add photographs via the media library after import.",
+      "content": "Classic Panna frames from the Madla and Hinouta routes — a resident tigress on a ridge, cubs crossing a forest track, and vultures drifting over the Ken cliffs. Add photographs via the media library after import.",
       "status": "publish",
       "meta": {},
       "terms": {}
@@ -1203,7 +1343,7 @@
     {
       "title": "Ken River & Gharial Gallery",
       "excerpt": "Boating, gharials and river sunsets on the Ken.",
-      "content": "Basking gharials, nesting vultures and sandstone gorges. Add photographs via the media library after import.",
+      "content": "Basking gharials, nesting vultures and sandstone gorges turning gold at sunset — a short, flat photographic essay of the Ken. Add photographs via the media library after import.",
       "status": "publish",
       "meta": {},
       "terms": {}
@@ -1211,7 +1351,7 @@
     {
       "title": "Lodges & Stays",
       "excerpt": "Rooms, pools and dining at our partner properties.",
-      "content": "Room types, pool villas and dining spaces across our partner stays. Add photographs via the media library after import.",
+      "content": "Room types, pool villas and dining spaces across our partner stays at Madla and Hinouta. Add photographs via the media library after import.",
       "status": "publish",
       "meta": {},
       "terms": {}

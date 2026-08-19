@@ -196,6 +196,14 @@ final class SeedImporter
                 continue;
             }
 
+            if (is_array($value) && $this->isReferenceList($value)) {
+                $ids = $this->resolveReferenceList($value);
+                if (!empty($ids)) {
+                    update_post_meta($postId, $key, $ids);
+                }
+                continue;
+            }
+
             if (is_array($value) && $this->isListOfRows($value)) {
                 update_post_meta($postId, $key, $value);
                 $this->writeRepeaterIndexed($postId, $key, $value);
@@ -217,6 +225,48 @@ final class SeedImporter
 
             update_post_meta($postId, $key, (string) $value);
         }
+    }
+
+    /**
+     * Detect a list of post-object references, e.g.
+     * [ { "pwt_resort": "Ken Vihar Jungle Lodge" }, { "pwt_resort": "Hinouta Riverside Stay" } ].
+     *
+     * @param array<int, mixed> $value
+     */
+    private function isReferenceList(array $value): bool
+    {
+        if ($value === []) {
+            return false;
+        }
+
+        foreach ($value as $row) {
+            if (!is_array($row) || !$this->isReference($row)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * Resolve a list of post-object references to their post IDs.
+     *
+     * @param array<int, array<string, mixed>> $value
+     *
+     * @return int[]
+     */
+    private function resolveReferenceList(array $value): array
+    {
+        $ids = [];
+
+        foreach ($value as $row) {
+            $id = $this->resolveReferenceId($row);
+            if ($id > 0) {
+                $ids[] = $id;
+            }
+        }
+
+        return $ids;
     }
 
     /**

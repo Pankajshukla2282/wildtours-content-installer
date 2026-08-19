@@ -21,6 +21,7 @@
 | `11-CTA-WIDGETS-TRUST-BADGES.md` | Floating inquiry widget, sticky bar, trust badges, microcopy |
 | `12-SCHEMA-JSONLD.md` | LocalBusiness, TouristAttraction, FAQPage, BreadcrumbList, Service schema |
 | `12-SEED-DATA.json` | Machine-readable content import matching plugin CPT/SCF fields |
+| `12-OPERATIONS-DATA.json` | Sample operational rows for the plugin's custom tables (customers, vendors, vendor rate cards, sell rates, availability, bookings + items/travelers/payments, settlements) — imported by `DatabaseSeeder` right after the seed step |
 | `13-EXPERIENCES.md` | **Experiences hub + 9 sub-pages** (merged hint content) — paste-ready Gutenberg pages with contextual images |
 | `14-SAFARIS.md` | **Safaris hub + Jungle Safari (Core/Buffer) + Boating** — supersedes `03`/`04` |
 | `15-STAYS.md` | **Stays hub + Home Stay / Hotel / Resort** — supersedes `05` |
@@ -55,10 +56,11 @@
 2. **Import media + pages** — WordPress Importer → `pannawildtours.WordPress.2026-08-11.xml`. This restores all 125 attachments and legacy pages. Set `Settings → Reading → static front page = Home`.
 3. **Apply `01-URL-MATRIX-NAVIGATION.md`** — create the new static pages/slugs (paste block HTML from files `02`–`09`, `13`–`16`), then set up 301 redirects for every legacy slug (use `safe_redirect_manager`-style plugin, `.htaccess`/Nginx rules, or the child theme's `template_redirect` block in `functions.php`).
 4. **Import PWT content** — run `12-SEED-DATA.json` through the plugin's seed importer (`Admin → Content Forms → Seed Starter Content`) or the WP importer; alternatively paste each `pwt_*` record via `Admin → PWT Quick Content Forms`. Verify taxonomies attach correctly (`pwt_safari_zone` = Madla/Hinouta/Akola).
-5. **Apply site settings** — plugin Settings → company name, `contact_phone = +919921841234`, `whatsapp_number = 919921841234`, `contact_email = support@pannawildtour.com`, `company_address = Madla Gate, Madla, Panna, Madhya Pradesh, India`, hero title/subtitle from `02-HOMEPAGE.md`.
-6. **Add schema + CTA** — paste JSON-LD blocks from `12-SCHEMA-JSONLD.md` into a header-insert (or the plugin's Settings → Custom Code). Add the floating widget markup from `11-CTA-WIDGETS-TRUST-BADGES.md` to the child theme footer (or via a widget).
-7. **Upload media per `10-MEDIA-SPEC-SHEET.md`** — replace placeholders with real images (WebP, <150 KB hero crops), matching alt text exactly.
-8. **QA sweep** — walk every link in `01-URL-MATRIX-NAVIGATION.md`; run the zero-404 checklist at the end of that file; verify `[pwt_booking_form]`, `[pwt_faq]`, `[pwt_packages]`, `[pwt_safaris]`, `[pwt_destinations]`, `[pwt_testimonials]`, `[pwt_reviews]`, `[pwt_contact_card]`, `[pwt_availability_calendar]` all render.
+5. **Import operational sample data** — `12-OPERATIONS-DATA.json` via the installer's `DatabaseSeeder` (runs automatically as part of `ContentInstaller`). Seeds vendors (hotel/vehicle/guide/restaurant/housekeeping/laundry/other), net rate cards, sell rates, availability rows, 4 demo bookings with items/travelers/payments, and settlements. All rows are deduped on re-runs; cross-references resolve by CPT title / vendor name / booking number.
+6. **Apply site settings** — plugin Settings → company name, `contact_phone = +919921841234`, `whatsapp_number = 919921841234`, `contact_email = support@pannawildtour.com`, `company_address = Madla Gate, Madla, Panna, Madhya Pradesh, India`, hero title/subtitle from `02-HOMEPAGE.md`.
+7. **Add schema + CTA** — paste JSON-LD blocks from `12-SCHEMA-JSONLD.md` into a header-insert (or the plugin's Settings → Custom Code). Add the floating widget markup from `11-CTA-WIDGETS-TRUST-BADGES.md` to the child theme footer (or via a widget).
+8. **Upload media per `10-MEDIA-SPEC-SHEET.md`** — replace placeholders with real images (WebP, <150 KB hero crops), matching alt text exactly.
+9. **QA sweep** — walk every link in `01-URL-MATRIX-NAVIGATION.md`; run the zero-404 checklist at the end of that file; verify `[pwt_booking_form]`, `[pwt_faq]`, `[pwt_packages]`, `[pwt_safaris]`, `[pwt_destinations]`, `[pwt_testimonials]`, `[pwt_reviews]`, `[pwt_contact_card]`, `[pwt_availability_calendar]` all render.
 
 ---
 
@@ -104,5 +106,6 @@
 | Safaris hub + Core/Buffer/Boating sub-pages | `14-SAFARIS.md` (supersedes `03`, `04`) |
 | Stays hub + Home Stay/Hotel/Resort sub-pages | `15-STAYS.md` (supersedes `05`) |
 | Machine-readable seed data | `12-SEED-DATA.json` |
+| Operational sample data (vendors, rates, availability, bookings, settlements) | `12-OPERATIONS-DATA.json` |
 
 _All placeholder text (Lorem Ipsum) has been eliminated. Every page below contains realistic, accurate Panna travel copy._

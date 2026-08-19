@@ -10,7 +10,8 @@ defined('ABSPATH') || exit;
  * Orchestrates a full content install:
  *  1. pages + blog posts from the markdown blueprints
  *  2. taxonomies + CPT records + site settings from 12-SEED-DATA.json
- *  3. primary navigation menu + header CTA
+ *  3. operational rows (customers, vendors, rates, availability, bookings) from 12-OPERATIONS-DATA.json
+ *  4. primary navigation menu + header CTA
  *
  * Every step is idempotent, so the whole run can be repeated safely.
  */
@@ -46,14 +47,16 @@ final class ContentInstaller
 
         $results['pages'] = (new PageImporter())->import((new BlueprintParser())->parseAll());
         $results['seed'] = (new SeedImporter())->import();
+        $results['operations'] = (new DatabaseSeeder())->import();
         $results['menu'] = (new MenuBuilder())->apply();
 
         $results['summary'] = [
-            'pages_created' => count(array_filter($results['pages'], static fn (array $p) => $p['action'] === 'created')),
-            'pages_updated' => count(array_filter($results['pages'], static fn (array $p) => $p['action'] === 'updated')),
-            'seed_records'  => count($results['seed']),
-            'menu_items'    => count($results['menu']),
-            'elapsed_ms'    => (int) round((microtime(true) - $start) * 1000),
+            'pages_created'    => count(array_filter($results['pages'], static fn (array $p) => $p['action'] === 'created')),
+            'pages_updated'    => count(array_filter($results['pages'], static fn (array $p) => $p['action'] === 'updated')),
+            'seed_records'     => count($results['seed']),
+            'operations_rows'  => count($results['operations']),
+            'menu_items'       => count($results['menu']),
+            'elapsed_ms'       => (int) round((microtime(true) - $start) * 1000),
         ];
 
         update_option('pwtci_last_run', [

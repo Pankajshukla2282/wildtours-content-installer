@@ -25,6 +25,7 @@ require_once PWTCI_PLUGIN_DIR . 'app/AttachmentResolver.php';
 require_once PWTCI_PLUGIN_DIR . 'app/BlueprintParser.php';
 require_once PWTCI_PLUGIN_DIR . 'app/PageImporter.php';
 require_once PWTCI_PLUGIN_DIR . 'app/SeedImporter.php';
+require_once PWTCI_PLUGIN_DIR . 'app/DatabaseSeeder.php';
 require_once PWTCI_PLUGIN_DIR . 'app/MenuBuilder.php';
 require_once PWTCI_PLUGIN_DIR . 'app/Manifest.php';
 require_once PWTCI_PLUGIN_DIR . 'app/Rollback.php';
