@@ -7,7 +7,7 @@ namespace PWT\ContentInstaller;
 defined('ABSPATH') || exit;
 
 /**
- * Imports taxonomies, CPT records and site settings from 12-SEED-DATA.json.
+ * Imports taxonomies, CPT records, site settings and the navigation tree from 12-SEED-DATA.json.
  *
  * Mirror of the admin ContentSeeder conventions (wp_insert_post +
  * update_post_meta + wp_set_object_terms) but idempotent by title, and it also
@@ -59,6 +59,7 @@ final class SeedImporter
 
         $this->importTaxonomies((array) ($data['taxonomies'] ?? []));
         $this->importSite((array) ($data['site'] ?? []));
+        $this->importNavigation((array) ($data['navigation'] ?? []));
 
         foreach (self::SUPPORTED_TYPES as $postType) {
             if (!post_type_exists($postType)) {
@@ -131,6 +132,75 @@ final class SeedImporter
         }
 
         update_option('pwt_settings', $settings);
+    }
+
+    /**
+     * Write the "PWT Navigation" options page in the SCF/ACF options storage
+     * format (options_nav_items = count + indexed subfields, plus the header
+     * CTA and top bar options). The plugin renderer (PWT\Frontend\Navigation)
+     * and the admin options page both read this format, so the tree is
+     * immediately visible and editable after import. Nav is config, so this is
+     * an overwrite (idempotent by nature).
+     *
+     * @param array<string, mixed> $navigation
+     */
+    private function importNavigation(array $navigation): void
+    {
+        $items = (array) ($navigation['items'] ?? []);
+
+        if ($items === []) {
+            return;
+        }
+
+        $previousCount = (int) get_option('options_nav_items', 0);
+        $count = 0;
+
+        foreach ($items as $item) {
+            if (!is_array($item)) {
+                continue;
+            }
+
+            $prefix = 'options_nav_items_' . $count . '_';
+
+            update_option($prefix . 'label', (string) ($item['label'] ?? ''));
+            update_option($prefix . 'type', (string) ($item['type'] ?? 'custom'));
+            update_option($prefix . 'slug', (string) ($item['slug'] ?? ''));
+            update_option($prefix . 'url', (string) ($item['url'] ?? ''));
+            update_option($prefix . 'mega', !empty($item['mega']) ? '1' : '');
+
+            $childCount = 0;
+
+            foreach ((array) ($item['children'] ?? []) as $child) {
+                if (!is_array($child)) {
+                    continue;
+                }
+
+                $childPrefix = $prefix . 'children_' . $childCount . '_';
+
+                update_option($childPrefix . 'label', (string) ($child['label'] ?? ''));
+                update_option($childPrefix . 'type', (string) ($child['type'] ?? 'custom'));
+                update_option($childPrefix . 'slug', (string) ($child['slug'] ?? ''));
+                update_option($childPrefix . 'url', (string) ($child['url'] ?? ''));
+
+                ++$childCount;
+            }
+
+            update_option($prefix . 'children', (string) $childCount);
+            ++$count;
+        }
+
+        update_option('options_nav_items', (string) $count);
+
+        $cta = (array) ($navigation['header_cta'] ?? []);
+        update_option('options_header_cta_label', (string) ($cta['label'] ?? ''));
+        update_option('options_header_cta_url', (string) ($cta['url'] ?? ''));
+        update_option('options_topbar_text', (string) ($navigation['topbar_text'] ?? ''));
+
+        $this->log[] = [
+            'type'   => 'navigation',
+            'action' => $previousCount > 0 ? 'updated' : 'created',
+            'name'   => $count . ' nav item(s) + header CTA',
+        ];
     }
 
     /**

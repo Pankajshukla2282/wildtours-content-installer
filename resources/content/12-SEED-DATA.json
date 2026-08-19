@@ -16,13 +16,99 @@
       "Sample content only for launch — verify each property and rate before production."
     ]
   },
-  "site": {
+"site": {
     "brand_name": "Panna Wild Tour",
     "domain": "pannawildtour.com",
     "locale": "en_IN",
     "contact_phone": "+91 9921841234",
     "contact_email": "support@pannawildtour.com",
     "address": "Madla Gate, Madla, Panna, Madhya Pradesh, India"
+  },
+  "navigation": {
+    "header_cta": {
+      "label": "Book Safari Assistance",
+      "url": "/contact-us/"
+    },
+    "topbar_text": "Tiger season Nov-Jun - book 30-60 days ahead - call/WhatsApp +91 99218 41234",
+    "items": [
+      {
+        "label": "Home",
+        "type": "page",
+        "slug": "home"
+      },
+      {
+        "label": "Safaris",
+        "type": "page",
+        "slug": "safaris",
+        "children": [
+          { "label": "Jungle Safari (Core)", "type": "page", "slug": "safaris/jungle-safari-core" },
+          { "label": "Jungle Safari (Buffer)", "type": "page", "slug": "safaris/jungle-safari-buffer" },
+          { "label": "Boating", "type": "page", "slug": "safaris/boating" }
+        ]
+      },
+      {
+        "label": "Tour Packages",
+        "type": "page",
+        "slug": "tour-packages"
+      },
+      {
+        "label": "Safari Zones",
+        "type": "page",
+        "slug": "zones",
+        "children": [
+          { "label": "Madla Gate", "type": "page", "slug": "zones/madla-gate" },
+          { "label": "Hinouta Gate", "type": "page", "slug": "zones/hinouta-gate" },
+          { "label": "Akola (Buffer) Gate", "type": "page", "slug": "zones/akola-buffer-gate" }
+        ]
+      },
+      {
+        "label": "Stays",
+        "type": "page",
+        "slug": "stays",
+        "children": [
+          { "label": "Home Stay", "type": "page", "slug": "stays/home-stay" },
+          { "label": "Hotel", "type": "page", "slug": "stays/hotel" },
+          { "label": "Resort", "type": "page", "slug": "stays/resort" }
+        ]
+      },
+      {
+        "label": "Experiences",
+        "type": "page",
+        "slug": "experiences",
+        "mega": true,
+        "children": [
+          { "label": "Pandav Caves & Falls", "type": "page", "slug": "experiences/pandav-caves-falls" },
+          { "label": "Khajuraho Western Temples", "type": "page", "slug": "experiences/khajuraho-western-temples" },
+          { "label": "Raneh Waterfall", "type": "page", "slug": "experiences/raneh-waterfall" },
+          { "label": "Ken Gharial Sanctuary", "type": "page", "slug": "experiences/ken-gharial-sanctuary" },
+          { "label": "Panna Temples", "type": "page", "slug": "experiences/panna-temples" },
+          { "label": "Kutni Dam", "type": "page", "slug": "experiences/kutni-dam" },
+          { "label": "Ken Riverside Scenes", "type": "page", "slug": "experiences/ken-riverside-scenes" },
+          { "label": "Walk with Pardhi", "type": "page", "slug": "experiences/walk-with-pardhi" },
+          { "label": "Bird Watching", "type": "page", "slug": "experiences/bird-watching" }
+        ]
+      },
+      {
+        "label": "Guides",
+        "type": "page",
+        "slug": "blog",
+        "children": [
+          { "label": "Best Time to Visit", "type": "post", "slug": "best-time-to-visit-panna-national-park" },
+          { "label": "How to Reach Panna", "type": "post", "slug": "how-to-reach-panna" },
+          { "label": "Safari Rules & Packing", "type": "post", "slug": "panna-safari-rules-packing-list" }
+        ]
+      },
+      {
+        "label": "About",
+        "type": "page",
+        "slug": "about-us"
+      },
+      {
+        "label": "Contact",
+        "type": "page",
+        "slug": "contact-us"
+      }
+    ]
   },
   "taxonomies": {
     "pwt_safari_zone": ["Madla Gate Core Zone", "Hinauta Gate Core Zone", "Akola Buffer Zone"],
