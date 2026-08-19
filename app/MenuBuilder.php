@@ -224,7 +224,7 @@ final class MenuBuilder
             'menu-item-status'    => 'publish',
             'menu-item-parent-id' => $parentId,
             'menu-item-position'  => $position,
-            'menu-item-classes'   => $classes,
+            'menu-item-classes'   => implode(' ', $classes),
         ]);
 
         return is_wp_error($itemId) || !is_numeric($itemId) ? 0 : (int) $itemId;

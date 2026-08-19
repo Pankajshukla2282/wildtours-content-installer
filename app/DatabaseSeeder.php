@@ -42,13 +42,24 @@ final class DatabaseSeeder
             return [];
         }
 
-        $this->insertCustomers((array) ($data['customers'] ?? []));
-        $this->insertVendors((array) ($data['vendors'] ?? []));
-        $this->insertVendorRates((array) ($data['vendor_rates'] ?? []));
-        $this->insertSellRates((array) ($data['rates'] ?? []));
-        $this->insertAvailability((array) ($data['availability'] ?? []));
-        $this->insertBookings((array) ($data['bookings'] ?? []));
-        $this->insertSettlements((array) ($data['settlements'] ?? []));
+        $sections = [
+            'customers'    => ['customers', 'insertCustomers'],
+            'vendors'      => ['vendors', 'insertVendors'],
+            'vendor_rates' => ['vendor_rates', 'insertVendorRates'],
+            'rates'        => ['rates', 'insertSellRates'],
+            'availability' => ['availability', 'insertAvailability'],
+            'bookings'     => ['bookings', 'insertBookings'],
+            'settlements'  => ['settlements', 'insertSettlements'],
+        ];
+
+        foreach ($sections as $table => [$label, $method]) {
+            if (!$this->tableExists($table)) {
+                $this->log('table', 'missing', $label);
+                continue;
+            }
+
+            $this->{$method}((array) ($data[$label] ?? []));
+        }
 
         return $this->log;
     }
@@ -288,16 +299,22 @@ final class DatabaseSeeder
 
             $bookingId = (int) $this->db()->insert_id;
 
-            foreach ((array) ($row['items'] ?? []) as $item) {
-                $this->insertItem($bookingId, (array) $item);
+            if ($this->tableExists('items')) {
+                foreach ((array) ($row['items'] ?? []) as $item) {
+                    $this->insertItem($bookingId, (array) $item);
+                }
             }
 
-            foreach ((array) ($row['travelers'] ?? []) as $traveler) {
-                $this->insertTraveler($bookingId, (array) $traveler);
+            if ($this->tableExists('travelers')) {
+                foreach ((array) ($row['travelers'] ?? []) as $traveler) {
+                    $this->insertTraveler($bookingId, (array) $traveler);
+                }
             }
 
-            foreach ((array) ($row['payments'] ?? []) as $payment) {
-                $this->insertPayment($bookingId, (array) $payment);
+            if ($this->tableExists('payments')) {
+                foreach ((array) ($row['payments'] ?? []) as $payment) {
+                    $this->insertPayment($bookingId, (array) $payment);
+                }
             }
 
             $this->log('booking', 'created', $bookingNumber . ' (id ' . $bookingId . ')');
@@ -465,6 +482,16 @@ final class DatabaseSeeder
         global $wpdb;
 
         return $wpdb->prefix . 'pwt_' . $key;
+    }
+
+    private function tableExists(string $key): bool
+    {
+        global $wpdb;
+
+        $table = $this->table($key);
+        $like = str_replace('_', '\\_', $table);
+
+        return (bool) $wpdb->get_var("SHOW TABLES LIKE '{$like}'");
     }
 
     private function db(): object
