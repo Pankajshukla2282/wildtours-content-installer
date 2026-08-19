@@ -69,7 +69,7 @@ jobs:
           test -d resources/content
           test -f resources/content/12-SEED-DATA.json
           test -f resources/content/12-OPERATIONS-DATA.json
-          grep -qi '^ \* Plugin Name: PWT Content Installer' wildtours-content-installer.php
+          grep -qiE '^[[:space:]]*\*[[:space:]]*Plugin Name:[[:space:]]+PWT Content Installer' wildtours-content-installer.php
 
       - name: Build installable zip
         if: steps.skip-check.outputs.skip != 'true'
