@@ -3,7 +3,7 @@
  * Plugin Name:       PWT Content Installer
  * Plugin URI:        https://www.pannawildtour.com
  * Description:       One-click installer that creates the Panna Wild Tour pages, safari/destination/package records, site settings and navigation menus from the bundled content package. Run it once from Settings → PWT Content Installer.
- * Version:           1.0.6
+ * Version:           1.0.7
  * Author:            Panna Wild Tour
  * Author URI:        https://www.pannawildtour.com
  * Requires at least: 6.7
@@ -16,7 +16,7 @@
 
 defined('ABSPATH') || exit;
 
-define('PWTCI_VERSION', '1.0.6');
+define('PWTCI_VERSION', '1.0.7');
 define('PWTCI_PLUGIN_FILE', __FILE__);
 define('PWTCI_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('PWTCI_CONTENT_DIR', PWTCI_PLUGIN_DIR . 'resources/content/');
