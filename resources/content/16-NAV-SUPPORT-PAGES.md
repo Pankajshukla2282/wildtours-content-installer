@@ -241,7 +241,7 @@ shortcodes with contextual imagery.
 ## Page 4 — FAQ (`/faq/`)
 
 **SEO Title:** Panna Safari FAQs — Booking, Rules, Stays | Panna Wild Tour
-**Meta Description:** Quick answers on Panna safaris — best time, permits, IDs, gates, stays, packages, boat safaris and night drives. Book with Panna Wild Tour.
+**Meta Description:** Quick answers on Panna safaris — best time, permits, IDs, gates, stays, packages and boat safaris. Book with Panna Wild Tour.
 
 ```html
 <!-- wp:cover {"dimRatio":38,"overlayColor":"contrast","isUserOverlayColor":true,"minHeight":360,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"44px","right":"24px","bottom":"44px","left":"24px"}}}} -->

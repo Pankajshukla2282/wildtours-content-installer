@@ -10,7 +10,6 @@ Every image referenced in the import package, with file name, alt text, upload p
 |---|---|---|---|
 | `panna-jeep-safari-route.webp` | 03 hero | Open jeep gypsy driving through dry deciduous teak forest of Panna Tiger Reserve at sunrise | Wide 16:9, motion feel, warm light |
 | `ken-river-gorge.webp` | 04A hero | Ken River cutting through forested cliffs and gorges of Panna Tiger Reserve at golden hour | Cliff wall + river bend, calm water |
-| `panna-night-safari.webp` | 04B (optional) | Night drive searchlight on a forest track in Panna buffer zone | Low-light, searchlight beam, no flash artefacts |
 | `panna-jungle-lodge.webp` | 05 hero | Jungle lodge cottage among sal and teak trees near Madla gate Panna | Cottage exterior, forest backdrop, morning light |
 | `panna-safari-package-cover.webp` | 06 hero | Safari gypsy at sunrise on a jungle track in Panna Tiger Reserve | Package-cover feel, inviting, golden tones |
 | `panna-zone-canopy.webp` | 07 hero | Panna Tiger Reserve forest canopy viewed across the Ken River valley | Aerial-ish / high vantage, vast forest |
@@ -31,7 +30,7 @@ Every image referenced in the import package, with file name, alt text, upload p
 
 - **02 Homepage:** tiger-portrait, jeep-safari-route (section), gharial, route-map, plus 4 gallery images (reuse above).
 - **03 Jeep Safari:** jeep-safari-route (hero); optional slot-comparison thumbnail.
-- **04 Boat:** ken-river-gorge (hero), gharial-sunbathing, kingfisher. Night drive: panna-night-safari.
+- **04 Boat:** ken-river-gorge (hero), gharial-sunbathing, kingfisher.
 - **05 Stays:** panna-jungle-lodge (hero), panna-resort-room; per-resort gallery images as available.
 - **06 Packages:** panna-safari-package-cover (hero), khajuraho-temple, ken-river-gorge (add-ons).
 - **07 Zones:** panna-zone-canopy (hero), madla-gate-sign, hinouta/akola gate shots as available.

@@ -12,7 +12,7 @@
 
 ```html
 <!-- wp:cover {"dimRatio":45,"overlayColor":"contrast","isUserOverlayColor":true,"minHeight":560,"minHeightUnit":"px","contentPosition":"center center","align":"full","style":{"spacing":{"padding":{"top":"60px","right":"24px","bottom":"60px","left":"24px"}}}} -->
-<div class="wp-block-cover alignfull" style="padding-top:60px;padding-right:24px;padding-bottom:60px;padding-left:24px;min-height:560px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-45 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Bengal tiger walking through teak forest of Panna National Park, Madla zone at dawn" src="/wp-content/uploads/2026/08/panna-hero-tiger-teak-forest.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"1180px"}} -->
+<div class="wp-block-cover alignfull" style="padding-top:60px;padding-right:24px;padding-bottom:60px;padding-left:24px;min-height:560px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-45 has-background-dim"></span><video class="wp-block-cover__video-background" autoplay muted loop playsinline poster="/wp-content/uploads/2026/08/panna-hero-tiger-teak-forest.webp" src="/wp-content/uploads/2026/08/VID-20230708-WA0041.mp4"></video><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"1180px"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"letterSpacing":"2px"}},"fontSize":"small"} -->
 <p class="has-small-font-size" style="letter-spacing:2px">Panna Tiger Reserve · Madhya Pradesh</p>
 <!-- /wp:paragraph -->
@@ -146,13 +146,13 @@
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"is-style-rounded"} -->
-<figure class="wp-block-image size-large is-style-rounded"><img src="/wp-content/uploads/2026/08/ken-river-boat-safari.webp" alt="Guided boat sailing on the calm waters of the Ken River near Panna's gharial sanctuary with forested cliffs on both banks" /></figure>
+<figure class="wp-block-image size-large is-style-rounded"><img src="/wp-content/uploads/2026/08/ken-river-boat-safari.webp" alt="Guided boat sailing on the calm waters of the Ken River with marsh muggers basking on the sandbanks and forested cliffs on both sides" /></figure>
 <!-- /wp:image -->
 <!-- wp:heading {"level":3} -->
 <h3>Ken River Boat Safari</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Float past gharial basking rocks and cliff-side bird colonies on the river that carves through the reserve. Seasonal, water-level dependent.</p>
+<p>Float past marsh muggers basking on sandbanks and cliff-side bird colonies on the river that carves through the reserve. Seasonal, water-level dependent.</p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} -->
@@ -163,17 +163,17 @@
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"is-style-rounded"} -->
-<figure class="wp-block-image size-large is-style-rounded"><img src="/wp-content/uploads/2026/08/night-drive-searchlight.webp" alt="Night drive searchlight sweeping across dry deciduous forest in the buffer zone of Panna tiger reserve" /></figure>
+<figure class="wp-block-image size-large is-style-rounded"><img src="/wp-content/uploads/2026/08/panna-kingfisher.webp" alt="Pied kingfisher hovering over the Ken River" /></figure>
 <!-- /wp:image -->
 <!-- wp:heading {"level":3} -->
-<h3>Night Drive (Buffer)</h3>
+<h3>Bird Watching</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>A guided after-dark drive in the buffer zone where forest-permitted — spot owls, nightjars, hyenas and sloth bears under a searchlight.</p>
+<p>Over 200 species across teak forest, grassland and the Ken — from red-headed vultures to pied kingfishers. Guided morning outings with field guides.</p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/safaris/jungle-safari-buffer/">Enquire About Night Drives</a></div>
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/experiences/bird-watching/">Plan a Birding Outing</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:column -->
@@ -240,6 +240,44 @@
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p><a href="/zones/akola-buffer-gate/">Akola Gate details →</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"level":4} -->
+<h4>Akola Gate — Core</h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Core-zone routes on the quieter side of the reserve, with its own e-permit quota and fewer vehicles on the track.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><a href="/zones/akola-core-gate/">Akola Core details →</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"level":4} -->
+<h4>Jhinna Gate — Buffer</h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Quiet buffer-zone entry with riverine routes — leopards, deer and strong bird life. Seasonal, permit-based.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><a href="/zones/jhinna-buffer-gate/">Jhinna Gate details →</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"level":4} -->
+<h4>Not sure which gate?</h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Share your dates and group size — we'll pick the best open gate and slot for your plan.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><a href="/contact-us/">Ask our team →</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
@@ -338,9 +376,9 @@
 
 **Why choose us (4 pillars):** Local Safari Expertise · Hassle-Free Permit & Vehicle Booking · Expert Naturalists & Guides · Transparent, No-Surprise Pricing
 
-**Featured experiences (4):** Jeep Safari → jeep page · Ken River Boat Safari → boat page · Night Drive (Buffer) → night page · Pandav Falls & Diamond Mine → experiences
+**Featured experiences (4):** Jeep Safari → jeep page · Ken River Boat Safari → boat page · Bird Watching → birding page · Pandav Falls & Diamond Mine → experiences
 
-**Zones overview (3):** Madla (core, near town, Ken-side grasslands) · Hinouta (core, Khajuraho road, rocky escarpments) · Akola (buffer, less crowded, evening drives where permitted)
+**Zones overview (5 gates):** Madla (core, near town, Ken-side grasslands) · Hinouta (core, Khajuraho road, rocky escarpments) · Akola Core (core, quieter side, own routes) · Akola Buffer (buffer, less crowded, evening drives where permitted) · Jhinna (buffer, riverine routes, strong bird life)
 
 **FAQ block:** rendered from `pwt_faq` (content seeded in `12-SEED-DATA.json`).
 
@@ -350,10 +388,10 @@
 
 | Block | Filename (after upload) | Alt text | Size |
 |---|---|---|---|
-| Hero cover | `panna-hero-tiger-teak-forest.webp` | Bengal tiger walking through teak forest of Panna National Park, Madla zone at dawn | 1920×1080, <150 KB |
+| Hero cover (video bg) | `VID-20230708-WA0041.mp4` (poster `panna-hero-tiger-teak-forest.webp`) | Legacy video of Bengal tigers walking through the teak forest, Madla zone — autoplay muted loop, poster as fallback | 1920×1080, <5 MB |
 | Jeep safari card | `panna-jeep-safari-gypsy.webp` | Open gypsy jeep with safari guests watching wildlife on a Panna tiger reserve forest trail | 800×533 |
-| Boat safari card | `ken-river-boat-safari.webp` | Guided boat sailing on the calm waters of the Ken River near Panna's gharial sanctuary | 800×533 |
-| Night drive card | `night-drive-searchlight.webp` | Night drive searchlight sweeping across dry deciduous forest in the buffer zone of Panna | 800×533 |
+| Boat safari card | `ken-river-boat-safari.webp` | Guided boat sailing on the calm waters of the Ken River with marsh muggers basking on the sandbanks | 800×533 |
+| Bird watching card | `panna-kingfisher.webp` | Pied kingfisher hovering over the Ken River | 800×533 |
 | Pandav/diamond card | `pandav-falls-diamond.webp` | Pandav Falls cascading 30 meters into a heart-shaped pool near Panna | 800×533 |
 
 See `10-MEDIA-SPEC-SHEET.md` for full prompts and compression rules.

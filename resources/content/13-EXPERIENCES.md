@@ -573,7 +573,7 @@ Experiences    /experiences/                     (hub page — this file, page 1
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>The Ken cuts a calm, dramatic line through the reserve. Selected riverside points offer the best of it — basking gharials, cliff-nesting vultures, kingfishers over still water, and sunsets that turn the sandstone gold.</p>
+<p>The Ken cuts a calm, dramatic line through the reserve. Selected riverside points offer the best of it — basking marsh muggers, cliff-nesting vultures, kingfishers over still water, and sunsets that turn the sandstone gold.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -582,7 +582,7 @@ Experiences    /experiences/                     (hub page — this file, page 1
 
 <!-- wp:list -->
 <ul><!-- wp:list-item -->Golden-hour sunset viewpoints</li><!-- /wp:list-item -->
-<!-- wp:list-item -->Gharial and mugger crocodile spotting (seasonal)</li><!-- /wp:list-item -->
+<!-- wp:list-item -->Marsh mugger crocodile spotting (seasonal)</li><!-- /wp:list-item -->
 <!-- wp:list-item -->Winter riverine birding — a hotspot for photographers</li><!-- /wp:list-item -->
 <!-- wp:list-item -->Pair with a Ken River boat safari for the full river day</li><!-- /wp:list-item --></ul>
 <!-- /wp:list -->

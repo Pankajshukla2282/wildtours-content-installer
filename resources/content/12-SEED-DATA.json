@@ -199,11 +199,13 @@
         "google_map": "https://maps.app.goo.gl/jhinna-gate",
         "best_time": "Oct-Jun"
       },
-      "terms": {
+"terms": {
         "pwt_destination_category": ["Wildlife", "Adventure"],
         "pwt_activity": ["Tiger Safari"]
       }
-    }
+    },
+    {
+      "title": "Pandav Caves & Falls",
       "excerpt": "Fascinating caves and waterfall surrounded by natural scenery and local legends.",
       "content": "Explore the Pandav Caves and Waterfall, where a 30-metre cascade falls into a famously heart-shaped pool. A short, rewarding trail leads through rock and woodland to the caves and waterfall — one of the most photogenic spots in the Panna region. Best after light monsoon rain; suitable for families.",
       "status": "publish",
@@ -433,7 +435,7 @@
     {
       "title": "Jungle Safari (Buffer) — Akola",
       "excerpt": "Quieter buffer-zone safari with leopard, deer and rare bird sightings.",
-      "content": "Buffer-zone routes around Akola blend riverine habitat and open scrub — strong for leopards, sambar, chital and a long list of birds. Evening and seasonal night drives available where the forest department permits.",
+      "content": "Buffer-zone routes around Akola blend riverine habitat and open scrub — strong for leopards, sambar, chital and a long list of birds. Night drives are not permitted in Panna under current court orders, so safaris here run in daylight only.",
       "status": "publish",
       "meta": {
         "safari_code": "PWT-SAF-AKOLA",
@@ -521,7 +523,7 @@
       "subtitle": "Photographer's Panna",
       "package_code": "PWT-DEEP-3D2N",
       "excerpt": "Three safaris plus a seasonal Ken River boat ride, two nights and full coordination.",
-      "content": "Day 1 arrival + evening safari; Day 2 morning safari + optional boat + optional buffer night drive (permit-permitting); Day 3 morning safari + checkout.",
+      "content": "Day 1 arrival + evening safari; Day 2 morning safari + optional boat; Day 3 morning safari + checkout.",
       "status": "publish",
       "meta": {
         "duration": "3 Days 2 Nights",
@@ -538,7 +540,7 @@
         "booking_enabled": "1",
         "resorts": [ { "pwt_resort": "Ken Vihar Jungle Lodge" }, { "pwt_resort": "Hinouta Riverside Stay" } ],
         "inclusions": "3 jeep safaris + 1 seasonal Ken River boat safari (permits + guide), 2 nights premium lodge AP, lodge-gate transfers, safari coordination",
-        "exclusions": "Rail/air tickets, highway transfers, camera fees, buffer night-drive (where available), tips & personal expenses",
+        "exclusions": "Rail/air tickets, highway transfers, camera fees, tips & personal expenses",
         "days_itinerary": [
           {
             "title": "Day 1 — Arrival & evening safari",
@@ -547,7 +549,7 @@
           },
           {
             "title": "Day 2 — River & jungle day",
-            "description": "Morning jeep safari, optional Ken boat safari (seasonal). Evening free, or buffer night drive if the forest department permits.",
+            "description": "Morning jeep safari, optional Ken boat safari (seasonal). Evening free.",
             "photo": ""
           },
           {
@@ -785,8 +787,8 @@
       "meta": {}
     },
     {
-      "title": "Is there a night safari inside Panna core zone?",
-      "content": "Night drives are not part of regular core-zone permits. Where the forest department permits buffer-zone drives we arrange them; otherwise we are transparent about it.",
+"title": "Is night safari allowed in Panna?",
+      "content": "No. Night drives and night safari are not permitted anywhere in Panna Tiger Reserve under current court orders. All safaris run in daylight — morning and evening slots. We never arrange after-dark safaris.",
       "status": "publish",
       "meta": {}
     },

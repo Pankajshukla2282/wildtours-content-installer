@@ -1,7 +1,7 @@
 # 14 — Safaris Hub & Sub-Pages (`/safaris/`)
 
 **Target:** https://www.pannawildtour.com/safaris/ + 3 child pages
-**Source merged:** existing Safari services (Jeep / Boat / Night Drive) + hint content + legacy pages.
+**Source merged:** existing Safari services (Jeep / Boat) + hint content + legacy pages.
 **Uses only existing theme/plugin features:** static pages rendered by the base theme (`page.php`/`template-full-width.php`), core Gutenberg blocks, and plugin shortcodes (`[pwt_booking_form]`, `[pwt_faq]`, `[pwt_packages]`, `[pwt_contact_card]`).
 
 ---
@@ -42,7 +42,7 @@ Safaris     /safaris/                    (hub page — this file, page 1)
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">Tiger country on your terms — sunrise core-zone gypsy drives through Madla and Hinouta gates, quieter buffer-zone routes, and a boat safari on the Ken River where gharials and vultures rule.</p>
+<p class="has-medium-font-size">Tiger country on your terms — sunrise core-zone gypsy drives through Madla and Hinouta gates, quieter buffer-zone routes, and a boat safari on the Ken River where marsh muggers and vultures rule.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
@@ -95,7 +95,7 @@ Safaris     /safaris/                    (hub page — this file, page 1)
 <h3><a href="/safaris/boating/">Boating</a></h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Glide past basking gharials and cliff-nesting vultures on the Ken River — Panna from the water.</p>
+<p>Glide past basking marsh muggers and cliff-nesting vultures on the Ken River — Panna from the water.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
@@ -179,8 +179,8 @@ Safaris     /safaris/                    (hub page — this file, page 1)
 
 ## Page 3 — Jungle Safari (Buffer) (`/safaris/jungle-safari-buffer/`)
 
-**SEO Title:** Jungle Safari Panna Buffer Zone — Akola Routes & Night Drives | Panna Wild Tour
-**Meta Description:** Quieter buffer-zone jungle safaris around Akola with wild scenery and strong leopard, deer and bird sightings — including seasonal night drives. Book with Panna Wild Tour.
+**SEO Title:** Jungle Safari Panna Buffer Zone — Akola Routes | Panna Wild Tour
+**Meta Description:** Quieter buffer-zone jungle safaris around Akola with wild scenery and strong leopard, deer and bird sightings. Night safari is not permitted in Panna. Book with Panna Wild Tour.
 
 **Featured image:** `Panna-national-park-1-scaled.jpg` (id 888)
 
@@ -196,7 +196,7 @@ Safaris     /safaris/                    (hub page — this file, page 1)
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">Fewer vehicles, wilder edges. Buffer-zone routes around Akola are where leopard, deer and rare birds show themselves — and where seasonal night drives come alive.</p>
+<p class="has-medium-font-size">Fewer vehicles, wilder edges. Buffer-zone routes around Akola are where leopard, deer and rare birds show themselves.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
@@ -213,11 +213,11 @@ Safaris     /safaris/                    (hub page — this file, page 1)
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Buffer safaris are quieter and often more personal than core-zone drives. The forest around Akola blends riverine habitat and open scrub — strong for leopards, sambar, chital and a long list of birds. Seasonal night drives add a searchlight adventure the core never offers.</p>
+<p>Buffer safaris are quieter and often more personal than core-zone drives. The forest around Akola blends riverine habitat and open scrub — strong for leopards, sambar, chital and a long list of birds.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list -->
-<ul><!-- wp:list-item -->Evening and night drives (night drives are seasonal/conditional)</li><!-- /wp:list-item -->
+<ul><!-- wp:list-item -->Daylight-only safari timings — night drives are not permitted in Panna</li><!-- /wp:list-item -->
 <!-- wp:list-item -->Great photography light and fewer crowds</li><!-- /wp:list-item -->
 <!-- wp:list-item -->Combine with a core safari for a full Panna day</li><!-- /wp:list-item --></ul>
 <!-- /wp:list -->
@@ -232,8 +232,8 @@ Safaris     /safaris/                    (hub page — this file, page 1)
 
 ## Page 4 — Boating (`/safaris/boating/`)
 
-**SEO Title:** Ken River Boat Safari Panna — Gharials & Vultures from the Water | Panna Wild Tour
-**Meta Description:** See Panna from the Ken River — a boat safari past basking gharials, mugger crocodiles and cliff-nesting vultures. Calm morning and sunset cruises with Panna Wild Tour.
+**SEO Title:** Ken River Boat Safari Panna — Marsh Muggers & Vultures from the Water | Panna Wild Tour
+**Meta Description:** See Panna from the Ken River — a boat safari past basking marsh muggers and cliff-nesting vultures. Calm morning and sunset cruises with Panna Wild Tour.
 
 **Featured image:** `Panna-Tiger-Reserve-04-scaled.jpg` (id 892)
 
@@ -249,7 +249,7 @@ Safaris     /safaris/                    (hub page — this file, page 1)
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">Trade the jeep for a boat. Drift past sandbars of basking gharials, keep an eye on mugger crocodiles, and watch vultures glide from the cliffs above.</p>
+<p class="has-medium-font-size">Trade the jeep for a boat. Drift past sandbars of basking marsh muggers and watch vultures glide from the cliffs above.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
@@ -266,7 +266,7 @@ Safaris     /safaris/                    (hub page — this file, page 1)
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>The Ken is the lifeline of the reserve. From the water you get close to gharials and muggers on the sandbars, vultures on the cliffs, kingfishers over still pools — and some of the best sunset views in the region.</p>
+<p>The Ken is the lifeline of the reserve. From the water you get close to marsh muggers on the sandbars, vultures on the cliffs, kingfishers over still pools — and some of the best sunset views in the region.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list -->
@@ -289,7 +289,7 @@ Safaris     /safaris/                    (hub page — this file, page 1)
 |---|---|---|---|---|
 | `safari-core-madla` | Jungle Safari (Core) — Madla | Madla | Tiger Safari | Book in advance — permits limited |
 | `safari-core-hinouta` | Jungle Safari (Core) — Hinouta | Hinouta | Tiger Safari | Great with a Khajuraho heritage day |
-| `safari-buffer-akola` | Jungle Safari (Buffer) — Akola | Akola Buffer | Tiger Safari | Quiet routes, night drives seasonal |
+| `safari-buffer-akola` | Jungle Safari (Buffer) — Akola | Akola Buffer | Tiger Safari | Quiet routes; daylight only (no night drives) |
 | `safari-ken-boat` | Ken River Boat Safari | Madla | Ken River Boating | Morning & sunset cruises |
 
 > **Navigation note:** keep the WordPress **pages** above as the canonical menu URLs. The

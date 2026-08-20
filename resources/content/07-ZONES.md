@@ -1,8 +1,8 @@
 # 07 — Safari Zones & Gates (`/zones/`)
 
-**SEO Title:** Panna Safari Zones & Gates — Madla, Hinouta, Akola | Panna Wild Tour
-**Meta Description:** Compare Panna Tiger Reserve entry gates — Madla (core), Hinouta (core, Khajuraho road) and Akola (buffer). Which gate for which traveller, slot details and zone planning.
-**Slug:** `zones` (top-level, header "Zones") — sub-pages `/zones/madla-gate/`, `/zones/hinouta-gate/`, `/zones/akola-buffer-gate/`
+**SEO Title:** Panna Safari Zones & Gates — Madla, Hinouta, Akola, Jhinna | Panna Wild Tour
+**Meta Description:** Compare Panna Tiger Reserve entry gates — Madla & Hinouta (core), Akola (core & buffer), Jhinna (buffer). Which gate for which traveller, slot details and zone planning.
+**Slug:** `zones` (top-level, header "Safari Zones") — sub-pages `/zones/madla-gate/`, `/zones/hinouta-gate/`, `/zones/akola-core-gate/`, `/zones/akola-buffer-gate/`, `/zones/jhinna-buffer-gate/`
 **Replaces (301):** `/safari-zone/`, `/gates/`, `/core-zone/`, `/buffer-zone/`
 
 **Layout:** hero → gate comparison table → gate-by-gate detail (sub-pages) → zone strategy (how to pick) → `[pwt_destinations]` → FAQ.
@@ -25,13 +25,15 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">Panna's tiger reserve is split into core and buffer zones, entered through three practical gates. Choose the right one and your whole safari changes — this page is your quick guide.</p>
+<p class="has-medium-font-size">Panna's tiger reserve is split into core and buffer zones, entered through five gate points. Choose the right one and your whole safari changes — this page is your quick guide.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list -->
 <ul><!-- wp:list-item --><li><a href="/zones/madla-gate/">Madla Gate — core, primary →</a></li><!-- /wp:list-item -->
 <!-- wp:list-item --><li><a href="/zones/hinouta-gate/">Hinouta Gate — core, Khajuraho road →</a></li><!-- /wp:list-item -->
-<!-- wp:list-item --><li><a href="/zones/akola-buffer-gate/">Akola Gate — buffer, eco-tourism →</a></li><!-- /wp:list-item --></ul>
+<!-- wp:list-item --><li><a href="/zones/akola-core-gate/">Akola Gate (Core) — core, quieter side →</a></li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><a href="/zones/akola-buffer-gate/">Akola Gate (Buffer) — buffer, eco-tourism →</a></li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><a href="/zones/jhinna-buffer-gate/">Jhinna Gate — buffer, riverine routes →</a></li><!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
 <!-- wp:buttons -->
@@ -48,7 +50,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:table -->
-<figure class="wp-block-table"><table><thead><tr><th>Gate</th><th>Zone</th><th>Location</th><th>Best for</th><th>Note</th></tr></thead><tbody><tr><td><strong>Madla</strong></td><td>Core</td><td>Main reserve entrance, Panna town side</td><td>First-timers, most itineraries</td><td>Highest demand — book early</td></tr><tr><td><strong>Hinouta</strong></td><td>Core</td><td>On Panna–Khajuraho road</td><td>Khajuraho-side travellers</td><td>Great combo with a temple visit</td></tr><tr><td><strong>Akola</strong></td><td>Buffer</td><td>Perimeter / eco-tourism zone</td><td>Budget options, less-crowded routes</td><td>Seasonal availability, permit-based</td></tr></tbody></table></figure>
+<figure class="wp-block-table"><table><thead><tr><th>Gate</th><th>Zone</th><th>Location</th><th>Best for</th><th>Note</th></tr></thead><tbody><tr><td><strong>Madla</strong></td><td>Core</td><td>Main reserve entrance, Panna town side</td><td>First-timers, most itineraries</td><td>Highest demand — book early</td></tr><tr><td><strong>Hinouta</strong></td><td>Core</td><td>On Panna–Khajuraho road</td><td>Khajuraho-side travellers</td><td>Great combo with a temple visit</td></tr><tr><td><strong>Akola</strong></td><td>Core</td><td>Akola side of the reserve</td><td>Core routes without Madla crowds</td><td>Separate e-permit quota from buffer</td></tr><tr><td><strong>Akola</strong></td><td>Buffer</td><td>Perimeter / eco-tourism zone</td><td>Budget options, less-crowded routes</td><td>Seasonal availability, permit-based</td></tr><tr><td><strong>Jhinna</strong></td><td>Buffer</td><td>Quiet side, riverine routes</td><td>Leopards, birds, buffer ambience</td><td>Seasonal, permit-based</td></tr></tbody></table></figure>
 <!-- /wp:table -->
 
 <!-- wp:paragraph -->
@@ -78,11 +80,27 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":2} -->
-<h2>Akola Gate — buffer &amp; eco-tourism</h2>
+<h2>Akola Gate — core and buffer in one name</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>A buffer-side entry used for eco-tourism and some community routes. Availability is seasonal and permit-based. When open, it offers a quieter, often more affordable alternative — and a different set of landscapes.</p>
+<p>Akola is really two entries with one name. The <a href="/zones/akola-core-gate/">core-zone side</a> opens a quieter stretch of the reserve with its own routes and e-permit quota, away from the Madla crowds. The <a href="/zones/akola-buffer-gate/">buffer side</a> runs eco-tourism routes through riverine habitat, scrub and fields. Both are seasonal and permit-based — we confirm current availability before quoting.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2>Akola Gate (Core) — the quieter core entry</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Core-zone drives from Akola open up forest sections on the opposite side of the reserve from Madla — fewer vehicles, a different route network, and the same department-wide timings. Availability follows the core-zone e-permit calendar.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2>Jhinna Gate — buffer, riverine and quiet</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Jhinna opens Panna's buffer zone on the quieter side of the reserve — riverine habitat, scrub and fields with strong leopard, deer and bird sightings. Seasonal, permit-based availability; we confirm current status before booking.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -95,7 +113,9 @@
 <ul><!-- wp:list-item --><li><strong>1–2 days in Panna?</strong> Madla core, morning slot, 2 safaris total.</li><!-- /wp:list-item -->
 <!-- wp:list-item --><li><strong>3+ days?</strong> Mix Madla + Hinouta mornings and evenings for route variety.</li><!-- /wp:list-item -->
 <!-- wp:list-item --><li><strong>Coming from Khajuraho?</strong> Start with Hinouta, end at Madla side or vice-versa.</li><!-- /wp:list-item -->
-<!-- wp:list-item --><li><strong>On a budget / quiet dates?</strong> We check Akola buffer availability for you.</li><!-- /wp:list-item --></ul>
+<!-- wp:list-item --><li><strong>Core but no Madla crowds?</strong> Ask about the Akola core-zone routes.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>On a budget / quiet dates?</strong> We check Akola buffer availability for you.</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li><strong>Second buffer day?</strong> We check Jhinna buffer availability too.</li><!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
 <!-- wp:paragraph -->
@@ -118,9 +138,9 @@
 
 ---
 
-## 2. Gate sub-pages (each `pwt_destination` — Madla / Hinouta / Akola)
+## 2. Gate sub-pages (each `pwt_destination` — Madla / Hinouta / Akola Core / Akola Buffer / Jhinna)
 
-Three child pages under `zones` with contextual imagery. Create them (parent = Zones), set featured image, then add under **Safari Zones** in the primary menu.
+Five child pages under `zones` with contextual imagery. Create them (parent = Zones), set featured image, then add under **Safari Zones** in the primary menu.
 
 ### Page Madla — `/zones/madla-gate/`
 
@@ -274,13 +294,117 @@ Three child pages under `zones` with contextual imagery. Create them (parent = Z
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Akola serves the buffer zone — the reserve's working landscape of riverine habitat, scrub and fields. When the department opens eco-tourism routes here, you get a quieter safari with strong leopard, sambar and bird life, plus the option of evening and night drives in season.</p>
+<p>Akola serves the buffer zone — the reserve's working landscape of riverine habitat, scrub and fields. When the department opens eco-tourism routes here, you get a quieter safari with strong leopard, sambar and bird life.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list -->
 <ul><!-- wp:list-item -->Availability is seasonal and permit-based — we confirm current status</li><!-- /wp:list-item -->
-<!-- wp:list-item -->Evening and night drives where permitted</li><!-- /wp:list-item -->
+<!-- wp:list-item -->Daylight-only evening drives (night safari is not permitted in Panna)</li><!-- /wp:list-item -->
 <!-- wp:list-item -->Great with a budget itinerary or a second-safari day</li><!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:shortcode -->
+[pwt_booking_form]
+<!-- /wp:shortcode --></div>
+<!-- /wp:group -->
+```
+
+---
+
+### Page Akola Core — `/zones/akola-core-gate/`
+
+**SEO Title:** Akola Gate (Core) Panna — Quieter Core Zone Safari | Panna Wild Tour
+**Meta Description:** Akola's core-zone entry opens Panna's quieter side — fewer vehicles, its own routes and a separate e-permit quota from the buffer. Check availability and book with Panna Wild Tour.
+**Featured image:** `Panna-Tiger-Reserve-04-scaled.jpg` (id 892)
+
+```html
+<!-- wp:cover {"dimRatio":40,"overlayColor":"contrast","isUserOverlayColor":true,"minHeight":440,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"48px","right":"24px","bottom":"48px","left":"24px"}}}} -->
+<div class="wp-block-cover alignfull" style="padding-top:48px;padding-right:24px;padding-bottom:48px;padding-left:24px;min-height:440px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-40 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Core zone forest on the Akola side of Panna Tiger Reserve" src="/wp-content/uploads/2026/08/Panna-Tiger-Reserve-04-scaled.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"1100px"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"letterSpacing":"2px"}},"fontSize":"small"} -->
+<p class="has-small-font-size" style="letter-spacing:2px">Core Zone · Akola Side</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":1} -->
+<h1>Akola Gate (Core)</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"fontSize":"medium"} -->
+<p class="has-medium-font-size">Core-zone routes on the quiet side of the reserve — fewer vehicles, its own network, the same tiger country.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/contact-us/">Check Akola Core Availability</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:cover -->
+
+<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"26px","bottom":"10px"}}}} -->
+<div class="wp-block-group alignwide" style="padding-top:26px;padding-bottom:10px"><!-- wp:heading {"level":2} -->
+<h2>Core without the crowds</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>While Madla draws the morning rush, the Akola core side opens forest sections with a different rhythm. Routes run through the same teak and dry deciduous landscape, but with fewer vehicles on the track. Its e-permit quota is separate from the Akola buffer routes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><!-- wp:list-item --><li>Same department-wide slot timings as Madla</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Separate core-zone e-permit quota from buffer</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Availability follows the core-zone calendar — we confirm</li><!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:shortcode -->
+[pwt_booking_form]
+<!-- /wp:shortcode --></div>
+<!-- /wp:group -->
+```
+
+---
+
+### Page Jhinna — `/zones/jhinna-buffer-gate/`
+
+**SEO Title:** Jhinna Gate Panna — Buffer Zone Safari | Panna Wild Tour
+**Meta Description:** Jhinna opens Panna's buffer zone on the quiet side — riverine routes, leopards, deer and strong bird life. Seasonal, permit-based availability. Book with Panna Wild Tour.
+**Featured image:** `Panna-Tiger-Reserve-04-scaled.jpg` (id 892)
+
+```html
+<!-- wp:cover {"dimRatio":40,"overlayColor":"contrast","isUserOverlayColor":true,"minHeight":440,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"48px","right":"24px","bottom":"48px","left":"24px"}}}} -->
+<div class="wp-block-cover alignfull" style="padding-top:48px;padding-right:24px;padding-bottom:48px;padding-left:24px;min-height:440px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-40 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Riverine habitat along the Ken on the buffer side near Jhinna" src="/wp-content/uploads/2026/08/Panna-Tiger-Reserve-04-scaled.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"1100px"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"letterSpacing":"2px"}},"fontSize":"small"} -->
+<p class="has-small-font-size" style="letter-spacing:2px">Buffer Zone · Riverine Side</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":1} -->
+<h1>Jhinna Gate</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"fontSize":"medium"} -->
+<p class="has-medium-font-size">Panna's buffer zone from its quiet side — riverine routes, leopards and strong bird life.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/contact-us/">Check Jhinna Availability</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:cover -->
+
+<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"26px","bottom":"10px"}}}} -->
+<div class="wp-block-group alignwide" style="padding-top:26px;padding-bottom:10px"><!-- wp:heading {"level":2} -->
+<h2>Buffer, quiet and riverine</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Jhinna sits on the quieter side of the reserve, where buffer habitat blends riverine forest, scrub and fields. Leopards, sambar and chital move through these routes, and the bird list is long. Availability is seasonal and permit-based — we confirm current status before quoting.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><!-- wp:list-item --><li>Strong for leopards, deer and birding</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Seasonal, permit-based availability</li><!-- /wp:list-item -->
+<!-- wp:list-item --><li>Good for a second buffer day or budget itinerary</li><!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
 <!-- wp:shortcode -->
@@ -294,10 +418,11 @@ Three child pages under `zones` with contextual imagery. Create them (parent = Z
 ## 3. Copy reference (plain text)
 
 - H1: `Panna Safari Zones & Gates`
-- Gate table: Madla (Core, main entrance, first-timers, high demand — book early); Hinouta (Core, Panna–Khajuraho road, Khajuraho travellers, temple combo); Akola (Buffer, eco-tourism, budget/quiet, seasonal permit-based).
+- Gate table: Madla (Core, main entrance, first-timers, high demand — book early); Hinouta (Core, Panna–Khajuraho road, Khajuraho travellers, temple combo); Akola Core (Core, quieter side, own routes, separate quota); Akola Buffer (Buffer, eco-tourism, budget/quiet, seasonal permit-based); Jhinna (Buffer, riverine routes, leopards + birds, seasonal permit-based).
 - Madla: primary core gate, teak + dry deciduous forest, Ken gorges, lodge belt close by.
 - Hinouta: core from Khajuraho highway (~35 km from Khajuraho), less saturated, Panna+Khajuraho loop fit.
-- Akola: buffer eco-tourism, seasonal, quieter + often cheaper.
+- Akola: two entries — the core side (quieter core routes, own e-permit quota) and the buffer side (eco-tourism, seasonal, quieter + often cheaper).
+- Jhinna: buffer on the quiet side, riverine habitat, strong leopard + bird life, seasonal.
 - Strategy bullets as above. Slot times: morning summer 05:30 / winter 06:30; evening summer 15:30 / winter 14:30; report 30–45 min early.
 
 ---
@@ -310,7 +435,9 @@ Field keys mirror `DestinationFields.php`.
 |---|---|---|---|---|---|---|---|
 | `madla-gate` | PWT-MADLA | Madhya Pradesh | India | Oct–Jun | 24.7205 | 80.1903 | https://maps.app.goo.gl/madla-gate |
 | `hinouta-gate` | PWT-HINOUTA | Madhya Pradesh | India | Oct–Jun | 24.7020 | 80.0880 | https://maps.app.goo.gl/hinouta-gate |
-| `akola-gate` | PWT-AKOLA | Madhya Pradesh | India | Oct–Jun | 24.6510 | 80.0210 | https://maps.app.goo.gl/akola-gate |
+| `akola-buffer-gate` | PWT-AKOLA | Madhya Pradesh | India | Oct–Jun | 24.6510 | 80.0210 | https://maps.app.goo.gl/akola-gate |
+| `akola-core-gate` | PWT-AKOLA-CORE | Madhya Pradesh | India | Oct–Jun | 24.6510 | 80.0210 | https://maps.app.goo.gl/akola-core-gate |
+| `jhinna-buffer-gate` | PWT-JHINNA | Madhya Pradesh | India | Oct–Jun | 24.5850 | 80.1080 | https://maps.app.goo.gl/jhinna-gate |
 
 > Replace `google_map` placeholders with real Maps URLs at import time.
 
@@ -321,4 +448,6 @@ Field keys mirror `DestinationFields.php`.
 1. **Which gate should I choose for my first Panna safari?** — Madla. It is the primary core-zone gate with the most routes and the thickest lodge belt nearby.
 2. **Is Hinouta gate inside the core zone?** — Yes. It's a core entry on the Panna–Khajuraho road, ideal for travellers combining a temple visit.
 3. **Can I book a buffer-zone safari through Akola?** — When the department permits, yes. Availability is seasonal; we confirm current status before quoting.
-4. **Do all gates follow the same safari timings?** — Yes, timings are department-wide (morning summer 05:30 / winter 06:30; evening summer 15:30 / winter 14:30).
+4. **Does Akola also open the core zone?** — Yes. Akola is two entries — a core side with its own routes and e-permit quota, and a buffer side for eco-tourism. Both are seasonal; we confirm current status.
+5. **What is Jhinna gate?** — A buffer-zone entry on the quieter side of the reserve, with riverine routes and strong leopard and bird life. Seasonal and permit-based.
+6. **Do all gates follow the same safari timings?** — Yes, timings are department-wide (morning summer 05:30 / winter 06:30; evening summer 15:30 / winter 14:30).

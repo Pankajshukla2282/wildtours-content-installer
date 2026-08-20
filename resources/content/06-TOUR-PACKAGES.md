@@ -66,7 +66,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:table -->
-<figure class="wp-block-table"><table><thead><tr><th>Day</th><th>Plan</th></tr></thead><tbody><tr><td><strong>Day 1</strong></td><td>Arrival &amp; check-in near Madla gate. Evening core-zone jeep safari. Dinner at lodge.</td></tr><tr><td><strong>Day 2</strong></td><td>Morning jeep safari + optional Ken River boat safari (seasonal). Evening free / optional buffer night drive (permit-permitting).</td></tr><tr><td><strong>Day 3</strong></td><td>Morning jeep safari (or second boat option). Breakfast, check-out, onward transfer.</td></tr></tbody></table></figure>
+<figure class="wp-block-table"><table><thead><tr><th>Day</th><th>Plan</th></tr></thead><tbody><tr><td><strong>Day 1</strong></td><td>Arrival &amp; check-in near Madla gate. Evening core-zone jeep safari. Dinner at lodge.</td></tr><tr><td><strong>Day 2</strong></td><td>Morning jeep safari + optional Ken River boat safari (seasonal). Evening free.</td></tr><tr><td><strong>Day 3</strong></td><td>Morning jeep safari (or second boat option). Breakfast, check-out, onward transfer.</td></tr></tbody></table></figure>
 <!-- /wp:table -->
 
 <!-- wp:paragraph -->
@@ -144,7 +144,7 @@
 - H1: `Panna Safari Tour Packages`
 - Workings: everything itemised; prices indicative (subject to forest fee revisions + seasonal stay rates); no sighting guarantee.
 - **Express 2D/1N:** Day 1 arrival + evening safari; Day 2 morning safari + checkout. Indicative ₹9,500–₹12,500 p.p. (2 pax, premium lodge, 2 safaris, AP).
-- **Deep Dive 3D/2N:** Day 1 arrival + evening safari; Day 2 morning safari + optional boat + optional buffer night drive; Day 3 morning safari + checkout. Indicative ₹14,500–₹19,500 p.p. (2 pax, premium lodge, 3 safaris + 1 boat, AP).
+- **Deep Dive 3D/2N:** Day 1 arrival + evening safari; Day 2 morning safari + optional boat; Day 3 morning safari + checkout. Indicative ₹14,500–₹19,500 p.p. (2 pax, premium lodge, 3 safaris + 1 boat, AP).
 - Add-ons: Khajuraho day tour (~35 km), Pandav Falls half-day, Ken boat safari (seasonal), extra slots.
 - Inclusions: safaris+permits+guide, stay+AP, gate transfers, assistance. Exclusions: rail/air/highway transfers (quoted separately), camera fees, tips/personal.
 
@@ -182,12 +182,12 @@ regular_price: 19500, offer_price: 14500, child_price: 9800
 peak_multiplier: 1.2, shoulder_multiplier: 1, monsoon_multiplier: 0.85
 minimum_person: 2, maximum_person: 6, booking_enabled: 1
 inclusions: 3 jeep safaris + 1 seasonal Ken River boat safari (permits + guide), 2 nights premium lodge AP, lodge-gate transfers, safari coordination
-exclusions: Rail/air tickets, highway transfers, camera fees, buffer night-drive (where available), tips & personal expenses
+exclusions: Rail/air tickets, highway transfers, camera fees, tips & personal expenses
 days_itinerary:
   - title: Day 1 — Arrival & evening safari
     description: Check-in near Madla gate. Evening core-zone jeep safari. Dinner at lodge.
   - title: Day 2 — River & jungle day
-    description: Morning jeep safari, optional Ken boat safari (seasonal). Evening free, or buffer night drive if the forest department permits.
+    description: Morning jeep safari, optional Ken boat safari (seasonal). Evening free.
   - title: Day 3 — Final morning safari
     description: Morning jeep safari. Breakfast, check-out, onward transfer.
 ```

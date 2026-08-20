@@ -12,7 +12,7 @@ pannawildtour.com
 │   └── /packages/3d2n-family-wildlife-tour/ ...
 ├── /safaris/                      Safari experiences hub (page)
 │   ├── /safaris/jungle-safari-core/      ★ Jungle Safari (Core) — Madla/Hinouta gates
-│   ├── /safaris/jungle-safari-buffer/    Jungle Safari (Buffer) — Akola, night drives
+│   ├── /safaris/jungle-safari-buffer/    Jungle Safari (Buffer) — Akola
 │   └── /safaris/boating/                 Ken River boating
 ├── /zones/
 │   ├── /zones/madla-gate/
@@ -79,7 +79,7 @@ add_filter('pwt/post_type_args/pwt_resort', function (array $args): array {
 | `/guided-jungle-safari/` | `/safaris/jungle-safari-core/` | 301 | Core service |
 | `/services/jeep-safari-booking/` | `/safaris/jungle-safari-core/` | 301 | Service renamed to Jungle Safari (Core) |
 | `/services/ken-river-boat-safari/` | `/safaris/boating/` | 301 | Boat safari → Boating |
-| `/services/night-drive-buffer/` | `/safaris/jungle-safari-buffer/` | 301 | Night drive folded into Buffer safari |
+| `/services/night-drive-buffer/` | `/safaris/jungle-safari-buffer/` | 301 | Night drive page retired — night safari not permitted in Panna |
 | `/early-morning-trekking/` | `/experiences/walk-with-pardhi/` | 301 | Pardhi/foot trail copy |
 | `/walk-with-pardhis/` | `/experiences/walk-with-pardhi/` | 301 | Preserve Pardhi story on Walk with Pardhi page |
 | `/gharial-sanctuary/` | `/experiences/ken-gharial-sanctuary/` | 301 | Now its own page |
@@ -182,8 +182,8 @@ Contact         /contact-us/
 > folded into `Jungle Safari (Core)` (it is the reserve itself); `Khajuraho Heritage` +
 > `Pandav Falls & Diamond Mines` are renamed/merged into `Khajuraho Western Temples` and
 > `Pandav Caves & Falls`; `Ken Gharial Sanctuary`, `Ken Riverside Scenes` and `Bird Watching`
-> are now three separate pages (previously merged into `Ken River Scenic Sites`); `Night Drive
-> & Buffer` moves under **Safaris** as `Jungle Safari (Buffer)`; `Cultural Evenings` is folded
+> are now three separate pages (previously merged into `Ken River Scenic Sites`); `Buffer` moves
+> under **Safaris** as `Jungle Safari (Buffer)` (the old night-drive page is retired — night safari is not permitted in Panna); `Cultural Evenings` is folded
 > into the `Panna Temples` page. Each sub-page has a paste-ready Gutenberg sample in
 > `13-EXPERIENCES.md`, `14-SAFARIS.md`, `15-STAYS.md`, `07-ZONES.md` and `16-NAV-SUPPORT-PAGES.md`
 > (contextual images included).
