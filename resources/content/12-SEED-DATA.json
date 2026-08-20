@@ -43,33 +43,13 @@
         "children": [
           { "label": "Jungle Safari (Core)", "type": "page", "slug": "safaris/jungle-safari-core" },
           { "label": "Jungle Safari (Buffer)", "type": "page", "slug": "safaris/jungle-safari-buffer" },
-          { "label": "Boating", "type": "page", "slug": "safaris/boating" }
+          { "label": "Ken River Boating", "type": "page", "slug": "safaris/boating" }
         ]
       },
       {
         "label": "Tour Packages",
         "type": "page",
         "slug": "tour-packages"
-      },
-      {
-        "label": "Safari Zones",
-        "type": "page",
-        "slug": "zones",
-        "children": [
-          { "label": "Madla Gate", "type": "page", "slug": "zones/madla-gate" },
-          { "label": "Hinouta Gate", "type": "page", "slug": "zones/hinouta-gate" },
-          { "label": "Akola (Buffer) Gate", "type": "page", "slug": "zones/akola-buffer-gate" }
-        ]
-      },
-      {
-        "label": "Stays",
-        "type": "page",
-        "slug": "stays",
-        "children": [
-          { "label": "Home Stay", "type": "page", "slug": "stays/home-stay" },
-          { "label": "Hotel", "type": "page", "slug": "stays/hotel" },
-          { "label": "Resort", "type": "page", "slug": "stays/resort" }
-        ]
       },
       {
         "label": "Experiences",
@@ -89,19 +69,26 @@
         ]
       },
       {
-        "label": "Guides",
+        "label": "Safari Zones",
         "type": "page",
-        "slug": "blog",
+        "slug": "zones",
         "children": [
-          { "label": "Best Time to Visit", "type": "post", "slug": "best-time-to-visit-panna-national-park" },
-          { "label": "How to Reach Panna", "type": "post", "slug": "how-to-reach-panna" },
-          { "label": "Safari Rules & Packing", "type": "post", "slug": "panna-safari-rules-packing-list" }
+          { "label": "Madla Gate", "type": "page", "slug": "zones/madla-gate" },
+          { "label": "Hinouta Gate", "type": "page", "slug": "zones/hinouta-gate" },
+          { "label": "Akola Gate (Core)", "type": "page", "slug": "zones/akola-core-gate" },
+          { "label": "Akola Gate (Buffer)", "type": "page", "slug": "zones/akola-buffer-gate" },
+          { "label": "Jhinna Gate (Buffer)", "type": "page", "slug": "zones/jhinna-buffer-gate" }
         ]
       },
       {
-        "label": "About",
+        "label": "Stays",
         "type": "page",
-        "slug": "about-us"
+        "slug": "stays",
+        "children": [
+          { "label": "Home Stay", "type": "page", "slug": "stays/home-stay" },
+          { "label": "Hotel", "type": "page", "slug": "stays/hotel" },
+          { "label": "Resort", "type": "page", "slug": "stays/resort" }
+        ]
       },
       {
         "label": "Contact",
@@ -111,7 +98,7 @@
     ]
   },
   "taxonomies": {
-    "pwt_safari_zone": ["Madla Gate Core Zone", "Hinauta Gate Core Zone", "Akola Buffer Zone"],
+    "pwt_safari_zone": ["Madla Gate Core Zone", "Hinauta Gate Core Zone", "Akola Gate Core Zone", "Akola Buffer Zone", "Jhinna Buffer Zone"],
     "pwt_vehicle_type": ["Open Gypsy (6 Seater)", "Canter (20 Seater)", "SUV Transfer"],
     "pwt_season": ["Peak (Nov-Feb)", "Shoulder (Mar-Jun)", "Monsoon (Jul-Oct)"],
     "pwt_package_category": ["Family Safari Packages", "Couple Getaway Packages", "Weekend Tours"],
@@ -174,13 +161,49 @@
         "google_map": "https://maps.app.goo.gl/akola-gate",
         "best_time": "Oct-Jun"
       },
-      "terms": {
+"terms": {
         "pwt_destination_category": ["Wildlife", "Adventure"],
         "pwt_activity": ["Tiger Safari"]
       }
     },
     {
-      "title": "Pandav Caves & Falls",
+      "title": "Akola Gate — Panna Core Zone",
+      "excerpt": "Core-zone safari entry from the Akola side with its own route network.",
+      "content": "Akola serves the reserve's core zone as well as the buffer — separate routes, separate quotas. Core-zone drives from Akola open up forest sections away from the crowded Madla side. Availability follows the department's core-zone e-permit calendar.",
+      "status": "publish",
+      "meta": {
+        "destination_code": "PWT-AKOLA-CORE",
+        "state": "Madhya Pradesh",
+        "country": "India",
+        "latitude": "24.6510",
+        "longitude": "80.0210",
+        "google_map": "https://maps.app.goo.gl/akola-core-gate",
+        "best_time": "Oct-Jun"
+      },
+      "terms": {
+        "pwt_destination_category": ["Wildlife"],
+        "pwt_activity": ["Tiger Safari"]
+      }
+    },
+    {
+      "title": "Jhinna Gate — Panna Buffer Zone",
+      "excerpt": "Quiet buffer-zone entry with riverine routes and strong bird life.",
+      "content": "Jhinna opens Panna's buffer zone on the quieter side of the reserve — riverine habitat, scrub and fields with strong leopard, deer and bird sightings. Seasonal, permit-based availability; we confirm current status before quoting.",
+      "status": "publish",
+      "meta": {
+        "destination_code": "PWT-JHINNA",
+        "state": "Madhya Pradesh",
+        "country": "India",
+        "latitude": "24.5850",
+        "longitude": "80.1080",
+        "google_map": "https://maps.app.goo.gl/jhinna-gate",
+        "best_time": "Oct-Jun"
+      },
+      "terms": {
+        "pwt_destination_category": ["Wildlife", "Adventure"],
+        "pwt_activity": ["Tiger Safari"]
+      }
+    }
       "excerpt": "Fascinating caves and waterfall surrounded by natural scenery and local legends.",
       "content": "Explore the Pandav Caves and Waterfall, where a 30-metre cascade falls into a famously heart-shaped pool. A short, rewarding trail leads through rock and woodland to the caves and waterfall — one of the most photogenic spots in the Panna region. Best after light monsoon rain; suitable for families.",
       "status": "publish",
@@ -294,7 +317,7 @@
     {
       "title": "Ken Riverside Scenes",
       "excerpt": "Peaceful riverside locations, breathtaking views and memorable sunsets along the Ken River.",
-      "content": "The Ken cuts a calm, dramatic line through the reserve. Selected riverside points offer the best of it — basking gharials, cliff-nesting vultures, kingfishers over still water and sunsets that turn the sandstone gold. Winter is a birding hotspot for photographers.",
+      "content": "The Ken cuts a calm, dramatic line through the reserve. Selected riverside points offer the best of it — basking marsh muggers, cliff-nesting vultures, kingfishers over still water and sunsets that turn the sandstone gold. Winter is a birding hotspot for photographers.",
       "status": "publish",
       "meta": {
         "destination_code": "PWT-EXP-KEN",
@@ -390,7 +413,7 @@
     },
     {
       "title": "Ken River Boat Safari (Seasonal)",
-      "excerpt": "Guide-led boat ride past gharials, gorges and nesting vulture cliffs.",
+"excerpt": "Guide-led boat ride past basking marsh muggers, gorges and nesting vulture cliffs.",
       "content": "Seasonal, water-level dependent. We confirm current forest-department permission and availability before booking.",
       "status": "publish",
       "meta": {
@@ -856,7 +879,7 @@
     {
       "title": "Great boat + jeep combo",
       "excerpt": "The river ride was the highlight of our second day.",
-      "content": "Boat safari was well organised, gharials and kingfishers everywhere. Combined easily with our morning jeep drive.",
+      "content": "Boat safari was well organised, marsh muggers and kingfishers everywhere. Combined easily with our morning jeep drive.",
       "status": "publish",
       "meta": {
         "rating": "5",
@@ -1246,7 +1269,7 @@
     {
       "title": "Ken River Boat Safari — 13 Sep 2026",
       "excerpt": "Seasonal guided boat ride on the Ken.",
-      "content": "Seasonal guided boat ride past gharials, gorges and nesting vulture cliffs. Water-level dependent; we confirm forest-department permission before booking.",
+      "content": "Seasonal guided boat ride past basking marsh muggers, gorges and nesting vulture cliffs. Water-level dependent; we confirm forest-department permission before booking.",
       "status": "publish",
       "meta": {
         "safari_id": { "pwt_safari": "Ken River Boat Safari (Seasonal)" },
@@ -1363,9 +1386,9 @@
       "terms": { "pwt_trip_type": ["Half Day"], "pwt_activity": ["Waterfall Trail"] }
     },
     {
-      "title": "Ken River Sunset Boat & Gharial Watch",
-      "excerpt": "Evening boat ride past gharials, gorges and nesting vulture cliffs.",
-      "content": "Guided sunset ride on the Ken — basking gharials, cliff-nesting vultures and sandstone gorges turning gold. Seasonal, water-level dependent.",
+"title": "Ken River Sunset Boat Safari",
+      "excerpt": "Evening boat ride past marsh muggers, gorges and nesting vulture cliffs.",
+      "content": "Guided sunset ride on the Ken — basking marsh muggers, cliff-nesting vultures and sandstone gorges turning gold. Seasonal, water-level dependent.",
       "status": "publish",
       "meta": {
         "trip_code": "PWT-TRIP-KENBOAT",
@@ -1427,9 +1450,9 @@
       "terms": {}
     },
     {
-      "title": "Ken River & Gharial Gallery",
-      "excerpt": "Boating, gharials and river sunsets on the Ken.",
-      "content": "Basking gharials, nesting vultures and sandstone gorges turning gold at sunset — a short, flat photographic essay of the Ken. Add photographs via the media library after import.",
+"title": "Ken River Boating Gallery",
+      "excerpt": "Boating, marsh muggers and river sunsets on the Ken.",
+      "content": "Basking marsh muggers, nesting vultures and sandstone gorges turning gold at sunset — a short, flat photographic essay of the Ken. Add photographs via the media library after import.",
       "status": "publish",
       "meta": {},
       "terms": {}
