@@ -12,7 +12,7 @@
 
 ```html
 <!-- wp:cover {"dimRatio":45,"overlayColor":"contrast","isUserOverlayColor":true,"minHeight":560,"minHeightUnit":"px","contentPosition":"center center","align":"full","style":{"spacing":{"padding":{"top":"60px","right":"24px","bottom":"60px","left":"24px"}}}} -->
-<div class="wp-block-cover alignfull" style="padding-top:60px;padding-right:24px;padding-bottom:60px;padding-left:24px;min-height:560px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-45 has-background-dim"></span><video class="wp-block-cover__video-background" autoplay muted loop playsinline poster="/wp-content/uploads/2026/08/panna-hero-tiger-teak-forest.webp" src="/wp-content/uploads/2026/08/VID-20230708-WA0041.mp4"></video><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"1180px"}} -->
+<div class="wp-block-cover alignfull" style="padding-top:60px;padding-right:24px;padding-bottom:60px;padding-left:24px;min-height:560px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-45 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Bengal tiger in Panna National Park at golden hour" src="/wp-content/uploads/2026/08/Bengal-tiger-in-Panna-National-Park-May-2025-by-Dr.Abhijit-Bagui-09-scaled.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"1180px"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"letterSpacing":"2px"}},"fontSize":"small"} -->
 <p class="has-small-font-size" style="letter-spacing:2px">Panna Tiger Reserve · Madhya Pradesh</p>
 <!-- /wp:paragraph -->
@@ -129,7 +129,7 @@
 <!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"is-style-rounded"} -->
-<figure class="wp-block-image size-large is-style-rounded"><img src="/wp-content/uploads/2026/08/panna-jeep-safari-gypsy.webp" alt="Open gypsy jeep with safari guests watching wildlife on a Panna tiger reserve forest trail" /></figure>
+<figure class="wp-block-image size-large is-style-rounded"><img src="/wp-content/uploads/2026/08/Jeep-Safari-scaled.jpg" alt="Open gypsy jeep with safari guests watching wildlife on a Panna tiger reserve forest trail" /></figure>
 <!-- /wp:image -->
 <!-- wp:heading {"level":3} -->
 <h3>Jeep Safari</h3>
@@ -146,7 +146,7 @@
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"is-style-rounded"} -->
-<figure class="wp-block-image size-large is-style-rounded"><img src="/wp-content/uploads/2026/08/ken-river-boat-safari.webp" alt="Guided boat sailing on the calm waters of the Ken River with marsh muggers basking on the sandbanks and forested cliffs on both sides" /></figure>
+<figure class="wp-block-image size-large is-style-rounded"><img src="/wp-content/uploads/2026/08/ken-river-boat-safari.svg" alt="Guided boat sailing on the calm waters of the Ken River with marsh muggers basking on the sandbanks and forested cliffs on both sides" /></figure>
 <!-- /wp:image -->
 <!-- wp:heading {"level":3} -->
 <h3>Ken River Boat Safari</h3>
@@ -163,7 +163,7 @@
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"is-style-rounded"} -->
-<figure class="wp-block-image size-large is-style-rounded"><img src="/wp-content/uploads/2026/08/panna-kingfisher.webp" alt="Pied kingfisher hovering over the Ken River" /></figure>
+<figure class="wp-block-image size-large is-style-rounded"><img src="/wp-content/uploads/2026/08/panna-kingfisher.svg" alt="Pied kingfisher hovering over the Ken River" /></figure>
 <!-- /wp:image -->
 <!-- wp:heading {"level":3} -->
 <h3>Bird Watching</h3>
@@ -180,7 +180,7 @@
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","className":"is-style-rounded"} -->
-<figure class="wp-block-image size-large is-style-rounded"><img src="/wp-content/uploads/2026/08/pandav-falls-diamond.webp" alt="Pandav Falls cascading 30 meters into a heart-shaped pool in the forest near Panna with caves in the background" /></figure>
+<figure class="wp-block-image size-large is-style-rounded"><img src="/wp-content/uploads/2026/08/Pandava-Caves-1-of-1-scaled.jpg" alt="Pandav Falls cascading 30 meters into a heart-shaped pool in the forest near Panna with caves in the background" /></figure>
 <!-- /wp:image -->
 <!-- wp:heading {"level":3} -->
 <h3>Pandav Falls &amp; Diamond Mine</h3>
@@ -386,12 +386,12 @@
 
 ## 3. Media map (hero + sections)
 
-| Block | Filename (after upload) | Alt text | Size |
+| Block | Filename | Alt text | Status |
 |---|---|---|---|
-| Hero cover (video bg) | `VID-20230708-WA0041.mp4` (poster `panna-hero-tiger-teak-forest.webp`) | Legacy video of Bengal tigers walking through the teak forest, Madla zone — autoplay muted loop, poster as fallback | 1920×1080, <5 MB |
-| Jeep safari card | `panna-jeep-safari-gypsy.webp` | Open gypsy jeep with safari guests watching wildlife on a Panna tiger reserve forest trail | 800×533 |
-| Boat safari card | `ken-river-boat-safari.webp` | Guided boat sailing on the calm waters of the Ken River with marsh muggers basking on the sandbanks | 800×533 |
-| Bird watching card | `panna-kingfisher.webp` | Pied kingfisher hovering over the Ken River | 800×533 |
-| Pandav/diamond card | `pandav-falls-diamond.webp` | Pandav Falls cascading 30 meters into a heart-shaped pool near Panna | 800×533 |
+| Hero cover | `Bengal-tiger-in-Panna-National-Park-May-2025-by-Dr.Abhijit-Bagui-09-scaled.jpg` | Bengal tiger in Panna National Park at golden hour | LIVE (already on site) |
+| Jeep safari card | `Jeep-Safari-scaled.jpg` | Open gypsy jeep with safari guests watching wildlife on a Panna tiger reserve forest trail | LIVE |
+| Boat safari card | `ken-river-boat-safari.svg` | Guided boat sailing on the calm waters of the Ken River with marsh muggers basking on the sandbanks | GEN — upload from `import-media-svg/` |
+| Bird watching card | `panna-kingfisher.svg` | Pied kingfisher hovering over the Ken River | GEN — upload from `import-media-svg/` |
+| Pandav/diamond card | `Pandava-Caves-1-of-1-scaled.jpg` | Pandav Falls cascading 30 meters into a heart-shaped pool near Panna | LIVE |
 
 See `10-MEDIA-SPEC-SHEET.md` for full prompts and compression rules.

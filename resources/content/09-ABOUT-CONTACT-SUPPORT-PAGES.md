@@ -14,7 +14,7 @@ Three pages: About Us, Contact Us, and Support/Help. Slugs and redirects below.
 
 ```html
 <!-- wp:cover {"dimRatio":42,"overlayColor":"contrast","isUserOverlayColor":true,"minHeight":400,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"44px","right":"24px","bottom":"44px","left":"24px"}}}} -->
-<div class="wp-block-cover alignfull" style="padding-top:44px;padding-right:24px;padding-bottom:44px;padding-left:24px;min-height:400px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-42 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Panna landscape at dusk with Ken river winding through the valley" src="/wp-content/uploads/2026/08/panna-dusk-valley.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-cover alignfull" style="padding-top:44px;padding-right:24px;padding-bottom:44px;padding-left:24px;min-height:400px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-42 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Panna landscape at dusk with Ken river winding through the valley" src="/wp-content/uploads/2026/08/Panna-national-park-1-scaled.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"900px"}} -->
 <div class="wp-block-group"><!-- wp:heading {"level":1} -->
 <h1>About Panna Wild Tour</h1>
 <!-- /wp:heading -->

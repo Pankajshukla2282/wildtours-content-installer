@@ -28,11 +28,11 @@ Stays     /stays/                    (hub page — this file, page 1)
 **SEO Title:** Stays near Panna Tiger Reserve — Home Stays, Hotels & Resorts | Panna Wild Tour
 **Meta Description:** Hand-picked home stays, hotels and resorts near Madla gate of Panna Tiger Reserve — budget to luxury, every property inspected for location, comfort and honest value. Book with Panna Wild Tour.
 
-**Featured image:** `panna-jungle-lodge.webp` (see 10-MEDIA-SPEC-SHEET.md)
+**Featured image:** `panna-jungle-lodge.svg` (see 10-MEDIA-SPEC-SHEET.md)
 
 ```html
 <!-- wp:cover {"dimRatio":38,"overlayColor":"contrast","isUserOverlayColor":true,"minHeight":440,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"48px","right":"24px","bottom":"48px","left":"24px"}}}} -->
-<div class="wp-block-cover alignfull" style="padding-top:48px;padding-right:24px;padding-bottom:48px;padding-left:24px;min-height:440px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-38 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Jungle lodge cottage among sal and teak trees near Madla gate Panna" src="/wp-content/uploads/2026/08/panna-jungle-lodge.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"1100px"}} -->
+<div class="wp-block-cover alignfull" style="padding-top:48px;padding-right:24px;padding-bottom:48px;padding-left:24px;min-height:440px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-38 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Jungle lodge cottage among sal and teak trees near Madla gate Panna" src="/wp-content/uploads/2026/08/panna-jungle-lodge.svg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"1100px"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"letterSpacing":"2px"}},"fontSize":"small"} -->
 <p class="has-small-font-size" style="letter-spacing:2px">Madla Gate Belt · Panna</p>
 <!-- /wp:paragraph -->
@@ -85,7 +85,7 @@ Stays     /stays/                    (hub page — this file, page 1)
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="/wp-content/uploads/2026/08/panna-resort-room.webp" alt="Premium jungle resort near Madla gate Panna"/></figure>
+<figure class="wp-block-image size-large"><img src="/wp-content/uploads/2026/08/panna-resort-room.svg" alt="Premium jungle resort near Madla gate Panna"/></figure>
 <!-- /wp:image -->
 <!-- wp:heading {"level":3} -->
 <h3><a href="/stays/resort/">Resort</a></h3>
@@ -117,11 +117,11 @@ Stays     /stays/                    (hub page — this file, page 1)
 **SEO Title:** Home Stay near Panna Tiger Reserve — Local, Home-Cooked | Panna Wild Tour
 **Meta Description:** Stay with a local family near Panna — home-cooked meals, traditional hospitality and insider tips for your safari. Budget-friendly home stays near Madla gate.
 
-**Featured image:** `panna-jungle-lodge.webp` (see 10-MEDIA-SPEC-SHEET.md)
+**Featured image:** `panna-jungle-lodge.svg` (see 10-MEDIA-SPEC-SHEET.md)
 
 ```html
 <!-- wp:cover {"dimRatio":40,"overlayColor":"contrast","isUserOverlayColor":true,"minHeight":440,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"48px","right":"24px","bottom":"48px","left":"24px"}}}} -->
-<div class="wp-block-cover alignfull" style="padding-top:48px;padding-right:24px;padding-bottom:48px;padding-left:24px;min-height:440px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-40 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Warm local home stay with courtyard near Panna Tiger Reserve" src="/wp-content/uploads/2026/08/panna-jungle-lodge.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"1100px"}} -->
+<div class="wp-block-cover alignfull" style="padding-top:48px;padding-right:24px;padding-bottom:48px;padding-left:24px;min-height:440px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-40 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Warm local home stay with courtyard near Panna Tiger Reserve" src="/wp-content/uploads/2026/08/panna-jungle-lodge.svg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"1100px"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"letterSpacing":"2px"}},"fontSize":"small"} -->
 <p class="has-small-font-size" style="letter-spacing:2px">Local · Home-Cooked · Budget Friendly</p>
 <!-- /wp:paragraph -->
@@ -170,11 +170,11 @@ Stays     /stays/                    (hub page — this file, page 1)
 **SEO Title:** Hotels near Panna Tiger Reserve — Comfort & Convenience | Panna Wild Tour
 **Meta Description:** Comfortable, dependable hotels near Panna Tiger Reserve and in Panna town — clean rooms, reliable hot water, easy safari logistics. Book with Panna Wild Tour.
 
-**Featured image:** `panna-resort-room.webp` (see 10-MEDIA-SPEC-SHEET.md)
+**Featured image:** `panna-resort-room.svg` (see 10-MEDIA-SPEC-SHEET.md)
 
 ```html
 <!-- wp:cover {"dimRatio":40,"overlayColor":"contrast","isUserOverlayColor":true,"minHeight":440,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"48px","right":"24px","bottom":"48px","left":"24px"}}}} -->
-<div class="wp-block-cover alignfull" style="padding-top:48px;padding-right:24px;padding-bottom:48px;padding-left:24px;min-height:440px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-40 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Comfortable hotel near Panna Tiger Reserve" src="/wp-content/uploads/2026/08/panna-resort-room.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"1100px"}} -->
+<div class="wp-block-cover alignfull" style="padding-top:48px;padding-right:24px;padding-bottom:48px;padding-left:24px;min-height:440px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-40 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Comfortable hotel near Panna Tiger Reserve" src="/wp-content/uploads/2026/08/panna-resort-room.svg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"1100px"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"letterSpacing":"2px"}},"fontSize":"small"} -->
 <p class="has-small-font-size" style="letter-spacing:2px">Comfort · Convenience · Panna Town</p>
 <!-- /wp:paragraph -->
@@ -223,11 +223,11 @@ Stays     /stays/                    (hub page — this file, page 1)
 **SEO Title:** Jungle Resorts near Panna Tiger Reserve — Luxury in the Wild | Panna Wild Tour
 **Meta Description:** Premium jungle resorts near Madla gate — pools, curated dining, spa-style service and guided stays for anniversaries, honeymoons and premium wildlife weeks.
 
-**Featured image:** `panna-resort-room.webp` (see 10-MEDIA-SPEC-SHEET.md)
+**Featured image:** `panna-resort-room.svg` (see 10-MEDIA-SPEC-SHEET.md)
 
 ```html
 <!-- wp:cover {"dimRatio":38,"overlayColor":"contrast","isUserOverlayColor":true,"minHeight":440,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"48px","right":"24px","bottom":"48px","left":"24px"}}}} -->
-<div class="wp-block-cover alignfull" style="padding-top:48px;padding-right:24px;padding-bottom:48px;padding-left:24px;min-height:440px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-38 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Premium jungle resort near Madla gate Panna" src="/wp-content/uploads/2026/08/panna-resort-room.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"1100px"}} -->
+<div class="wp-block-cover alignfull" style="padding-top:48px;padding-right:24px;padding-bottom:48px;padding-left:24px;min-height:440px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-38 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Premium jungle resort near Madla gate Panna" src="/wp-content/uploads/2026/08/panna-resort-room.svg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"1100px"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"letterSpacing":"2px"}},"fontSize":"small"} -->
 <p class="has-small-font-size" style="letter-spacing:2px">Premium · Luxury · Guided Stays</p>
 <!-- /wp:paragraph -->

@@ -8,7 +8,7 @@ Reusable conversion blocks shared across pages. All are Gutenberg block patterns
 
 ```html
 <!-- wp:cover {"dimRatio":55,"overlayColor":"contrast","isUserOverlayColor":true,"minHeight":280,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"40px","right":"24px","bottom":"40px","left":"24px"}}}} -->
-<div class="wp-block-cover alignfull" style="padding-top:40px;padding-right:24px;padding-bottom:40px;padding-left:24px;min-height:280px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-55 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Tiger walking through dry forest in Panna Tiger Reserve" src="/wp-content/uploads/2026/08/panna-tiger-portrait.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"800px"}} -->
+<div class="wp-block-cover alignfull" style="padding-top:40px;padding-right:24px;padding-bottom:40px;padding-left:24px;min-height:280px"><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-55 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Tiger walking through dry forest in Panna Tiger Reserve" src="/wp-content/uploads/2026/08/Bengal-tiger-in-Panna-National-Park-May-2025-by-Dr.Abhijit-Bagui-09-scaled.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","contentSize":"800px"}} -->
 <div class="wp-block-group"><!-- wp:heading {"level":2,"textAlign":"center"} -->
 <h2 class="wp-block-heading has-text-align-center">Ready to plan your Panna safari?</h2>
 <!-- /wp:heading -->
