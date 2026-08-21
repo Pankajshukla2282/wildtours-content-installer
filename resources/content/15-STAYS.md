@@ -67,7 +67,7 @@ Stays     /stays/                    (hub page — this file, page 1)
 <h3><a href="/stays/home-stay/">Home Stay</a></h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Sleep with a local family — home-cooked food, stories and the warmest welcome in Panna.</p>
+<p>Sleep with a local family — home-cooked food, stories and the warmest welcome in Panna. For a unique experience, ask about <strong>Sparrow Homes</strong> — a homestay named after the many sparrows that make the courtyard their home.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 

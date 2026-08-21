@@ -17,13 +17,13 @@
 
   <rect width="1600" height="1000" fill="url(#bgSky)"/>
 
-  <g fill="#FFFFFF" opacity="0.35">
+  <g fill="#FFFFFF" opacity="0.3">
     <circle cx="260" cy="180" r="46"/>
     <circle cx="340" cy="150" r="28"/>
     <circle cx="1320" cy="200" r="38"/>
   </g>
 
-  <path d="M0 520 Q220 430 480 505 T960 470 T1440 505 T1600 500 L1600 600 L0 600 Z" fill="#6F9A62" opacity="0.85"/>
+  <path d="M0 520 Q220 430 480 505 T960 470 T1440 505 T1600 505 L1600 600 L0 600 Z" fill="#6F9A62" opacity="0.85"/>
   <path d="M0 560 Q260 490 560 545 T1200 530 T1600 545 L1600 620 L0 620 Z" fill="#4E8F5B" opacity="0.9"/>
   <g fill="#1F5A32">
     <circle cx="180" cy="470" r="22"/><circle cx="216" cy="466" r="26"/><circle cx="252" cy="474" r="18"/>
@@ -57,11 +57,11 @@
   <circle cx="800" cy="312" r="30" fill="#FFFFFF"/>
   <circle cx="812" cy="300" r="5" fill="#172018"/>
   <path d="M778 330 l10 14 l-4 6 l-14 -10 Z" fill="#D97706"/>
-  <path d="M822 330 l-10 14 l4 6 l14 -10 Z" fill="#D97706"/>
+  <path d="M822 330 l-10 14 l4 6 l-14 -10 Z" fill="#D97706"/>
   <path d="M764 340 l-4 26 q6 -4 12 -6 Z" fill="#D97706"/>
   <path d="M836 340 l4 26 q-6 -4 -12 -6 Z" fill="#D97706"/>
 
-  <path d="M760 348 q-46 -10 -80 -34 q-8 -6 -12 2 q-2 12 12 16 q46 22 80 26 Z" fill="#FFFFFF"/>
+  <path d="M800 348 q-46 -10 -80 -34 q-8 -6 -12 2 q-2 12 12 16 q46 22 80 26 Z" fill="#FFFFFF"/>
   <path d="M840 348 q46 -10 80 -34 q8 -6 12 2 q2 12 -12 16 q-46 22 -80 26 Z" fill="#FFFFFF"/>
 
   <path d="M800 352 l-10 60 q10 8 20 0 Z" fill="#D97706"/>
